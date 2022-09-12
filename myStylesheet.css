@@ -14,7 +14,7 @@ body {
     text-align: center;
     width: 100%;
     margin: auto;
-    background-color: rgb(218, 32, 190);
+    background-color: white;
     position: fixed;
     z-index: 100;
     font-size: 19px;
@@ -25,21 +25,28 @@ body {
 #header.hide {
     top: -200px;
 }
-.grassContainer{
-    height:50px;
-    width:100%;
+
+.headerMedlemsida {
+    box-shadow: -4px 16px 23px -7px #000000;
+
+}
+
+.grassContainer {
+    height: 50px;
+    width: 100%;
     display: flex;
     flex-direction: row;
     position: absolute;
     left: 0;
     bottom: 0;
-    height:35px;
+    height: 35px;
 }
-.grass{
+
+.grass {
 
     left: 0;
     bottom: 0;
-    height:35px;
+    height: 35px;
 }
 
 .second-header {
@@ -53,6 +60,11 @@ body {
     font-size: 20px;
 
 
+}
+
+.secondHeaderMedlemsida {
+    font-size: 0;
+    padding: 20px;
 }
 
 .webContent {
@@ -85,8 +97,61 @@ body {
     display: block;
 }
 
+.gruppmedlemmarContainer {
+    scroll-margin-top: 150px;
+    grid-row-start: 13;
+    grid-row-end: 16;
+    grid-column-start: 2;
+    grid-column-end: 6;
+    background-color: white;
+    object-fit: cover;
+    display: flex;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
 
+.gruppmedlemmar {
+    display: flex;
+    justify-content: space-evenly;
+}
 
+.medlem {
+    margin: auto;
+    width: 20%;
+    height: 80%;
+    background-color: white;
+    border: thin solid #BBEBB6;
+    padding-top: 1%;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.bild {
+    margin-top: 1%;
+    margin: auto;
+    background-color: #BBEBB6;
+    width: 80%;
+    height: 40%;
+    overflow: hidden;
+}
+
+.profilbild {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.besText {
+    padding-top: 3%;
+    margin: auto;
+    width: 80%;
+}
+
+.namn {
+    font-weight: bold;
+}
 
 
 .content {
@@ -387,7 +452,7 @@ body {
     padding-bottom: 5px;
 
     margin-right: 3%;
-    margin-top:3%;
+    margin-top: 3%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -462,4 +527,186 @@ label {
 .revealRight.active {
     transform: translateX(0);
     opacity: 1;
+}
+
+/* -------profilstylesheet------- */
+
+.arvidsBody {
+    margin-top: 12%;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 30px;
+    max-height: 100%;
+
+}
+
+.personligHeader {
+    border-bottom: thick solid #BBEBB6;
+
+}
+
+#profilbildPre {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 5;
+    float: left;
+    animation-duration: 2s;
+    animation-name: slidein;
+    margin-left: 30%;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    
+}
+
+#riktigProfilbild {
+    width: 100%;
+    height: 90%;
+    margin-top: 7%;
+    object-fit: cover;
+    display: block;
+    box-shadow: -1px 2px 31px 4px rgba(0,0,0,0.71);
+
+}
+
+.background {
+    border-top: thick solid #BBEBB6;
+    background-color: white;
+    width: 100%;
+
+    grid-column-start: 1;
+    grid-column-end: 8;
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+
+@keyframes slidein {
+    from {
+        margin-left: -100%;
+    }
+
+    to {
+        margin-left: 30%;
+    }
+}
+
+#skillContainer {
+    z-index: 99;
+    background-color: #BBEBB6;
+    grid-row-start: 1;
+    grid-row-end: 5;
+    grid-column-start: 4;
+    grid-column-end: 6;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding-left: 15%;
+}
+
+#skillsHeader {
+    font-size: xx-large;
+
+    width: 100%;
+}
+
+.fardigheterText {
+    font-weight: bold;
+    margin-bottom: 1%;
+}
+
+.bar {
+    height: 20px;
+    background-color: lightskyblue;
+    animation-duration: 2s;
+    border-radius: 25px;
+
+}
+
+.barBorder {
+    width: 80%;
+    border: thin solid black;
+    border-radius: 25px;
+}
+
+.bar1 {
+    width: 60%;
+    animation-name: slideinBars1;
+}
+
+.bar2 {
+    width: 40%;
+    animation-name: slideinBars2;
+
+}
+
+.bar3 {
+    width: 67%;
+    animation-name: slideinBars3;
+
+}
+
+.bar4 {
+    width: 95%;
+    animation-name: slideinBars4;
+
+}
+
+.bar5 {
+    width: 10%;
+    animation-name: slideinBars5;
+
+}
+
+@keyframes slideinBars1 {
+    from {
+        width: 0px;
+    }
+
+    to {
+        width: 60%
+    }
+}
+
+@keyframes slideinBars2 {
+    from {
+        width: 0px;
+    }
+
+    to {
+        width: 40%;
+    }
+}
+
+@keyframes slideinBars3 {
+    from {
+        width: 0px;
+    }
+
+    to {
+        width: 67%;
+    }
+}
+
+@keyframes slideinBars4 {
+    from {
+        width: 0px;
+    }
+
+    to {
+        width: 95%;
+    }
+}
+
+@keyframes slideinBars5 {
+    from {
+        width: 0px;
+    }
+
+    to {
+        width: 10%;
+    }
 }

@@ -215,3 +215,10 @@ $(document).ready(function () {
 
 
 
+// ------Arvids presentation-----
+
+function slide(){
+    setTimeout(function(){
+        document.getElementById('profilbildPre').style.left = '500px';
+    }, 1000)
+}
