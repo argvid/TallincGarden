@@ -172,92 +172,71 @@
             </div>
         </div>
         <div class="rec-container">
-            <div id="header-effects">
-                <h2>Recensioner från nöjda kunder</h2>
+
+            <img src="bilder/trädgårdsskötsel1.jpg" class="gallery__img">
+
+
+
+        </div>
+
+
+    </div>
+    <div class="valjTjansterContainer">
+        <div class="checkContainer">
+            <h3 id="checkboxHeader">Vad vill du ha hjälp med?</h3>
+            <div class="checkboxContainer">
+                <p>Gräsklippning:</p>
+                <input name="tjanst" type="checkbox" class="grasklippning" value="klippa gräset">
             </div>
-            <div class="arrow" onclick="myFunction()">
-                <img class="arrow-img" src="bilder/arrow.png">
+            <div class="checkboxContainer">
+                <p>Plantera blommor:</p>
+
+                <input name="tjanst" type="checkbox" class="planteraBlommor" value="plantera blommor">
             </div>
+            <div class="checkboxContainer">
+                <p>Vattna:</p>
 
-            <div class="border-container">
-                <div>
-                    <div id="rec" style="display:none">
-                        <img src="bilder/trädgårdsskötsel1.jpg" class="imgContainer">
-                    </div>
-                </div>
-                <div>
-                    <div id="rec2">
-                        <h4>Per Jakobsson</h3>
-
-                            <p>"Jag ville plantera solrosor i min trädgård men har inte speciellt gröna fingrar, fick då
-                                hjälp av Trädgårdshjälpen."
-                            </p>
-
-                    </div>
-                </div>
-
+                <input name="tjanst" type="checkbox" class="vattna" value="vattna din trädgård">
             </div>
-            <div class="second-arrow" onclick="myFunction()">
-                <img class="arrow-img" src="bilder/arrow.png">
+            <div class="checkboxContainer">
+                <p>Plocka frukt:</p>
+
+                <input name="tjanst" type="checkbox" class="plockaFrukt" value="plocka frukt">
+            </div>
+            <div class="checkboxContainer">
+                <input class="button1" id="btn" type="submit" value="Välj" onclick="kollaValdaTjanster()">
             </div>
 
         </div>
-        <div class="valjTjansterContainer">
-            <div class="checkContainer">
-                <h3 id="checkboxHeader">Vad vill du ha hjälp med?</h3>
-                <div class="checkboxContainer">
-                    <p>Gräsklippning:</p>
-                    <input name="tjanst" type="checkbox" class="grasklippning" value="klippa gräset">
-                </div>
-                <div class="checkboxContainer">
-                    <p>Plantera blommor:</p>
-
-                    <input name="tjanst" type="checkbox" class="planteraBlommor" value="plantera blommor">
-                </div>
-                <div class="checkboxContainer">
-                    <p>Vattna:</p>
-
-                    <input name="tjanst" type="checkbox" class="vattna" value="vattna din trädgård">
-                </div>
-                <div class="checkboxContainer">
-                    <p>Plocka frukt:</p>
-
-                    <input name="tjanst" type="checkbox" class="plockaFrukt" value="plocka frukt">
-                </div>
-                <div class="checkboxContainer">
-                    <input class="button1" id="btn" type="submit" value="Välj" onclick="kollaValdaTjanster()">
-                </div>
-
+        <div class="confirmContainer">
+            <div>
+                <h3>Gör intresseanmälan!</h3>
+                <label>Förnamn:</label>
+                <input type="text">
+                <br>
+                <br>
+                <label>Efternamn:</label>
+                <input type="text">
+                <br>
+                <br>
+                <label>Adress:</label>
+                <input type="text">
+                <br>
+                <br>
+                <label>Telefonnr:</label>
+                <input type="text">
             </div>
-            <div class="confirmContainer">
-                <div>
-                    <h3>Gör intresseanmälan!</h3>
-                    <label>Förnamn:</label>
-                    <input type="text">
-                    <br>
-                    <br>
-                    <label>Efternamn:</label>
-                    <input type="text">
-                    <br>
-                    <br>
-                    <label>Adress:</label>
-                    <input type="text">
-                    <br>
-                    <br>
-                    <label>Telefonnr:</label>
-                    <input type="text">
+            <div>
+                <div class="summeradText">
+                    <h4 id="valdaTjanster">
+                        </p>
                 </div>
-                <div>
-                    <div class="summeradText">
-                        <h4 id="valdaTjanster">
-                            </p>
-                    </div>
-                </div>
-                <div>
-                    <input class="button1" id="btn" type="submit" value="Skicka intresseanmälan">
-                </div>
+            </div>
+            <div>
+                <input class="button1" id="btn" type="submit" value="Skicka intresseanmälan">
             </div>
         </div>
+    </div>
 
     </div>
 
