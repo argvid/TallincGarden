@@ -75,7 +75,7 @@ body {
     margin-top: 100px;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(30, 100px);
+    grid-template-rows: repeat(34, 100px);
     grid-column-gap: 10px;
     grid-row-gap: 30px;
 
@@ -216,7 +216,7 @@ body {
 .tjanster-container {
     scroll-margin-top: 150px;
     grid-row-start: 26;
-    grid-row-end: 30;
+    grid-row-end: 31;
     grid-column-start: 2;
     grid-column-end: 6;
     background-color: white;
@@ -311,6 +311,7 @@ body {
 }
 
 
+
 #header-effects {
     grid-column-start: 5;
     grid-column-end: 10;
@@ -359,15 +360,7 @@ body {
     height: 50%;
 }
 
-.border-container {
-    border: thin solid #BBEBB6;
-    grid-row-start: 2;
-    grid-row-end: 5;
-    grid-column-start: 4;
-    grid-column-end: 11;
-    margin: 5%;
-    padding: 3%;
-}
+
 
 @keyframes mymove {
     from {
@@ -532,9 +525,9 @@ label {
 /* -------profilstylesheet------- */
 
 .arvidsBody {
-    margin-top: 12%;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    margin-top: 15% !important;
+    grid-template-columns: repeat(6, 1fr) !important;
+    grid-template-rows: repeat(4, 1fr) !important;
     grid-column-gap: 10px;
     grid-row-gap: 30px;
     max-height: 100%;
@@ -560,7 +553,7 @@ label {
     height: 100%;
     object-fit: cover;
     display: block;
-    
+
 }
 
 #riktigProfilbild {
@@ -569,7 +562,7 @@ label {
     margin-top: 7%;
     object-fit: cover;
     display: block;
-    box-shadow: -1px 2px 31px 4px rgba(0,0,0,0.71);
+    box-shadow: -1px 2px 31px 4px rgba(0, 0, 0, 0.71);
 
 }
 
@@ -582,6 +575,8 @@ label {
     grid-column-end: 8;
     grid-row-start: 1;
     grid-row-end: 5;
+    border-bottom: thick solid #BBEBB6;
+
 }
 
 @keyframes slidein {
@@ -709,15 +704,17 @@ label {
     to {
         width: 10%;
     }
-body {
-    background-image: url(bilder/papyrus.webp);
-    margin: 0;
-    margin-top: -20px;
-    padding: 0;
-    overflow-x: hidden;
-    font-family: 'Roboto Condensed', sans-serif;
+
+    body {
+        background-image: url(bilder/papyrus.webp);
+        margin: 0;
+        margin-top: -20px;
+        padding: 0;
+        overflow-x: hidden;
+        font-family: 'Roboto Condensed', sans-serif;
 
 
+    }
 }
 
 #header {
@@ -736,21 +733,23 @@ body {
 #header.hide {
     top: -200px;
 }
-.grassContainer{
-    height:50px;
-    width:100%;
+
+.grassContainer {
+    height: 50px;
+    width: 100%;
     display: flex;
     flex-direction: row;
     position: absolute;
     left: 0;
     bottom: 0;
-    height:35px;
+    height: 35px;
 }
-.grass{
+
+.grass {
 
     left: 0;
     bottom: 0;
-    height:35px;
+    height: 35px;
 }
 
 .second-header {
@@ -859,22 +858,7 @@ body {
     justify-content: space-around;
 }
 
-.tjanster-container {
-    scroll-margin-top: 150px;
-    grid-row-start: 13;
-    grid-row-end: 16;
-    grid-column-start: 2;
-    grid-column-end: 6;
-    background-color: white;
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    object-fit: cover;
-    border-left: thin solid #C2E500;
-    border-right: thin solid #C2E500;
 
-
-}
 
 .tjanst-titel {
     text-align: center;
@@ -954,6 +938,21 @@ body {
     grid-template-rows: repeat(5, 1fr);
     border-left: thin solid #C2E500;
     border-right: thin solid #C2E500;
+    
+}
+.imgContainer{
+    max-width: 100%;
+    height: auto
+}
+
+.border-container {
+    border: thin solid #BBEBB6;
+    grid-row-start: 2;
+    grid-row-end: 5;
+    grid-column-start: 4;
+    grid-column-end: 11;
+    margin: 5%;
+    padding: 3%;
 }
 
 
@@ -1098,7 +1097,7 @@ body {
     padding-bottom: 5px;
 
     margin-right: 3%;
-    margin-top:3%;
+    margin-top: 3%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
