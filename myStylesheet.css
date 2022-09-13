@@ -66,11 +66,11 @@ body {
 
 
 .material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 48
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48
 }
 
 
@@ -309,7 +309,7 @@ body {
 
 
 
-.bildspelContainer{
+.bildspelContainer {
     grid-row-start: 17;
     grid-row-end: 20;
     grid-column-start: 2;
@@ -317,11 +317,24 @@ body {
     background-color: white;
     border-left: thin solid #C2E500;
     border-right: thin solid #C2E500;
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
 
 }
-#bild{
-    
+ 
+.bildspelContainer img{
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%
+}
+
+#bild3 img {
+    vertical-align: middle;
+    width: 100%;
+    top:0;
+
 }
 
 
@@ -669,24 +682,29 @@ label {
     animation-name: slideinBars5;
 
 }
-.obar1{
+
+.obar1 {
     width: 60%;
     animation-name: slideinBars1;
 }
-.obar2{
+
+.obar2 {
     width: 40%;
     animation-name: slideinBars2;
 }
-.obar3{
+
+.obar3 {
     width: 67%;
     animation-name: slideinBars3;
 }
-.obar4{
+
+.obar4 {
     width: 95%;
     animation-name: slideinBars4;
 
 }
-.obar5{
+
+.obar5 {
     width: 10%;
     animation-name: slideinBars5;
 }
@@ -781,4 +799,3 @@ label {
 
     }
 }
-

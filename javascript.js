@@ -219,17 +219,15 @@ let bildIndex = 0;
 bildspel();
 
 function bildspel() {
-    let i;
-    let bild = document.getElementsByClassName("enBild");
-    for (i = 0; i < bild.length; i++) {
-        bild[i].style.display = "none";
-    }
-    bildIndex++;
-    if(slideIndex > bild.length) {        
-        slideIndex = 1
-    }
-    bild[slideIndex-1].style.display = "block";
-    setTimeout(bildspel, 2000);
+    document.querySelectorAll(".enSlide").forEach(item => {
+        if(item.style.display == "none"){
+            
+        }
+    })
+
+
+
+
 }
 
 // ------Arvids presentation-----
