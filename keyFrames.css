@@ -77,6 +77,35 @@
     animation-name: slideinBars5;
 }
 
+.Sbar1 {
+    width: 60%;
+    animation-name: slideinBars1;
+}
+
+.Sbar2 {
+    width: 40%;
+    animation-name: slideinBars2;
+
+}
+
+.Sbar3 {
+    width: 67%;
+    animation-name: slideinBars3;
+
+}
+
+.Sbar4 {
+    width: 95%;
+    animation-name: slideinBars4;
+
+}
+
+.Sbar5 {
+    width: 10%;
+    animation-name: slideinBars5;
+}
+
+
 @keyframes slideinBars1 {
     from {
         width: 0px;
