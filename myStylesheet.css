@@ -297,15 +297,19 @@ body {
 
 
 
-.rec-container {
+.bildspelContainer{
     grid-row-start: 17;
-    grid-row-end: 19;
+    grid-row-end: 20;
     grid-column-start: 2;
     grid-column-end: 6;
     background-color: white;
-
     border-left: thin solid #C2E500;
     border-right: thin solid #C2E500;
+    position: relative;
+
+}
+#bild{
+    
 }
 
 

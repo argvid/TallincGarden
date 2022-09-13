@@ -96,7 +96,7 @@ btn.addEventListener('click', (event) => {
     checkboxes.forEach((checkbox) => {
         values.push(checkbox.value);
     })
-    document.getElementById('valdaTjanster').innerHTML = "Du vill ha hjälp med att "+values+"!";
+    document.getElementById('valdaTjanster').innerHTML = "Du vill ha hjälp med att " + values + "!";
     // values.forEach((value) => {
     //     alert("Du vill ha hjälp med att " + value)
     // })
@@ -213,12 +213,29 @@ $(document).ready(function () {
     }, o * 5000);
 });
 
+// ----------bildspel-----------
 
+let bildIndex = 0;
+bildspel();
+
+function bildspel() {
+    let i;
+    let bild = document.getElementsByClassName("enBild");
+    for (i = 0; i < bild.length; i++) {
+        bild[i].style.display = "none";
+    }
+    bildIndex++;
+    if(slideIndex > bild.length) {        
+        slideIndex = 1
+    }
+    bild[slideIndex-1].style.display = "block";
+    setTimeout(bildspel, 2000);
+}
 
 // ------Arvids presentation-----
 
-function slide(){
-    setTimeout(function(){
+function slide() {
+    setTimeout(function () {
         document.getElementById('profilbildPre').style.left = '500px';
     }, 1000)
 }
