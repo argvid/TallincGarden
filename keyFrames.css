@@ -1,52 +1,52 @@
 .wbar1 {
     width: 15%;
-    animation-name: slideinWBars1;
+    animation-name: slideinBars1;
 }
 
 .wbar2 {
     width: 25%;
-    animation-name: slideinWBars2;
+    animation-name: slideinBars2;
 
 }
 
 .wbar3 {
     width: 95%;
-    animation-name: slideinWBars3;
+    animation-name: slideinBars3;
 
 }
 
 .wbar4 {
     width: 55%;
-    animation-name: slideinWBars4;
+    animation-name: slideinBars4;
 
 }
 
 .wbar5 {
     width: 10%;
-    animation-name: slideinWBars5;
+    animation-name: slideinBars5;
 
 }
 
 .obar1{
     width: 60%;
-    animation-name: slideinOBars1;
+    animation-name: slideinBars1;
 }
 .obar2{
     width: 40%;
-    animation-name: slideinOBars2;
+    animation-name: slideinBars2;
 }
 .obar3{
     width: 67%;
-    animation-name: slideinOBars3;
+    animation-name: slideinBars3;
 }
 .obar4{
     width: 95%;
-    animation-name: slideinOBars4;
+    animation-name: slideinBars4;
 
 }
 .obar5{
     width: 10%;
-    animation-name: slideinOBars5;
+    animation-name: slideinBars5;
 }
 
 .bar1 {
@@ -125,101 +125,3 @@
     to {
         width: 10%;
     }}
-
-    @keyframes slideinOBars1 {
-        from {
-            width: 0px;
-        }
-    
-        to {
-            width: 60%
-        }
-    }
-    
-    @keyframes slideinOBars2 {
-        from {
-            width: 0px;
-        }
-    
-        to {
-            width: 40%;
-        }
-    }
-    
-    @keyframes slideinOBars3 {
-        from {
-            width: 0px;
-        }
-    
-        to {
-            width: 67%;
-        }
-    }
-    
-    @keyframes slideinOBars4 {
-        from {
-            width: 0px;
-        }
-    
-        to {
-            width: 95%;
-        }
-    }
-    
-    @keyframes slideinOBars5 {
-        from {
-            width: 0px;
-        }
-    
-        to {
-            width: 10%;
-        }}
-
-        @keyframes slideinWBars1 {
-            from {
-                width: 0px;
-            }
-        
-            to {
-                width: 60%
-            }
-        }
-        
-        @keyframes slideinWBars2 {
-            from {
-                width: 0px;
-            }
-        
-            to {
-                width: 40%;
-            }
-        }
-        
-        @keyframes slideinWBars3 {
-            from {
-                width: 0px;
-            }
-        
-            to {
-                width: 67%;
-            }
-        }
-        
-        @keyframes slideinWBars4 {
-            from {
-                width: 0px;
-            }
-        
-            to {
-                width: 95%;
-            }
-        }
-        
-        @keyframes slideinWBars5 {
-            from {
-                width: 0px;
-            }
-        
-            to {
-                width: 10%;
-            }}
