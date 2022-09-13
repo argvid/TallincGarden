@@ -655,6 +655,57 @@ label {
     animation-name: slideinBars5;
 
 }
+.obar1{
+    width: 60%;
+    animation-name: slideinBars1;
+}
+.obar2{
+    width: 40%;
+    animation-name: slideinBars2;
+}
+.obar3{
+    width: 67%;
+    animation-name: slideinBars3;
+}
+.obar4{
+    width: 95%;
+    animation-name: slideinBars4;
+
+}
+.obar5{
+    width: 10%;
+    animation-name: slideinBars5;
+}
+
+
+.wbar1 {
+    width: 15%;
+    animation-name: slideinBars1;
+}
+
+.wbar2 {
+    width: 25%;
+    animation-name: slideinBars2;
+
+}
+
+.wbar3 {
+    width: 95%;
+    animation-name: slideinBars3;
+
+}
+
+.wbar4 {
+    width: 55%;
+    animation-name: slideinBars4;
+
+}
+
+.wbar5 {
+    width: 10%;
+    animation-name: slideinBars5;
+
+}
 
 @keyframes slideinBars1 {
     from {
@@ -1173,3 +1224,4 @@ label {
     transform: translateX(0);
     opacity: 1;
 }
+
