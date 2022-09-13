@@ -125,3 +125,52 @@
     to {
         width: 10%;
     }}
+
+    @keyframes slideinWBars1 {
+        from {
+            width: 0px;
+        }
+    
+        to {
+            width: 60%
+        }
+    }
+    
+    @keyframes slideinWBars2 {
+        from {
+            width: 0px;
+        }
+    
+        to {
+            width: 40%;
+        }
+    }
+    
+    @keyframes slideinWBars3 {
+        from {
+            width: 0px;
+        }
+    
+        to {
+            width: 67%;
+        }
+    }
+    
+    @keyframes slideinWBars4 {
+        from {
+            width: 0px;
+        }
+    
+        to {
+            width: 95%;
+        }
+    }
+    
+    @keyframes slideinWBars5 {
+        from {
+            width: 0px;
+        }
+    
+        to {
+            width: 10%;
+        }}
