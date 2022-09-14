@@ -906,3 +906,9 @@ label {
     /* border: solid black; */
 
 }
+.grid-container{
+  display: grid;
+  height: 400px;
+  align-content: center;  
+
+}
