@@ -230,18 +230,14 @@ function slide() {
   }, 1000);
 }
 
-const cart = () => {
-  console.log("wwwww");
-
-  let newWin = window.open("about:blank", "hello", "width=200,height=200");
-
-  newWin.document.write("Hello, world!");
-};
+// Påbörjat en koppling med vue
 
 const app = Vue.createApp({
   //template: '<h> I am the tamplate</h>'
   data() {
     return {
+      page: "products",
+      cart: [],
       products: [
         {
           namn: "Plantera",
@@ -276,15 +272,9 @@ const app = Vue.createApp({
     };
   },
   methods: {
-    toggleShowbox() {
-      this.showBooks = !this.showBooks;
-    },
-
-    handleEvent(e, data) {
-      console.log(e, e.type);
-      if (data) {
-        console.log(data);
-      }
+    addItemToCart(product) {
+      this.cart.push(product);
+      console.log(this.cart);
     },
     test1() {
       this.antal++;
