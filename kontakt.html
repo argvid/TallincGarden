@@ -20,24 +20,29 @@
     <div class="kontaktBody">hej
         <div class="kontaktTitel">Kontakta oss</div>
     </div>
-    <div class="kontaktContainer">
-        <form action="action_page.php">
-            <label for="fname">Förnamn</label>
-            <input type="text" id="fname" name="förnamn" placeholder="Ditt namn.." placeholder="Ditt namn..">
-            <label for="lname">Efternamn</label>
-            <input type="text" id="lname" name="efternamn" placeholder="Ditt efternamn..">
-            <label for="country">Land</label>
-            <select id="country" name="land">
-                <option value="sverige">Sverige</option>
-                <option value="norge">Norge</option>
-                <option value="danmark">Danmark</option>
-            </select>
-            <label for="subject">Meddelande</label>
-            <textarea id="subject" name="subject" placeholder="Skriv något.." style="height:200px">
-            </textarea>
-            <input type="submit" value="Submit">
-        </form>
-    </div>
+    <form id="form" name="form" method="post" action=" ">
+
+        
+        <label for="fnamn">Förnamn:</label><br>
+        <input type="text" name="fnamn" required> <br>
+
+        <label for="enamn"><br>
+            Efternamn:</label><br>
+            <input type="text" name="enamn" required><br>
+            
+
+        
+
+        <label for="e-postadress">e-postadress:</label><br>
+        <input type="email" name="email"> <br>
+        
+
+        Meddelande:<br>
+        <textarea name="meddelande" id="meddelande" cols="45" rows="5"></textarea> <br>
+
+        <input type="submit" name="skicka" id="skicka" value="Skicka meddelandet" />
+
+    </form>
 
 </body>
 
