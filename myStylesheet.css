@@ -540,7 +540,6 @@ body {
     padding-left: 15px;
     padding-top: 20px;
     padding-bottom: 5px;
-
     margin-right: 3%;
     margin-top: 3%;
     display: flex;
@@ -714,19 +713,28 @@ label {
 
     
 .kontaktBody{
-    margin-top: 100px;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(24, 100px);
+    grid-template-rows: repeat(7, 100px);
     grid-column-gap: 10px;
-    grid-row-gap: 30px;
+    grid-row-gap: 1px;
 
 }
 .kontaktTitel{
-    margin-top: 100px;
   font-size: 30px;
-  color: blue;
+  color: black;
   font-weight: bold;
+}
+.form{
+    background-color: white;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 7;
+    padding:50px;
+
+    box-shadow: -1px 2px 31px 4px rgba(0, 0, 0, 0.71);
+
 }
 
 
