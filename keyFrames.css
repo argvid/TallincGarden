@@ -48,24 +48,24 @@
 
 .obar1{
     width: 60%;
-    animation-name: slideinBars1;
+    animation-name: slideinoBars1;
 }
 .obar2{
     width: 40%;
-    animation-name: slideinBars2;
+    animation-name: slideinoBars2;
 }
 .obar3{
     width: 67%;
-    animation-name: slideinBars3;
+    animation-name: slideinoBars3;
 }
 .obar4{
     width: 95%;
-    animation-name: slideinBars4;
+    animation-name: slideinoBars4;
 
 }
 .obar5{
-    width: 10%;
-    animation-name: slideinBars5;
+    width: 20%;
+    animation-name: slideinoBars5;
 }
 
 /* Arvids Bars */
@@ -102,32 +102,33 @@
 
 .Sbar1 {
     width: 60%;
-    animation-name: slideinBars1;
+    animation-name: slideinsBars1;
 }
 
 .Sbar2 {
     width: 40%;
-    animation-name: slideinBars2;
+    animation-name: slideinsBars2;
 
 }
 
 .Sbar3 {
     width: 67%;
-    animation-name: slideinBars3;
+    animation-name: slideinsBars3;
 
 }
 
 .Sbar4 {
     width: 95%;
-    animation-name: slideinBars4;
+    animation-name: slideinsBars4;
 
 }
 
 .Sbar5 {
-    width: 10%;
-    animation-name: slideinBars5;
+    width: 20%;
+    animation-name: slideinsBars5;
 }
 
+/* Arvids keyframes */
 
 @keyframes slideinBars1 {
     from {
@@ -169,7 +170,153 @@
     }
 }
 
-@keyframes slideinBars5 {
+/* Williams keyframes */
+
+@keyframes slideinwBars1 {
+    from {
+        width: 0px;
+    }
+
+    to {
+        width: 15%
+    }
+}
+
+@keyframes slideinwBars2 {
+    from {
+        width: 0px;
+    }
+
+    to {
+        width: 25%;
+    }
+}
+
+@keyframes slideinwBars3 {
+    from {
+        width: 0px;
+    }
+
+    to {
+        width: 95%;
+    }
+}
+
+@keyframes slideinwBars4 {
+    from {
+        width: 0px;
+    }
+
+    to {
+        width: 55%;
+    }
+}
+
+@keyframes slideinwBars5 {
+    from {
+        width: 95px;
+    }
+
+    to {
+        width: 10%;
+        }}
+
+
+/* Olivers keyframes */
+
+@keyframes slideinoBars1 {
+    from {
+        width: 0px;
+    }
+
+    to {
+        width: 60%
+    }
+}
+
+@keyframes slideinoBars2 {
+    from {
+        width: 0px;
+    }
+
+    to {
+        width: 40%;
+    }
+}
+
+@keyframes slideinoBars3 {
+    from {
+        width: 0px;
+    }
+
+    to {
+        width: 67%;
+    }
+}
+
+@keyframes slideinoBars4 {
+    from {
+        width: 0px;
+    }
+
+    to {
+        width: 95%;
+    }
+}
+
+@keyframes slideinoBars5 {
+    from {
+        width: 0px;
+    }
+
+    to {
+        width: 20%;
+        }}
+
+
+/* Sagis keyframes */
+
+@keyframes slideinsBars1 {
+    from {
+        width: 0px;
+    }
+
+    to {
+        width: 60%
+    }
+}
+
+@keyframes slideinsBars2 {
+    from {
+        width: 0px;
+    }
+
+    to {
+        width: 40%;
+    }
+}
+
+@keyframes slideinsBars3 {
+    from {
+        width: 0px;
+    }
+
+    to {
+        width: 67%;
+    }
+}
+
+@keyframes slideinsBars4 {
+    from {
+        width: 0px;
+    }
+
+    to {
+        width: 95%;
+    }
+}
+
+@keyframes slideinsBars5 {
     from {
         width: 0px;
     }
