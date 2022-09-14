@@ -798,11 +798,10 @@ label {
 
 
     }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
+
 }
-=======
-}
+
+
 .kontaktBody{
     margin-top: 100px;
     display: grid;
@@ -819,7 +818,7 @@ label {
   font-weight: bold;
 }
 
->>>>>>> Stashed changes
+
 .input[type=text], select, textarea{
     width: 100%;
     padding: 12px;
@@ -845,7 +844,7 @@ label {
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
-=======
+
 }
 
 .cart{
@@ -873,5 +872,4 @@ label {
 
     /* border: solid black; */
 
->>>>>>> Stashed changes
 }
