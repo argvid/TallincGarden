@@ -1,3 +1,18 @@
+.bar {
+    height: 20px;
+    background-color: lightskyblue;
+    animation-duration: 2s;
+    border-radius: 25px;
+
+}
+
+.barBorder {
+    width: 80%;
+    border: thin solid black;
+    border-radius: 25px;
+}
+
+
 /* Williams Bars */
 
 .wbar1 {
@@ -79,7 +94,7 @@
 }
 
 .bar5 {
-    width: 10%;
+    width: 20%;
     animation-name: slideinBars5;
 }
 
@@ -160,5 +175,5 @@
     }
 
     to {
-        width: 10px;
+        width: 20%;
         }}
