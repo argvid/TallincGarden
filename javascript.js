@@ -99,7 +99,10 @@ function myFunction() {
   rec.style.animation = "mymove 1s infinite";
   rec2.style.display = rec2.style.display == "none" ? "block" : "none";
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> parent of fed0651 (ny startsida)
 
 function revealer() {
   var rev = document.querySelectorAll(".revealRight");
@@ -111,6 +114,7 @@ function revealer() {
       rev[x].classList.add("active");
     } else {
       rev[x].classList.remove("active");
+<<<<<<< HEAD
     var rev = document.querySelectorAll(".revealRight");
     
     for (var x = 0; x < rev.length; x++) {
@@ -124,6 +128,8 @@ function revealer() {
         else {
             rev[x].classList.remove("active");
         }
+=======
+>>>>>>> parent of fed0651 (ny startsida)
     }
   }
 }
@@ -181,20 +187,16 @@ $(document).ready(function () {
 
 // ----------bildspel-----------
 
-
-
-
-
 let bildIndex = 0;
-let nytimeout;
-let test = 1;
 bildspel();
+
 function bildspel() {
   document.querySelectorAll(".enSlide").forEach((item) => {
     if (item.style.display == "none") {
     }
   });
 }
+<<<<<<< HEAD
     let i;
     let bild = document.getElementsByClassName("enSlide");
     for (i = 0; i < bild.length; i++) {
@@ -243,6 +245,8 @@ function imgMouseLeave(x) {
 
 
 
+=======
+>>>>>>> parent of fed0651 (ny startsida)
 
 // ------Arvids presentation-----
 
