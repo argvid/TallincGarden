@@ -635,6 +635,9 @@ label {
     border-bottom: thick solid #BBEBB6;
 
 }
+.personligHeader a{
+    text-decoration: none;
+}
 
 #profilbildPre {
     grid-column-start: 1;
