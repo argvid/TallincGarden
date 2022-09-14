@@ -91,42 +91,22 @@ btn.addEventListener("click", (event) => {
   // })
 });
 
-function myFunction() {
-  var rec = document.getElementById("rec");
-  var rec2 = document.getElementById("rec2");
-
-  rec.style.display = rec.style.display == "none" ? "block" : "none";
-  rec.style.animation = "mymove 1s infinite";
-  rec2.style.display = rec2.style.display == "none" ? "block" : "none";
-}
-
-
 function revealer() {
   var rev = document.querySelectorAll(".revealRight");
-  for (var i = 0; x < rev.length; i++) {
+
+  for (var x = 0; x < rev.length; x++) {
     var winHei = window.innerHeight;
+
     var eleTop = rev[x].getBoundingClientRect().top;
     var eleVis = 150;
     if (eleTop < winHei - eleVis) {
       rev[x].classList.add("active");
     } else {
       rev[x].classList.remove("active");
-    var rev = document.querySelectorAll(".revealRight");
-    
-    for (var x = 0; x < rev.length; x++) {
-        var winHei = window.innerHeight;
-        
-        var eleTop = rev[x].getBoundingClientRect().top;
-        var eleVis = 150;
-        if (eleTop < winHei - eleVis) {
-            rev[x].classList.add("active");
-        }
-        else {
-            rev[x].classList.remove("active");
-        }
     }
   }
 }
+
 window.addEventListener("scroll", revealer);
 revealer;
 
@@ -181,68 +161,66 @@ $(document).ready(function () {
 
 // ----------bildspel-----------
 
-
-
-
-
 let bildIndex = 0;
 let nytimeout;
 let test = 1;
 bildspel();
 function bildspel() {
-  document.querySelectorAll(".enSlide").forEach((item) => {
-    if (item.style.display == "none") {
-    }
-  });
+  let i;
+  let bild = document.getElementsByClassName("enSlide");
+  for (i = 0; i < bild.length; i++) {
+    bild[i].style.display = "none";
+  }
+  bildIndex++;
+  if (bildIndex > bild.length) {
+    bildIndex = 1;
+  }
+  bild[bildIndex - 1].style.display = "block";
+  nytimeout = setTimeout(bildspel, 4000);
 }
-    let i;
-    let bild = document.getElementsByClassName("enSlide");
-    for (i = 0; i < bild.length; i++) {
-        bild[i].style.display = "none";
-    }
-    bildIndex++;
-    if (bildIndex > bild.length) {
-        bildIndex = 1;
-    }
-    bild[bildIndex - 1].style.display = "block";
-    nytimeout = setTimeout(bildspel, 4000);
-}
-let bytBild = document.getElementById("bytBild")
-bytBild.addEventListener("click", (function () {
-    clearTimeout(nytimeout);
-    bildspel();
-}
-));
-
+let bytBild = document.getElementById("bytBild");
+bytBild.addEventListener("click", function () {
+  clearTimeout(nytimeout);
+  bildspel();
+});
 
 // ----- medlemshover ---------
 imgMouseEnter(x);
 imgMouseLeave(x);
 function imgMouseEnter(x) {
-    let arvidBild = document.getElementById("arvidProfilbild");
-    let arvidText = document.getElementById("textRuta");
-    arvidBild.addEventListener("mouseenter", function () {
-        arvidBild.classList.add("profilbildBlur");
-        arvidText.classList.add("namnTextOpacity");
-    }, false);
-    arvidText.addEventListener("mouseenter", function () {
-        arvidBild.classList.add("profilbildBlur");
-        arvidText.classList.add("namnTextOpacity");
-    }, false);
+  let arvidBild = document.getElementById("arvidProfilbild");
+  let arvidText = document.getElementById("textRuta");
+  arvidBild.addEventListener(
+    "mouseenter",
+    function () {
+      arvidBild.classList.add("profilbildBlur");
+      arvidText.classList.add("namnTextOpacity");
+    },
+    false
+  );
+  arvidText.addEventListener(
+    "mouseenter",
+    function () {
+      arvidBild.classList.add("profilbildBlur");
+      arvidText.classList.add("namnTextOpacity");
+    },
+    false
+  );
 }
 function imgMouseLeave(x) {
-    let arvidBild = document.getElementById("arvidProfilbild");
-    let arvidText = document.getElementById("textRuta");
+  let arvidBild = document.getElementById("arvidProfilbild");
+  let arvidText = document.getElementById("textRuta");
 
-    arvidBild.addEventListener("mouseleave", function () {
-        arvidText.classList.remove("namnTextOpacity");
+  arvidBild.addEventListener(
+    "mouseleave",
+    function () {
+      arvidText.classList.remove("namnTextOpacity");
 
-        arvidBild.classList.remove("profilbildBlur");
-    }, false);
+      arvidBild.classList.remove("profilbildBlur");
+    },
+    false
+  );
 }
-
-
-
 
 // ------Arvids presentation-----
 
