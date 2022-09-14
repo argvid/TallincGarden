@@ -726,6 +726,8 @@ label {
   font-weight: bold;
 }
 .form{
+    border-left:thick solid #BBEBB6;
+    border-right:thick solid #BBEBB6;
     background-color: white;
     grid-column-start: 2;
     grid-column-end: 5;
