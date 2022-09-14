@@ -47,24 +47,24 @@
 /* Olivers Bars */
 
 .obar1{
-    width: 60%;
+    width: 20%;
     animation-name: slideinoBars1;
 }
 .obar2{
-    width: 40%;
+    width: 80%;
     animation-name: slideinoBars2;
 }
 .obar3{
-    width: 67%;
+    width: 50%;
     animation-name: slideinoBars3;
 }
 .obar4{
-    width: 95%;
+    width: 65%;
     animation-name: slideinoBars4;
 
 }
 .obar5{
-    width: 20%;
+    width: 95%;
     animation-name: slideinoBars5;
 }
 
@@ -230,7 +230,7 @@
     }
 
     to {
-        width: 60%
+        width: 20%
     }
 }
 
@@ -240,7 +240,7 @@
     }
 
     to {
-        width: 40%;
+        width: 80%;
     }
 }
 
@@ -250,7 +250,7 @@
     }
 
     to {
-        width: 67%;
+        width: 50%;
     }
 }
 
@@ -260,7 +260,7 @@
     }
 
     to {
-        width: 95%;
+        width: 65%;
     }
 }
 
@@ -270,7 +270,7 @@
     }
 
     to {
-        width: 20%;
+        width: 95%;
         }}
 
 
