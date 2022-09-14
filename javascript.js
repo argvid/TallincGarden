@@ -91,7 +91,6 @@ btn.addEventListener("click", (event) => {
   // })
 });
 
-<<<<<<< Updated upstream
 function myFunction() {
   var rec = document.getElementById("rec");
   var rec2 = document.getElementById("rec2");
@@ -100,12 +99,9 @@ function myFunction() {
   rec.style.animation = "mymove 1s infinite";
   rec2.style.display = rec2.style.display == "none" ? "block" : "none";
 }
-=======
 
->>>>>>> Stashed changes
 
 function revealer() {
-<<<<<<< Updated upstream
   var rev = document.querySelectorAll(".revealRight");
   for (var i = 0; x < rev.length; i++) {
     var winHei = window.innerHeight;
@@ -115,7 +111,6 @@ function revealer() {
       rev[x].classList.add("active");
     } else {
       rev[x].classList.remove("active");
-=======
     var rev = document.querySelectorAll(".revealRight");
     
     for (var x = 0; x < rev.length; x++) {
@@ -129,7 +124,6 @@ function revealer() {
         else {
             rev[x].classList.remove("active");
         }
->>>>>>> Stashed changes
     }
   }
 }
@@ -196,13 +190,11 @@ let nytimeout;
 let test = 1;
 bildspel();
 function bildspel() {
-<<<<<<< Updated upstream
   document.querySelectorAll(".enSlide").forEach((item) => {
     if (item.style.display == "none") {
     }
   });
 }
-=======
     let i;
     let bild = document.getElementsByClassName("enSlide");
     for (i = 0; i < bild.length; i++) {
@@ -251,7 +243,6 @@ function imgMouseLeave(x) {
 
 
 
->>>>>>> Stashed changes
 
 // ------Arvids presentation-----
 
