@@ -233,7 +233,6 @@ function slide() {
 // Påbörjat en koppling med vue
 
 const app = Vue.createApp({
-  //template: '<h> I am the tamplate</h>'
   data() {
     return {
       page: "products",
