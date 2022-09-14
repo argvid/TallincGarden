@@ -1,5 +1,5 @@
 body {
-    background-image: url(bilder/papyrus.webp);
+    background-image: url(bilder/leaves.webp);
     margin: 0;
     margin-top: -20px;
     padding: 0;
@@ -89,16 +89,28 @@ body {
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(34, 100px);
     grid-column-gap: 10px;
-    grid-row-gap: 30px;
+    grid-row-gap: 0px;
 
 }
 
+#bytBild{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    z-index: 99;
+    cursor: pointer;
+
+}
 .nice-picture {
+    background-color: green;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
     margin-top: 50px;
     grid-column-start: 1;
     grid-column-end: 7;
     grid-row-start: 1;
-    grid-row-end: 6;
+    grid-row-end: 8;
 
 }
 
@@ -110,17 +122,24 @@ body {
 }
 
 .gruppmedlemmarContainer {
+    border-bottom:thick solid #BBEBB6;
+    box-shadow: -1px 2px 31px 4px rgba(0, 0, 0, 0.71);
+
     scroll-margin-top: 150px;
     grid-row-start: 13;
-    grid-row-end: 16;
-    grid-column-start: 2;
-    grid-column-end: 6;
+    grid-row-end: 19;
+    grid-column-start: 1;
+    grid-column-end: 7;
     background-color: white;
     object-fit: cover;
     display: flex;
     text-align: center;
     display: flex;
     flex-direction: column;
+}
+.gruppmedlemmarContainer h1{
+    font-size:3rem;
+    font-weight:bolder;
 }
 
 .gruppmedlemmar {
@@ -133,19 +152,21 @@ body {
     width: 20%;
     height: 80%;
     background-color: white;
-    border: thin solid #BBEBB6;
-    padding-top: 1%;
     text-align: center;
     word-wrap: break-word;
+    box-shadow: -1px 2px 31px 4px rgba(0, 0, 0, 0.71);
+
 }
 
 .bild {
-    margin-top: 1%;
     margin: auto;
     background-color: #BBEBB6;
-    width: 80%;
-    height: 40%;
-    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    /* overflow: hidden; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .profilbild {
@@ -153,18 +174,39 @@ body {
     height: 100%;
     object-fit: cover;
     display: block;
+    transition: .5s ease;
+    opacity: 1;
+
 }
 
-.besText {
-    padding-top: 3%;
-    margin: auto;
-    width: 80%;
+
+.profilbildBlur {
+    opacity: 0.4;
+    transition: .5s ease;
 }
 
-.namn {
-    font-weight: bold;
+.namnText {
+    opacity: 0;
+    position: absolute;
+    background-color: #BBEBB6;
+    font-size: 16px;
+    padding: 16px 32px;
+    transition: .5s ease;
+    cursor: pointer;
+
 }
 
+.namnText a {
+    text-decoration: none;
+    color: black !important;
+
+}
+
+.namnTextOpacity {
+    transition: .5s ease;
+
+    opacity: 1;
+}
 
 .content {
     display: flex;
@@ -185,14 +227,16 @@ body {
     border-right: thin solid #C2E500;
     grid-column-start: 2;
     grid-column-end: 6;
-    grid-row-start: 4;
-    grid-row-end: 7;
+    grid-row-start: 3;
+    grid-row-end: 6;
     background-color: white;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     padding-top: 50px;
     text-align: center;
+    z-index: 99;
+
 }
 
 .beskrivningstext {
@@ -205,11 +249,15 @@ body {
 
 }
 
+.presentation-bild img {
+    height: 200px;
+}
+
 .containerRight {
-    grid-row-start: 8;
+    grid-row-start: 7;
     grid-row-end: 10;
-    grid-column-start: 2;
-    grid-column-end: 6;
+    grid-column-start: 1;
+    grid-column-end: 7;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -217,20 +265,24 @@ body {
 
 .containerLeft {
     grid-row-start: 10;
-    grid-row-end: 12;
-    grid-column-start: 2;
-    grid-column-end: 6;
+    grid-row-end: 13;
+    grid-column-start: 1;
+    grid-column-end: 7;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 
 .tjanster-container {
+    border-top:thick solid #BBEBB6;
+    border-bottom:thick solid #BBEBB6;
+    box-shadow: -1px 2px 31px 4px rgba(0, 0, 0, 0.71);
+
     scroll-margin-top: 150px;
-    grid-row-start: 26;
-    grid-row-end: 31;
-    grid-column-start: 2;
-    grid-column-end: 6;
+    grid-row-start: 20;
+    grid-row-end: 24;
+    grid-column-start: 1;
+    grid-column-end: 7;
     background-color: white;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
@@ -255,7 +307,7 @@ body {
 }
 
 .tjanst-symbol {
-    width: 30%;
+    width: 20%;
     height: 20%;
 
 }
@@ -321,19 +373,38 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden
-
 }
- 
-.bildspelContainer img{
+
+.enSlide {
+    animation: 4s;
+    display: none;
+}
+
+.bildspelContainer img {
     flex-shrink: 0;
     min-width: 100%;
     min-height: 100%
 }
 
+.fade {
+    animation-name: fade;
+    animation-duration: 3s all ease;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.6
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
 #bild3 img {
     vertical-align: middle;
     width: 100%;
-    top:0;
+    top: 0;
 
 }
 
@@ -406,7 +477,6 @@ body {
 
 .active {
     visibility: visible;
-    transition: 2s all ease;
 
 }
 
@@ -529,7 +599,7 @@ label {
     position: relative;
     transform: translateX(-150px);
     opacity: 0;
-    transition: 1s all ease;
+    transition: 0.25s all ease;
 }
 
 .revealLeft.active {
@@ -541,7 +611,8 @@ label {
     position: relative;
     transform: translateX(150px);
     opacity: 0;
-    transition: 1s all ease;
+    transition: 0.25s all ease;
+    background-color: green;
 }
 
 .revealRight.active {
