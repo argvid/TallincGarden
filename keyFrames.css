@@ -1,31 +1,35 @@
+/* Williams Bars */
+
 .wbar1 {
     width: 15%;
-    animation-name: slideinBars1;
+    animation-name: slideinwBars1;
 }
 
 .wbar2 {
     width: 25%;
-    animation-name: slideinBars2;
+    animation-name: slideinwBars2;
 
 }
 
 .wbar3 {
     width: 95%;
-    animation-name: slideinBars3;
+    animation-name: slideinwBars3;
 
 }
 
 .wbar4 {
     width: 55%;
-    animation-name: slideinBars4;
+    animation-name: slideinwBars4;
 
 }
 
 .wbar5 {
     width: 10%;
-    animation-name: slideinBars5;
+    animation-name: slideinwBars5;
 
 }
+
+/* Olivers Bars */
 
 .obar1{
     width: 60%;
@@ -48,6 +52,8 @@
     width: 10%;
     animation-name: slideinBars5;
 }
+
+/* Arvids Bars */
 
 .bar1 {
     width: 60%;
@@ -76,6 +82,8 @@
     width: 10%;
     animation-name: slideinBars5;
 }
+
+/* Sagis Bars */
 
 .Sbar1 {
     width: 60%;
@@ -152,5 +160,5 @@
     }
 
     to {
-        width: 10%;
-    }}
+        width: 10px;
+        }}

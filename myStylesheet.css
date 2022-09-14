@@ -640,7 +640,7 @@ label {
     margin-bottom: 1%;
 }
 
-.bar {
+/* .bar {
     height: 20px;
     background-color: lightskyblue;
     animation-duration: 2s;
@@ -786,7 +786,7 @@ label {
 
     to {
         width: 10%;
-    }
+    } */
 
     body {
         background-image: url(bilder/papyrus.webp);
