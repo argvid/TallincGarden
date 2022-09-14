@@ -237,3 +237,59 @@ const cart = () => {
 
   newWin.document.write("Hello, world!");
 };
+
+const app = Vue.createApp({
+  //template: '<h> I am the tamplate</h>'
+  data() {
+    return {
+      products: [
+        {
+          namn: "Plantera",
+          cost: "40",
+          image: "bilder/plant.png",
+          beskrivning:
+            "Vi hjälper dig att välja ut och plantera blommor som passar klimatet och stilen i din trädgård.",
+        },
+        {
+          namn: "Gräsklippning",
+          cost: "50",
+          image: "bilder/lawn-mower.png",
+          beskrivning:
+            "Vi håller din gräsmatta vältrimmad genom gräsklippning av olika typer Både underhåll samt nyklippning.",
+        },
+        {
+          namn: "Klippning",
+          cost: "400",
+          image: "bilder/scissor.png",
+          beskrivning:
+            "Vi klipper dina buskar och träd i diverse former eller underhåller för att hålla din trädgård snygg.",
+        },
+        {
+          namn: "Rensa",
+          cost: "490",
+          image: "bilder/garden.png",
+          beskrivning:
+            "Ska du resa bort eller har inte tid att vattna dina blommor? Vi hjälper dig med detta så att din trädgård håller sig grön.",
+        },
+      ],
+      antal: 0,
+    };
+  },
+  methods: {
+    toggleShowbox() {
+      this.showBooks = !this.showBooks;
+    },
+
+    handleEvent(e, data) {
+      console.log(e, e.type);
+      if (data) {
+        console.log(data);
+      }
+    },
+    test1() {
+      this.antal++;
+    },
+  },
+});
+
+app.mount("#app");

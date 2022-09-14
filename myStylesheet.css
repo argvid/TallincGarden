@@ -312,12 +312,27 @@ body {
 
 }
 
-
-.tjanst {
+.tjanstNy {
     grid-row-start: 2;
     grid-row-end: 7;
 }
 
+.tjanstNy {
+    
+    display: flexbox;
+    padding: auto;
+    border-right: thin solid #BBEBB6;
+    text-align: center;
+    margin: 1rem;
+    
+    
+    
+    
+}
+.tjanst {
+    grid-row-start: 2;
+    grid-row-end: 7;
+}
 .tjanst1 {
 
     grid-column-start: 1;
@@ -327,6 +342,7 @@ body {
 
 
 }
+
 
 .tjanst2 {
 

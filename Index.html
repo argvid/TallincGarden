@@ -2,264 +2,289 @@
 <html lang="sv">
 
 <head>
+    <script src="javascript.js" defer></script>
     <link rel="stylesheet" href="myStylesheet.css" />
-
     <meta charset="utf-8" />
     <script src="//code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-    <script src="jquery-3.6.0.min.js"></script>
+    <!-- <script src="jquery-3.6.0.min.js"></script> -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <script src="https://unpkg.com/vue@next"></script>
 
 </head>
 
 
 <body>
+    <div id = "app">
 
-    <div id="header">
-        <div class="grassContainer">
-            <img class="grass" src="bilder/new grass.jpg">
-            <img class="grass" src="bilder/new grass.jpg">
-            <img class="grass" src="bilder/new grass.jpg">
-            <img class="grass" src="bilder/new grass.jpg">
-            <img class="grass" src="bilder/new grass.jpg">
-            <img class="grass" src="bilder/new grass.jpg">
-            <img class="grass" src="bilder/new grass.jpg">
-            <img class="grass" src="bilder/new grass.jpg">
-            <img class="grass" src="bilder/new grass.jpg">
-            <img class="grass" src="bilder/new grass.jpg">
 
-        </div>
-        <h2><span style="background-color:#BBEBB6; padding:3px">Trädgårds</span><span
-                style="border: solid #BBEBB6">hjälpen</span></h2>
-        <div class="second-header">
-            <p class="webContent" onclick="smoothScrollIntresse()">Anmäl intresse</p>
-            <p class="webContent" onclick="smoothScrollBeskrivning()">Beskrivning</p>
-            <p class="webContent" onclick="smoothScrollTjanster()">Tjänster</p>
-            <div class="cart">
-                <i class="bi bi-cart2"></i>
-
-                <div class="cartAmount">0</div>
+        <div id="header">
+            <div class="grassContainer">
+                <img class="grass" src="bilder/new grass.jpg">
+                <img class="grass" src="bilder/new grass.jpg">
+                <img class="grass" src="bilder/new grass.jpg">
+                <img class="grass" src="bilder/new grass.jpg">
+                <img class="grass" src="bilder/new grass.jpg">
+                <img class="grass" src="bilder/new grass.jpg">
+                <img class="grass" src="bilder/new grass.jpg">
+                <img class="grass" src="bilder/new grass.jpg">
+                <img class="grass" src="bilder/new grass.jpg">
+                <img class="grass" src="bilder/new grass.jpg">
 
             </div>
-        </div>
-    </div>
+            <h2><span style="background-color:#BBEBB6; padding:3px">Trädgårds</span><span
+                    style="border: solid #BBEBB6">hjälpen</span></h2>
+            <div class="second-header">
+                <p class="webContent" onclick="smoothScrollIntresse()">Anmäl intresse</p>
+                <p class="webContent" onclick="smoothScrollBeskrivning()">Beskrivning</p>
+                <p class="webContent" onclick="smoothScrollTjanster()">Tjänster</p>
+                <div>
+                    <div class="cart" onclick="test1()">
+                        <i class="bi bi-cart2"></i>
+        
+                        <div class="cartAmount">{{antal}}</div>
+
+        
+                    </div>
 
 
-    </div>
-    <div class="body-content">
-        <div id="bytBild"> <img src="bilder/arrow.png"></div>
-        <div class="nice-picture enSlide fade">
-            <img src="bilder/big_garden.webp" class="gallery__img" />
-        </div>
-        <div class="nice-picture enSlide fade">
-            <img src="bilder/trädgårdsskötsel3.jpg" class="gallery__img" />
-        </div>
-        <div class="nice-picture enSlide fade" >
-            <img src="bilder/trädgårdsskötsel4.jpg" class="gallery__img" />
-        </div>
-        <div class="nice-picture enSlide fade">
-            <img src="bilder/trädgårdsskötsel1.jpg" class="gallery__img" />
-        </div>
-
-        <div class="presentation">
-
-            <div class="presentation-bild">
-                <img src="bilder/arvid.jpg"/>
-                <p><a href=""></a>Arvid Eriksson</p>
-            </div>
-            <div class="presentation-text">
-                <h3>"Jag älskar välskötta trädgårdar!"</h3>
-                <div class="beskrivningstext">
-                    <p>Jag startade för ett par år sedan ett eget företag inom trädgårsskötsel.</p>
-                    <p>De senaste åren har mitt företag växt så pass mycket att jag kan jobba</p>
-                    <p>med det på heltid, samt anställa ett par medarbetare.</p>
                 </div>
-
             </div>
+        
+
+
         </div>
-
-        <div class="containerRight revealRight">
-            <div class="tradgardsbild">
-                <img src="bilder/trädgårdsskötsel1.jpg" class="gallery__img">
+        <div class="body-content">
+            <div id="bytBild"> <img src="bilder/arrow.png"></div>
+            <div class="nice-picture enSlide fade">
+                <img src="bilder/big_garden.webp" class="gallery__img" />
             </div>
-            <div class="tradgardsbild">
-                <img src="bilder/trädgårdsskötsel2.webp" class="gallery__img">
-
+            <div class="nice-picture enSlide fade">
+                <img src="bilder/trädgårdsskötsel3.jpg" class="gallery__img" />
             </div>
-        </div>
-        <div class="containerLeft revealLeft">
-            <div class="tradgardsbild">
-                <img src="bilder/trädgårdsskötsel3.jpg" class="gallery__img">
-
+            <div class="nice-picture enSlide fade" >
+                <img src="bilder/trädgårdsskötsel4.jpg" class="gallery__img" />
             </div>
-            <div class="tradgardsbild">
-                <img src="bilder/trädgårdsskötsel4.jpg" class="gallery__img">
-
+            <div class="nice-picture enSlide fade">
+                <img src="bilder/trädgårdsskötsel1.jpg" class="gallery__img" />
             </div>
-        </div>
 
+            <div class="presentation">
 
-
-        <div class="gruppmedlemmarContainer">
-            <h1>Våra medarbetare</h1>
-            <div class="gruppmedlemmar">
-                <div class="medlem">
-                    <div class="bild">
-                        <img onmouseenter="imgMouseEnter(this)" onmouseleave="imgMouseLeave(this)" id="arvidProfilbild" class="profilbild" src="bilder/arvid.jpg">                        
-                            <div id="textRuta" class="namnText"><a href="arvid.html">Arvid Eriksson<br>VD</a></div>                        
+                <div class="presentation-bild">
+                    <img src="bilder/arvid.jpg"/>
+                    <p><a href=""></a>Arvid Eriksson</p>
+                </div>
+                <div class="presentation-text">
+                    <h3>"Jag älskar välskötta trädgårdar!"</h3>
+                    <div class="beskrivningstext">
+                        <p>Jag startade för ett par år sedan ett eget företag inom trädgårsskötsel.</p>
+                        <p>De senaste åren har mitt företag växt så pass mycket att jag kan jobba</p>
+                        <p>med det på heltid, samt anställa ett par medarbetare.</p>
                     </div>
 
                 </div>
-                <div class="medlem">
-                    <div class="bild">
-                        <img class="profilbild" src="bilder/skriet.jpg">
+            </div>
 
-                    </div>
-                    <p class="besText namn">
-                        <a href="william.html">William Åberg<br>Krattmästare</a>
-                    </p>
-
-
+            <div class="containerRight revealRight">
+                <div class="tradgardsbild">
+                    <img src="bilder/trädgårdsskötsel1.jpg" class="gallery__img">
                 </div>
-                <div class="medlem">
-                    <div class="bild">
-                        <img class="profilbild" src="bilder/batman.png">
-
-                    </div>
-                    <p class="besText namn">
-                        <a href="oliver.html">Oliver Timmerman<br>Grässpecialist</a>
-                    </p>
-
-
-                </div>
-                <div class="medlem">
-                    <div class="bild">
-                        <img class="profilbild" src="bilder/skriet.jpg">
-
-                    </div>
-                    <p class="besText namn">
-                        <a href="niklas.html">Niklas Sagström<br>Ogräsdödare</a>
-                    </p>
-                    <p class="besText">
-                        Jag kan gräva
-                    </p>
+                <div class="tradgardsbild">
+                    <img src="bilder/trädgårdsskötsel2.webp" class="gallery__img">
 
                 </div>
             </div>
-        </div>
+            <div class="containerLeft revealLeft">
+                <div class="tradgardsbild">
+                    <img src="bilder/trädgårdsskötsel3.jpg" class="gallery__img">
 
+                </div>
+                <div class="tradgardsbild">
+                    <img src="bilder/trädgårdsskötsel4.jpg" class="gallery__img">
 
-        <div class="tjanster-container">
-            <div class="tjanst-titel">
-                <h3>Olika tjänster</h2>
-            </div>
-            <div class="tjanst tjanst1">
-                <img src="bilder/plant.png" class="tjanst-symbol" />
-                <p class="tjanst-beskrivning">Vi hjälper dig att välja ut och plantera blommor som passar klimatet och
-                    stilen i din trädgård. </p>
-            </div>
-            <div class="tjanst tjanst2">
-                <img src="bilder/lawn-mower.png" class="tjanst-symbol" />
-                <p class="tjanst-beskrivning">Vi håller din gräsmatta vältrimmad genom gräsklippning av olika typer.
-                    Både underhåll samt nyklippning. </p>
-
-
-            </div>
-            <div class="tjanst tjanst3">
-                <img src="bilder/scissor.png" class="tjanst-symbol" />
-                <p class="tjanst-beskrivning">Vi klipper dina buskar och träd i diverse former eller underhåller för att
-                    hålla din trädgård snygg.</p>
-
-            </div>
-            <div class="tjanst tjanst4">
-                <img src="bilder/garden.png" class="tjanst-symbol" />
-                <p class="tjanst-beskrivning">Ska du resa bort eller har inte tid att vattna dina blommor? Vi hjälper
-                    dig med detta så att din trädgård håller sig grön.</p>
-
-
-            </div>
-        </div>
-        <!-- <div class="bildspelContainer">
-            <div class="enSlide fade" id="bild1">
-                <img src="bilder/trädgårdsskötsel1.jpg">
-            </div>
-            <div class="enSlide fade" id="bild2">
-                <img src="bilder/trädgårdsskötsel4.jpg">
-            </div>
-            <div class="enSlide fade" id="bild3">
-                <img src="bilder/trädgårdsskötsel3.jpg">
+                </div>
             </div>
 
-        </div> -->
 
 
-    </div>
-    <div class="valjTjansterContainer">
-        <div class="checkContainer">
-            <h3 id="checkboxHeader">Vad vill du ha hjälp med?</h3>
-            <div class="checkboxContainer">
-                <p>Gräsklippning:</p>
-                <input name="tjanst" type="checkbox" class="grasklippning" value="klippa gräset">
-            </div>
-            <div class="checkboxContainer">
-                <p>Plantera blommor:</p>
+            <div class="gruppmedlemmarContainer">
+                <h1>Våra medarbetare</h1>
+                <div class="gruppmedlemmar">
+                    <div class="medlem">
+                        <div class="bild">
+                            <img onmouseenter="imgMouseEnter(this)" onmouseleave="imgMouseLeave(this)" id="arvidProfilbild" class="profilbild" src="bilder/arvid.jpg">                        
+                                <div id="textRuta" class="namnText"><a href="arvid.html">Arvid Eriksson<br>VD</a></div>                        
+                        </div>
 
-                <input name="tjanst" type="checkbox" class="planteraBlommor" value="plantera blommor">
-            </div>
-            <div class="checkboxContainer">
-                <p>Vattna:</p>
+                    </div>
+                    <div class="medlem">
+                        <div class="bild">
+                            <img class="profilbild" src="bilder/skriet.jpg">
 
-                <input name="tjanst" type="checkbox" class="vattna" value="vattna din trädgård">
-            </div>
-            <div class="checkboxContainer">
-                <p>Plocka frukt:</p>
-
-                <input name="tjanst" type="checkbox" class="plockaFrukt" value="plocka frukt">
-            </div>
-            <div class="checkboxContainer">
-                <input class="button1" id="btn" type="submit" value="Välj" onclick="kollaValdaTjanster()">
-            </div>
-
-        </div>
-        <div class="confirmContainer">
-            <div>
-                <h3>Gör intresseanmälan!</h3>
-                <label>Förnamn:</label>
-                <input type="text">
-                <br>
-                <br>
-                <label>Efternamn:</label>
-                <input type="text">
-                <br>
-                <br>
-                <label>Adress:</label>
-                <input type="text">
-                <br>
-                <br>
-                <label>Telefonnr:</label>
-                <input type="text">
-            </div>
-            <div>
-                <div class="summeradText">
-                    <h4 id="valdaTjanster">
+                        </div>
+                        <p class="besText namn">
+                            <a href="william.html">William Åberg<br>Krattmästare</a>
                         </p>
+
+
+                    </div>
+                    <div class="medlem">
+                        <div class="bild">
+                            <img class="profilbild" src="bilder/batman.png">
+
+                        </div>
+                        <p class="besText namn">
+                            <a href="oliver.html">Oliver Timmerman<br>Grässpecialist</a>
+                        </p>
+
+
+                    </div>
+                    <div class="medlem">
+                        <div class="bild">
+                            <img class="profilbild" src="bilder/skriet.jpg">
+
+                        </div>
+                        <p class="besText namn">
+                            <a href="niklas.html">Niklas Sagström<br>Ogräsdödare</a>
+                        </p>
+                        <p class="besText">
+                            Jag kan gräva
+                        </p>
+
+                    </div>
                 </div>
             </div>
-            <div>
-                <input class="button1" id="btn" type="submit" value="Skicka intresseanmälan">
+
+
+            <div class="tjanster-container">
+                <div class="tjanst-titel">
+                    <h3>Olika tjänster</h2>
+                </div>
+                <div class="tjanst tjanst1">
+                    <img src="bilder/plant.png" class="tjanst-symbol" />
+                    <p class="tjanst-beskrivning">Vi hjälper dig att välja ut och plantera blommor som passar klimatet och
+                        stilen i din trädgård. </p>
+                </div>
+                <div class="tjanst tjanst2">
+                    <img src="bilder/lawn-mower.png" class="tjanst-symbol" />
+                    <p class="tjanst-beskrivning">Vi håller din gräsmatta vältrimmad genom gräsklippning av olika typer.
+                        Både underhåll samt nyklippning. </p>
+                        <button  @click="test1()">Köp</button>
+                        
+
+                </div>
+                <div class="tjanst tjanst3">
+                    <img src="bilder/scissor.png" class="tjanst-symbol" />
+                    <p class="tjanst-beskrivning">Vi klipper dina buskar och träd i diverse former eller underhåller för att
+                        hålla din trädgård snygg.</p>
+
+                </div>
+                <div class="tjanst tjanst4">
+                    <img src="bilder/garden.png" class="tjanst-symbol" />
+                    <p class="tjanst-beskrivning">Ska du resa bort eller har inte tid att vattna dina blommor? Vi hjälper
+                        dig med detta så att din trädgård håller sig grön.</p>
+
+
+                </div>
+            </div>
+
+            <div class="tjanster-container">
+                <div class="tjanst-titel">
+                    <h3>Olika tjänster</h2>
+                </div>
+                <div class = "tjanst tjanstNy"  v-for="product in products" :key ="product.name">
+                    <div>{{product.namn}}</div>
+                    <img :src="product.image" class="tjanst-symbol"/>
+                    <div>{{product.cost}} svenska riksdaler</div>
+                    <p class="tjanst-beskrivning">{{product.beskrivning}} </p>
+                    <button> Lägg i varukorgen</button>
+                </div>
+
+            </div>
+            
+            <!-- <div class="bildspelContainer">
+                <div class="enSlide fade" id="bild1">
+                    <img src="bilder/trädgårdsskötsel1.jpg">
+                </div>
+                <div class="enSlide fade" id="bild2">
+                    <img src="bilder/trädgårdsskötsel4.jpg">
+                </div>
+                <div class="enSlide fade" id="bild3">
+                    <img src="bilder/trädgårdsskötsel3.jpg">
+                </div>
+
+            </div> -->
+
+
+        </div>
+        <div class="valjTjansterContainer">
+            <div class="checkContainer">
+                <h3 id="checkboxHeader">Vad vill du ha hjälp med?</h3>
+                <div class="checkboxContainer">
+                    <p>Gräsklippning:</p>
+                    <input name="tjanst" type="checkbox" class="grasklippning" value="klippa gräset">
+                </div>
+                <div class="checkboxContainer">
+                    <p>Plantera blommor:</p>
+
+                    <input name="tjanst" type="checkbox" class="planteraBlommor" value="plantera blommor">
+                </div>
+                <div class="checkboxContainer">
+                    <p>Vattna:</p>
+
+                    <input name="tjanst" type="checkbox" class="vattna" value="vattna din trädgård">
+                </div>
+                <div class="checkboxContainer">
+                    <p>Plocka frukt:</p>
+
+                    <input name="tjanst" type="checkbox" class="plockaFrukt" value="plocka frukt">
+                </div>
+                <div class="checkboxContainer">
+                    <input class="button1" id="btn" type="submit" value="Välj" onclick="kollaValdaTjanster()">
+                </div>fgv
+
+            </div>
+            <div class="confirmContainer">
+                <div>
+                    <h3>Gör intresseanmälan!</h3>
+                    <label>Förnamn:</label>
+                    <input type="text">
+                    <br>
+                    <br>
+                    <label>Efternamn:</label>
+                    <input type="text">
+                    <br>
+                    <br>
+                    <label>Adress:</label>
+                    <input type="text">
+                    <br>
+                    <br>
+                    <label>Telefonnr:</label>
+                    <input type="text">
+                </div>
+                <div>
+                    <div class="summeradText">
+                        <h4 id="valdaTjanster">
+                            </p>
+                    </div>
+                </div>
+                <div>
+                    <input class="button1" id="btn" type="submit" value="Skicka intresseanmälan">
+                </div>
             </div>
         </div>
-    </div>
 
+<<<<<<< Updated upstream
     </div>
     <footer>
         <p>Företag Trädgårdshjälpen</p>
     </footer>
+=======
+    
+>>>>>>> Stashed changes
 
-    <script type="text/javascript" src="javascript.js"></script>
+    </div>
 
 
 
