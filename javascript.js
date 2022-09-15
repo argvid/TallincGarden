@@ -15,8 +15,8 @@
 // function kollaValdaTjanster() {
 
 // }
-textHover(x);
-textHoverLeave(x);
+// textHover(x);
+// textHoverLeave(x);
 (function () {
   var doc = document.documentElement;
   var w = window;
@@ -94,13 +94,9 @@ btn.addEventListener("click", (event) => {
 });
 
 function revealer() {
-
-
   var rev = document.querySelectorAll(".revealRight");
 
-
   for (var x = 0; x < rev.length; x++) {
-
     var winHei = window.innerHeight;
 
     var eleTop = rev[x].getBoundingClientRect().top;
@@ -288,11 +284,9 @@ const app = Vue.createApp({
   },
 });
 
-<<<<<<< Updated upstream
 app.mount("#app");
-=======
-  newWin.document.write("Hello, world!");
-};
+
+newWin.document.write("Hello, world!");
 
 // ----card text---------
 
@@ -302,7 +296,7 @@ function textHover(x) {
   skillContainer.addEventListener(
     "mouseenter",
     function () {
-      skillContainer.classList.add("skillContainerOpacity");      
+      skillContainer.classList.add("skillContainerOpacity");
       presentationContainer.classList.add("presentationContainerOpacity");
     },
     false
@@ -320,4 +314,3 @@ function textHoverLeave(x) {
     false
   );
 }
->>>>>>> Stashed changes
