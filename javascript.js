@@ -15,6 +15,8 @@
 // function kollaValdaTjanster() {
 
 // }
+textHover(x);
+textHoverLeave(x);
 (function () {
   var doc = document.documentElement;
   var w = window;
@@ -92,12 +94,17 @@ btn.addEventListener("click", (event) => {
 });
 
 function revealer() {
+
+
   var rev = document.querySelectorAll(".revealRight");
 
+
   for (var x = 0; x < rev.length; x++) {
+
     var winHei = window.innerHeight;
 
     var eleTop = rev[x].getBoundingClientRect().top;
+
     var eleVis = 150;
     if (eleTop < winHei - eleVis) {
       rev[x].classList.add("active");
@@ -281,4 +288,36 @@ const app = Vue.createApp({
   },
 });
 
+<<<<<<< Updated upstream
 app.mount("#app");
+=======
+  newWin.document.write("Hello, world!");
+};
+
+// ----card text---------
+
+function textHover(x) {
+  let skillContainer = document.getElementById("skillContainer");
+  let presentationContainer = document.getElementById("presentationContainer");
+  skillContainer.addEventListener(
+    "mouseenter",
+    function () {
+      skillContainer.classList.add("skillContainerOpacity");      
+      presentationContainer.classList.add("presentationContainerOpacity");
+    },
+    false
+  );
+}
+function textHoverLeave(x) {
+  let skillContainer = document.getElementById("skillContainer");
+  let presentationContainer = document.getElementById("presentationContainer");
+  skillContainer.addEventListener(
+    "mouseleave",
+    function () {
+      skillContainer.classList.remove("skillContainerOpacity");
+      presentationContainer.classList.remove("presentationContainerOpacity");
+    },
+    false
+  );
+}
+>>>>>>> Stashed changes
