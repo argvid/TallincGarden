@@ -35,6 +35,33 @@ const app = Vue.createApp({
             "Ska du resa bort eller har inte tid att vattna dina blommor? Vi hjälper dig med detta så att din trädgård håller sig grön.",
         },
       ],
+      medarbetare: [
+        {
+          namn: "Arvid Eriksson",
+          roll: "VD",
+          bild: "bilder/arvid.jpg",
+          sida: "arvid.html",
+        },
+        {
+          namn: "William Åberg",
+          roll: "Krattmästare",
+          bild: "bilder/skriet.jpg",
+          sida: "william.html",
+        },
+        {
+          namn: "Oliver Timmerman",
+          roll: "Ogräsdödare",
+          bild: "bilder/batman.png",
+          sida: "oliver.html",
+        },
+        {
+          namn: "Niklas Sagström",
+          roll: "Grässpecialist",
+          bild: "bilder/skriet.jpg",
+          sida: "niklas.html",
+        },
+      ],
+
       antal: localStorage.getItem("someVarKey"),
       showCart: false,
       cart2: [],
@@ -63,6 +90,7 @@ const app = Vue.createApp({
       localStorage.clear();
       window.location.reload();
     },
+    handleEvent() {},
   },
 });
 

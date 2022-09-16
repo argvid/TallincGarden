@@ -179,6 +179,27 @@ body {
 
 }
 
+.profilbild:hover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: .5s ease;
+    opacity: 0.4;
+
+
+}
+#arvidProfilbild:hover + #textRuta {
+    opacity: 0;
+    position: absolute;
+    background-color: #BBEBB6;
+    font-size: 16px;
+    padding: 16px 32px;
+    transition: .5s ease;
+    cursor: pointer;
+    opacity: 1;
+  
+}
 
 .profilbildBlur {
     opacity: 0.4;
@@ -193,6 +214,18 @@ body {
     padding: 16px 32px;
     transition: .5s ease;
     cursor: pointer;
+
+}
+
+.namnText:hover {
+    opacity: 0;
+    position: absolute;
+    background-color: #BBEBB6;
+    font-size: 16px;
+    padding: 16px 32px;
+    transition: .5s ease;
+    cursor: pointer;
+    opacity: 1;
 
 }
 

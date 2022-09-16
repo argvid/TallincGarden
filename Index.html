@@ -121,7 +121,7 @@
 
 
 
-            <div class="gruppmedlemmarContainer">
+            <!-- <div class="gruppmedlemmarContainer">
                 <h1>Våra medarbetare</h1>
                 <div class="gruppmedlemmar">
                     <div class="medlem">
@@ -164,6 +164,19 @@
                         <p class="besText">
                             Jag kan gräva
                         </p>
+
+                    </div>
+                </div>
+            </div> -->
+            <div class="gruppmedlemmarContainer">
+                <h1>Våra medarbetare</h1>
+                <div class="gruppmedlemmar">
+                    <div class="medlem" v-for="aa in medarbetare" :key ="aa.name">
+                        <div class="bild">
+                            <img onmouseenter="imgMouseEnter(this)" onmouseleave="imgMouseLeave(this)"
+                            id="arvidProfilbild" class="profilbild" v-bind:src="aa.bild">                        
+                                <div id="textRuta" class="namnText"><a v-bind:href="aa.sida">{{aa.namn}}<br>{{aa.roll}}</a></div>                        
+                        </div>
 
                     </div>
                 </div>
