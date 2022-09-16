@@ -35,13 +35,15 @@ const app = Vue.createApp({
             "Ska du resa bort eller har inte tid att vattna dina blommor? Vi hjälper dig med detta så att din trädgård håller sig grön.",
         },
       ],
-      antal: 0,
+      antal: localStorage.getItem("someVarKey"),
     };
   },
   methods: {
     addItemToCart(product) {
-      this.cart.push(product);
+      // this.cart.push(product);
+      let aa = this.cart.push(product);
       console.log(this.cart);
+      localStorage.setItem("someVarKey", aa);
     },
     test1() {
       this.antal++;
