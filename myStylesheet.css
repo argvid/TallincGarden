@@ -93,7 +93,7 @@ body {
 
 }
 
-#bytBild {
+#bytBild{
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 4;
@@ -102,7 +102,6 @@ body {
     cursor: pointer;
 
 }
-
 .nice-picture {
     background-color: green;
     filter: blur(5px);
@@ -123,7 +122,7 @@ body {
 }
 
 .gruppmedlemmarContainer {
-    border-bottom: thick solid #BBEBB6;
+    border-bottom:thick solid #BBEBB6;
     box-shadow: -1px 2px 31px 4px rgba(0, 0, 0, 0.71);
 
     scroll-margin-top: 150px;
@@ -138,10 +137,9 @@ body {
     display: flex;
     flex-direction: column;
 }
-
-.gruppmedlemmarContainer h1 {
-    font-size: 3rem;
-    font-weight: bolder;
+.gruppmedlemmarContainer h1{
+    font-size:3rem;
+    font-weight:bolder;
 }
 
 .gruppmedlemmar {
@@ -187,8 +185,6 @@ body {
     transition: .5s ease;
 }
 
-
-
 .namnText {
     opacity: 0;
     position: absolute;
@@ -197,7 +193,6 @@ body {
     padding: 16px 32px;
     transition: .5s ease;
     cursor: pointer;
-    z-index: 99;
 
 }
 
@@ -208,10 +203,10 @@ body {
 }
 
 .namnTextOpacity {
-    opacity: 1 !important;
+    transition: .5s ease;
+
+    opacity: 1;
 }
-
-
 
 .content {
     display: flex;
@@ -240,11 +235,9 @@ body {
     justify-content: space-around;
     padding-top: 50px;
     text-align: center;
-
+    z-index: 99;
 
 }
-
-
 
 .beskrivningstext {
     height: 400px;
@@ -281,8 +274,8 @@ body {
 }
 
 .tjanster-container {
-    border-top: thick solid #BBEBB6;
-    border-bottom: thick solid #BBEBB6;
+    border-top:thick solid #BBEBB6;
+    border-bottom:thick solid #BBEBB6;
     box-shadow: -1px 2px 31px 4px rgba(0, 0, 0, 0.71);
 
     scroll-margin-top: 150px;
@@ -319,27 +312,12 @@ body {
 
 }
 
-.tjanstNy {
-    grid-row-start: 2;
-    grid-row-end: 7;
-}
 
-.tjanstNy {
-    
-    display: flexbox;
-    padding: auto;
-    border-right: thin solid #BBEBB6;
-    text-align: center;
-    margin: 1rem;
-    
-    
-    
-    
-}
 .tjanst {
     grid-row-start: 2;
     grid-row-end: 7;
 }
+
 .tjanst1 {
 
     grid-column-start: 1;
@@ -349,7 +327,6 @@ body {
 
 
 }
-
 
 .tjanst2 {
 
@@ -533,8 +510,8 @@ body {
 
 .valjTjansterContainer {
     scroll-margin-top: 150px;
-    grid-row-start: 21;
-    grid-row-end: 25;
+    grid-row-start: 16;
+    grid-row-end: 20;
     grid-column-start: 2;
     grid-column-end: 6;
     background-color: white;
@@ -544,6 +521,7 @@ body {
     border-left: thin solid #C2E500;
     border-right: thin solid #C2E500;
     height: 80%;
+    margin-bottom: 10%;
 
 
 
@@ -671,47 +649,29 @@ label {
     animation-duration: 2s;
     animation-name: slidein;
     margin-left: 30%;
-    z-index: 98;
+    z-index: 99;
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
 
-
-}
-
-.namnTextPre {
-    max-width: 35%;
-    height: max-content;
-    margin: auto;
-    opacity: 0;
-    position: absolute;
-    background-color: #BBEBB6;
-    font-size: 16px;
-    transition: .5s ease;
-    cursor: pointer;
-    z-index: 99;
-    word-break: break-word
 }
 
 #riktigProfilbild {
     width: 100%;
     height: 90%;
+    margin-top: 7%;
     object-fit: cover;
     display: block;
     box-shadow: -1px 2px 31px 4px rgba(0, 0, 0, 0.71);
 
 }
 
-
-
 .background {
     border-top: thick solid #BBEBB6;
     background-color: white;
     width: 100%;
+
     grid-column-start: 1;
     grid-column-end: 8;
     grid-row-start: 1;
@@ -730,30 +690,7 @@ label {
     }
 }
 
-#presentationContainer {
-    opacity: 0;
-    z-index: 99;
-    background-color: #BBEBB6;
-    grid-row-start: 1;
-    grid-row-end: 5;
-    grid-column-start: 4;
-    grid-column-end: 6;
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-    padding-left: 15%;
-    padding-right: 15%;
-    transition: 1s;
-}
-
-.presentationContainerOpacity {
-    opacity: 1 !important;
-    background-color: green;
-}
-
-
 #skillContainer {
-    opacity: 1;
     z-index: 99;
     background-color: #BBEBB6;
     grid-row-start: 1;
@@ -765,12 +702,6 @@ label {
     flex-direction: column;
     padding-left: 15%;
 }
-.skillContainerOpacity{
-    opacity: 0 !important;
-    transition: 1s;
-}
-
-
 
 #skillsHeader {
     font-size: xx-large;
@@ -784,8 +715,8 @@ label {
 }
 
 
-
-.kontaktBody {
+    
+.kontaktBody{
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(7, 100px);
@@ -793,22 +724,20 @@ label {
     grid-row-gap: 1px;
 
 }
-
-.kontaktTitel {
-    font-size: 30px;
-    color: black;
-    font-weight: bold;
+.kontaktTitel{
+  font-size: 30px;
+  color: black;
+  font-weight: bold;
 }
-
-.form {
-    border-left: thick solid #BBEBB6;
-    border-right: thick solid #BBEBB6;
+.form{
+    border-left:thick solid #BBEBB6;
+    border-right:thick solid #BBEBB6;
     background-color: white;
     grid-column-start: 2;
-    grid-column-end: 6;
+    grid-column-end: 5;
     grid-row-start: 3;
     grid-row-end: 7;
-    padding: 50px;
+    padding:50px;
 
     box-shadow: -1px 2px 31px 4px rgba(0, 0, 0, 0.71);
 
@@ -817,20 +746,20 @@ label {
 
 
 
-.cart {
+.cart{
     position: relative;
     background-color: #fff;
     color: #000000;
     font-size: 25px;
     padding: 5px;
-    border-radius: 4px;
+    border-radius: 4px ;
     /* margin-bottom: 7px;
     margin-top: 7px; */
     margin: 1rem;
-
+    
 }
 
-.cartAmount {
+.cartAmount{
     position: absolute;
     top: -10px;
     right: -6px;
@@ -843,18 +772,31 @@ label {
     /* border: solid black; */
 
 }
-
-.grid-container {
-    display: grid;
-    height: 400px;
-    align-content: center;
+.grid-container{
+  display: grid;
+  height: 400px;
+  align-content: center;  
 
 }
 
 /*Footer till hemsidan
-*/
+**/
 .footer {
-    padding: 10px 20px;
-    background: #666;
+
+    width: 100%;
+    height: 150px;
+    background-color: #BBEBB6;
     color: white;
+    text-align: center;
+    
+  }
+  .footer_bild{
+    border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 150px;
+  height: auto;
+  float: left;
+
+
+
   }
