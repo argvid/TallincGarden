@@ -40,11 +40,22 @@
                 <p class="webContent" onclick="smoothScrollBeskrivning()">Beskrivning</p>
                 <p class="webContent" onclick="smoothScrollTjanster()">Tjänster</p>
                 <div>
-                    <div class="cart">
-                        <button ></button>
-                        <i class="bi bi-cart2"   ></i>
-        
-                        <div class="cartAmount">{{cart.length}}</div>
+                    <div class="cart" @click="showCart =!showCart">
+                        
+                        <i class="bi bi-cart2"></i>
+                        
+                        <div class="cartAmount">{{cart.length}} {{antal}}</div>
+                        <div v-if="showCart" class="cartDropDown">
+                            <ul class="cartDropDown2">
+                                <li v-for="c in cart" :key ="cart.name">
+                                     {{c.namn}}
+                                    <img v-bind:src="c.image" />
+                                </li>
+                                <a href="kassa.html">
+                                <button @click="test1()"> Gå till kassan</button>
+                            </a>
+                            </ul>
+                        </div>
 
         
                     </div>

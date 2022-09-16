@@ -36,17 +36,32 @@ const app = Vue.createApp({
         },
       ],
       antal: localStorage.getItem("someVarKey"),
+      showCart: false,
+      cart2: [],
+      storedKop: JSON.parse(localStorage.getItem("kopta")),
     };
   },
+
   methods: {
     addItemToCart(product) {
-      // this.cart.push(product);
-      let aa = this.cart.push(product);
-      console.log(this.cart);
-      localStorage.setItem("someVarKey", aa);
+      this.cart.push(product);
+      //let aa = this.cart.push(product);
+      //console.log(this.cart);
+      //localStorage.setItem("someVarKey", aa);
+      this.cart = [...new Set(this.cart)];
     },
     test1() {
-      console.log("QQQQQQQQ");
+      localStorage.setItem("kopta", JSON.stringify(this.cart));
+
+      //console.log(storedKop);
+    },
+    removeDuplicates() {
+      this.cart = [...new Set(this.cart)];
+      //console.log(cart);
+    },
+    test2() {
+      localStorage.clear();
+      window.location.reload();
     },
   },
 });
@@ -317,6 +332,5 @@ function textHoverLeave(x) {
     false
   );
 }
-
-textHover(x);
-textHoverLeave(x);
+imgMouseEnter(x);
+imgMouseLeave(x);

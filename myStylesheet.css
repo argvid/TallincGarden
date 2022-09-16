@@ -749,7 +749,7 @@ label {
 .cart{
     position: relative;
     background-color: #fff;
-    color: #000000;
+    color: #BBEBB6;
     font-size: 25px;
     padding: 5px;
     border-radius: 4px ;
@@ -768,10 +768,28 @@ label {
     color: white;
     padding: 3px;
     border-radius: 3px;
+}
+
+.cartDropDown2{
+    position: absolute;
+    top: 50px;
+    right: 0;
+    font-size: small;
+    background-color: white;
+    color: black;
+    padding: 99px;
+    border-radius: 3px;
+    border: thick solid #BBEBB6;
+    
+    
+}
+
+ul{
+    list-style-type:none;
+    }
 
     /* border: solid black; */
 
-}
 .grid-container{
   display: grid;
   height: 400px;
