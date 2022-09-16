@@ -1,3 +1,56 @@
+// Påbörjat en koppling med vue
+
+const app = Vue.createApp({
+  data() {
+    return {
+      page: "products",
+      cart: [],
+      products: [
+        {
+          namn: "Plantera",
+          cost: "40",
+          image: "bilder/plant.png",
+          beskrivning:
+            "Vi hjälper dig att välja ut och plantera blommor som passar klimatet och stilen i din trädgård.",
+        },
+        {
+          namn: "Gräsklippning",
+          cost: "50",
+          image: "bilder/lawn-mower.png",
+          beskrivning:
+            "Vi håller din gräsmatta vältrimmad genom gräsklippning av olika typer Både underhåll samt nyklippning.",
+        },
+        {
+          namn: "Klippning",
+          cost: "400",
+          image: "bilder/scissor.png",
+          beskrivning:
+            "Vi klipper dina buskar och träd i diverse former eller underhåller för att hålla din trädgård snygg.",
+        },
+        {
+          namn: "Rensa",
+          cost: "490",
+          image: "bilder/garden.png",
+          beskrivning:
+            "Ska du resa bort eller har inte tid att vattna dina blommor? Vi hjälper dig med detta så att din trädgård håller sig grön.",
+        },
+      ],
+      antal: 0,
+    };
+  },
+  methods: {
+    addItemToCart(product) {
+      this.cart.push(product);
+      console.log(this.cart);
+    },
+    test1() {
+      this.antal++;
+    },
+  },
+});
+
+app.mount("#app");
+
 // let grasklippning = document.querySelector('.grasklippning:checked').value;
 // let planteraBlommor = document.querySelector('.planteraBlommor:checked').value;
 // let vattna = document.querySelector('.vattna:checked').value;
@@ -17,6 +70,7 @@
 // }
 // textHover(x);
 // textHoverLeave(x);
+
 (function () {
   var doc = document.documentElement;
   var w = window;
@@ -233,59 +287,6 @@ function slide() {
   }, 1000);
 }
 
-// Påbörjat en koppling med vue
-
-const app = Vue.createApp({
-  data() {
-    return {
-      page: "products",
-      cart: [],
-      products: [
-        {
-          namn: "Plantera",
-          cost: "40",
-          image: "bilder/plant.png",
-          beskrivning:
-            "Vi hjälper dig att välja ut och plantera blommor som passar klimatet och stilen i din trädgård.",
-        },
-        {
-          namn: "Gräsklippning",
-          cost: "50",
-          image: "bilder/lawn-mower.png",
-          beskrivning:
-            "Vi håller din gräsmatta vältrimmad genom gräsklippning av olika typer Både underhåll samt nyklippning.",
-        },
-        {
-          namn: "Klippning",
-          cost: "400",
-          image: "bilder/scissor.png",
-          beskrivning:
-            "Vi klipper dina buskar och träd i diverse former eller underhåller för att hålla din trädgård snygg.",
-        },
-        {
-          namn: "Rensa",
-          cost: "490",
-          image: "bilder/garden.png",
-          beskrivning:
-            "Ska du resa bort eller har inte tid att vattna dina blommor? Vi hjälper dig med detta så att din trädgård håller sig grön.",
-        },
-      ],
-      antal: 0,
-    };
-  },
-  methods: {
-    addItemToCart(product) {
-      this.cart.push(product);
-      console.log(this.cart);
-    },
-    test1() {
-      this.antal++;
-    },
-  },
-});
-
-app.mount("#app");
-
 newWin.document.write("Hello, world!");
 
 // ----card text---------
@@ -314,3 +315,6 @@ function textHoverLeave(x) {
     false
   );
 }
+
+textHover(x);
+textHoverLeave(x);
