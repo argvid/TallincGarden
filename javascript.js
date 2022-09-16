@@ -46,7 +46,7 @@ const app = Vue.createApp({
       localStorage.setItem("someVarKey", aa);
     },
     test1() {
-      this.antal++;
+      console.log("QQQQQQQQ");
     },
   },
 });
@@ -289,7 +289,7 @@ function slide() {
   }, 1000);
 }
 
-newWin.document.write("Hello, world!");
+// newWin.document.write("Hello, world!");
 
 // ----card text---------
 
