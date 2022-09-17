@@ -78,10 +78,6 @@ const app = Vue.createApp({
     test1() {
       localStorage.setItem("kopta", JSON.stringify(this.cart));
     },
-    // removeDuplicates() {
-    //   this.cart = [...new Set(this.cart)];
-    //   console.log(cart);
-    // },
     test2() {
       localStorage.clear();
       window.location.reload();
@@ -91,7 +87,6 @@ const app = Vue.createApp({
       this.totalSum = this.cart.reduce((acc, ele) => {
         return acc + parseInt(ele.cost);
       }, 0);
-      console.log(this.totalSum);
     },
   },
 });
