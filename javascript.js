@@ -64,8 +64,9 @@ const app = Vue.createApp({
 
       showCart: false,
       cart2: [],
-      storedKop: JSON.parse(localStorage.getItem("kopta")),
+      storedKop: JSON.parse(sessionStorage.getItem("kopta")),
       totalSum: 0,
+      totalSum2: sessionStorage.getItem("summa"),
     };
   },
 
@@ -76,10 +77,10 @@ const app = Vue.createApp({
       this.cart = [...new Set(this.cart)];
     },
     test1() {
-      localStorage.setItem("kopta", JSON.stringify(this.cart));
+      sessionStorage.setItem("kopta", JSON.stringify(this.cart));
     },
     test2() {
-      localStorage.clear();
+      sessionStorage.clear();
       window.location.reload();
     },
     test3() {
@@ -87,6 +88,7 @@ const app = Vue.createApp({
       this.totalSum = this.cart.reduce((acc, ele) => {
         return acc + parseInt(ele.cost);
       }, 0);
+      this.totalSum2 = sessionStorage.setItem("summa", this.totalSum);
     },
   },
 });

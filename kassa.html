@@ -27,7 +27,8 @@
           {{product.namn}} <img v-bind:src="product.image" />
         </li>
       </ul>
-      <button @click="test2()">betala</button>
+      <button @click="test2()">betala {{totalSum2}}</button>
+      <p>{{totalSum2}} kr</p>
     </div>
   </body>
 </html>
