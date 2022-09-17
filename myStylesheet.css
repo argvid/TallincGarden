@@ -782,7 +782,7 @@ label {
 .cart{
     position: relative;
     background-color: #fff;
-    color: #BBEBB6;
+    color: #213458;
     font-size: 25px;
     padding: 5px;
     border-radius: 4px ;
@@ -798,7 +798,7 @@ label {
     top: -10px;
     right: -6px;
     font-size: small;
-    background-color: red;
+    background-color: #213458;
     color: white;
     padding: 3px;
     border-radius: 3px;
@@ -817,6 +817,64 @@ label {
     
     
 }
+
+/* #kopButton{
+    background-color: #fff;
+    border: solid #213458;
+    color: #213458;
+    padding: 1rem;
+    cursor: pointer;
+    
+
+} */
+
+
+#kopButton {
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 12px;
+    letter-spacing: 1px;
+    position: relative;
+    background-color: #BBEBB6;
+    border: none;
+    color: #000;
+    padding: 15px;
+    width: 150px;
+    text-align: center;
+    transition-duration: 0.4s;
+    overflow: hidden;
+    box-shadow: 0 5px 15px #193047;
+    border-radius: 4px;
+  }
+  
+  #kopButton:hover {
+    background: #DB1896;
+    box-shadow: 0px 2px 10px 5px #213458;
+    color: #000;
+  }
+  
+  #kopButton:after {
+    content: "";
+    background: #213458;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+  }
+  
+  #kopButton:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+  }
+  
+  #kopButton:focus { outline:0; }
 
 ul{
     list-style-type:none;
