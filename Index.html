@@ -38,19 +38,22 @@
             <div class="second-header">
                 <p class="webContent" onclick="smoothScrollIntresse()">Anmäl intresse</p>
                 <p class="webContent" onclick="smoothScrollBeskrivning()">Beskrivning</p>
-                <p class="webContent" onclick="smoothScrollTjanster()">Tjänster</p>
+                <p class="webContent" onclick="smoothScrollTjanster()">Tjänster </p>
                 <div>
-                    <div class="cart" @click="showCart =!showCart">
+                    <div class="cart" @click="showCart =!showCart" >
                         
                         <i class="bi bi-cart2"></i>
                         
-                        <div class="cartAmount">{{cart.length}} {{antal}}</div>
+                        <div class="cartAmount">{{cart.length}}</div>
                         <div v-if="showCart" class="cartDropDown">
                             <ul class="cartDropDown2">
                                 <li v-for="c in cart" :key ="cart.name">
                                      {{c.namn}}
                                     <img v-bind:src="c.image" />
                                 </li>
+                                <p>
+                                    Summa: {{totalSum}} kr
+                                </p>
                                 <a href="kassa.html">
                                 <button @click="test1()"> Gå till kassan</button>
                             </a>
@@ -224,7 +227,7 @@
                     <img :src="product.image" class="tjanst-symbol"/>
                     <div>{{product.cost}} svenska riksdaler</div>
                     <p class="tjanst-beskrivning">{{product.beskrivning}} </p>
-                    <button  @click="addItemToCart(product)"> Lägg i varukorgen</button>
+                    <button  @click="addItemToCart(product); test3()"> Lägg i varukorgen</button>
                 </div>
 
             </div>

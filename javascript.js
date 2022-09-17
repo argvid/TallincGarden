@@ -62,35 +62,37 @@ const app = Vue.createApp({
         },
       ],
 
-      antal: localStorage.getItem("someVarKey"),
       showCart: false,
       cart2: [],
       storedKop: JSON.parse(localStorage.getItem("kopta")),
+      totalSum: 0,
     };
   },
 
   methods: {
     addItemToCart(product) {
       this.cart.push(product);
-      //let aa = this.cart.push(product);
       //console.log(this.cart);
-      //localStorage.setItem("someVarKey", aa);
       this.cart = [...new Set(this.cart)];
     },
     test1() {
       localStorage.setItem("kopta", JSON.stringify(this.cart));
-
-      //console.log(storedKop);
     },
-    removeDuplicates() {
-      this.cart = [...new Set(this.cart)];
-      //console.log(cart);
-    },
+    // removeDuplicates() {
+    //   this.cart = [...new Set(this.cart)];
+    //   console.log(cart);
+    // },
     test2() {
       localStorage.clear();
       window.location.reload();
     },
-    handleEvent() {},
+    test3() {
+      // Tar ut summan av de värderna som ligger i korgen
+      this.totalSum = this.cart.reduce((acc, ele) => {
+        return acc + parseInt(ele.cost);
+      }, 0);
+      console.log(this.totalSum);
+    },
   },
 });
 
