@@ -910,6 +910,28 @@ ul{
 
 
   }
+
+
+  .tKunder {
+    border-top:thick solid #BBEBB6;
+    border-bottom:thick solid #BBEBB6;
+    box-shadow: -1px 2px 31px 4px rgba(0, 0, 0, 0.71);
+
+    scroll-margin-top: 150px;
+    grid-row-start: 25;
+    grid-row-end: 31;
+    grid-column-start: 1;
+    grid-column-end: 7;
+    background-color: white;
+    /* display: grid; */
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    object-fit: cover;
+    border-left: thin solid #C2E500;
+    border-right: thin solid #C2E500;
+
+
+}
 /* RESPONSIVE DESIGN */
 
 @media screen and (max-width: 500px) {

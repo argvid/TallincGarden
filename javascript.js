@@ -67,7 +67,14 @@ const app = Vue.createApp({
       storedKop: JSON.parse(sessionStorage.getItem("kopta")),
       totalSum: 0,
       totalSum2: sessionStorage.getItem("summa"),
+      lista2: [],
     };
+  },
+
+  mounted: function () {
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then((response) => response.json())
+      .then((json) => (this.lista2 = json));
   },
 
   methods: {
@@ -89,6 +96,9 @@ const app = Vue.createApp({
         return acc + parseInt(ele.cost);
       }, 0);
       this.totalSum2 = sessionStorage.setItem("summa", this.totalSum);
+    },
+    test4() {
+      console.log(this.lista2);
     },
   },
 });
