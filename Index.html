@@ -194,6 +194,10 @@
                     </div>
                 </div>
             </div>
+      
+
+
+            
 
 
             <!-- <div class="tjanster-container">
@@ -248,7 +252,16 @@
 
             </div> -->
 
-            <div class="tKunder">
+            <div>
+                <button @click="page =!page">Visa</button>
+            </div>
+
+            
+
+
+
+            
+            <div v-if ="page ===false" class="tKunder">
                 <div class="tjanst-titel">
                     <h3>Tidigare kunder</h2>
                 </div>
@@ -272,10 +285,11 @@
                         </tr>
                     </tbody>
                 </table>
+
             </div>
-
+        
         </div>
-
+    
         <!-- <div class="bildspelContainer">
                 <div class="enSlide fade" id="bild1">
                     <img src="bilder/trädgårdsskötsel1.jpg">

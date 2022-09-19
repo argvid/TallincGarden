@@ -3,7 +3,7 @@
 const app = Vue.createApp({
   data() {
     return {
-      page: "products",
+      page: true,
       cart: [],
       products: [
         {

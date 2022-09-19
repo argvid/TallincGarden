@@ -835,6 +835,7 @@ label {
 
 
 
+
 .cart {
     position: relative;
     background-color: #fff;
@@ -878,6 +879,8 @@ label {
     justify-content: space-between;
 }
 
+
+
 .cartDropDown2 {
     position: absolute;
     right: 0;
@@ -914,6 +917,68 @@ label {
     margin-bottom: 1%;
 
 }
+
+/* Kassa sidan  */
+.kassaProdukt img {
+    margin-top: 0%;
+    height: 35%;
+    width: 35%;
+
+}
+
+.kassaProdukt li {
+    width: 250px;
+    line-height: 40px;
+    font-size: 2vh;
+    border-bottom: thin solid black;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+}
+
+#kassaKnapp2 {
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 70%;
+    letter-spacing: auto;
+    position: relative;
+    background-color: #BBEBB6;
+    border: thick solid #BBEBB6;
+    color: #000;
+    padding: 1%;
+    width: 20%;
+    height: 60%;
+    text-align: center;
+    transition-duration: 0.4s;
+    overflow: hidden;
+    margin-right: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1%;
+
+}
+
+.formKassa {
+    border-left: thick solid #BBEBB6;
+    border-right: thick solid #BBEBB6;
+    background-color: white;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 15;
+    padding: 50px;
+
+    box-shadow: -1px 2px 31px 4px rgba(0, 0, 0, 0.71);
+}
+
+#kassaSumma{
+    font-size: large;
+    font-weight: bold;
+    margin-left: 5%;
+}
+
+/* slut på kassa sidan */
 
 #Blink {
     width: fit-content;
