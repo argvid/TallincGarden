@@ -28,7 +28,7 @@ const app = Vue.createApp({
             "Vi klipper dina buskar och träd i diverse former eller underhåller för att hålla din trädgård snygg.",
         },
         {
-          namn: "Rensa",
+          namn: "Vattna",
           cost: "490",
           image: "bilder/garden.png",
           beskrivning:
@@ -82,6 +82,11 @@ const app = Vue.createApp({
       this.cart.push(product);
       //console.log(this.cart);
       this.cart = [...new Set(this.cart)];
+    },
+
+    removeItemToCart() {
+      this.cart.length = 0;
+      this.totalSum = 0;
     },
     test1() {
       sessionStorage.setItem("kopta", JSON.stringify(this.cart));
@@ -294,7 +299,8 @@ bytBild.addEventListener("click", function () {
   clearTimeout(nytimeout);
   bildspel();
 });
-
+textHover(x);
+textHoverLeave(x);
 // ----- medlemshover ---------
 imgMouseEnter(x);
 imgMouseLeave(x);
@@ -343,7 +349,7 @@ function slide() {
 
 // newWin.document.write("Hello, world!");
 
-// ----card text---------
+//  Arvids card text---------
 
 function textHover(x) {
   let skillContainer = document.getElementById("skillContainer");
@@ -369,5 +375,3 @@ function textHoverLeave(x) {
     false
   );
 }
-imgMouseEnter(x);
-imgMouseLeave(x);

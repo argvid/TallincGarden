@@ -297,6 +297,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    overflow-x: hidden;
 }
 
 .containerLeft {
@@ -307,6 +308,15 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+}
+
+.tjanstNy {
+    text-align: center;
+    width: 20vW;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .tjanster-container {
@@ -326,8 +336,15 @@ body {
     object-fit: cover;
     border-left: thin solid #C2E500;
     border-right: thin solid #C2E500;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-top: 5%;
+}
 
-
+.tjanst-header {
+    font-size: larger;
+    font-weight: bold;
 }
 
 .tjanst-titel {
@@ -340,6 +357,7 @@ body {
 
 .tjanst-beskrivning {
     padding: 3%;
+    height: 20%;
 }
 
 .tjanst-symbol {
@@ -636,6 +654,10 @@ label {
     transform: translateX(-150px);
     opacity: 0;
     transition: 0.25s all ease;
+    border-radius: 0.5;
+    margin:auto;
+    max-height: 100%;
+
 }
 
 .revealLeft.active {
@@ -648,7 +670,9 @@ label {
     transform: translateX(150px);
     opacity: 0;
     transition: 0.25s all ease;
-    background-color: green;
+    background-color: white;
+    margin:auto;
+    max-height: 100%;
 }
 
 .revealRight.active {
@@ -742,8 +766,30 @@ label {
 
 #skillsHeader {
     font-size: xx-large;
-
     width: 100%;
+}
+
+.skillContainerOpacity {
+    transition: 1s;
+    opacity: 0 !important;
+}
+
+#presentationContainer {
+    opacity: 0;
+    padding: 10%;
+    background-color: #BBEBB6;
+    grid-row-start: 1;
+    grid-row-end: 5;
+    grid-column-start: 4;
+    grid-column-end: 6;
+}
+
+.presentationContainerOpacity {
+    transition-delay: 1s;
+    transition: 1s;
+    opacity: 1 !important;
+    z-index: 99;
+
 }
 
 .fardigheterText {
@@ -779,7 +825,6 @@ label {
     padding: 50px;
 
     box-shadow: -1px 2px 31px 4px rgba(0, 0, 0, 0.71);
-
 }
 
 
@@ -810,18 +855,65 @@ label {
     border-radius: 3px;
 }
 
+.cartDropDown2 img {
+    margin-top: 3%;
+    height: 20%;
+    width: 20%;
+
+}
+
+.cartDropDown2 li {
+    width: 250px;
+    line-height: 70px;
+    font-size: 3vh;
+    border-bottom: thin solid black;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+}
+
 .cartDropDown2 {
     position: absolute;
-    top: 50px;
     right: 0;
     font-size: small;
     background-color: white;
     color: black;
-    padding: 99px;
+    padding: 10px;
     border-radius: 3px;
     border: thick solid #BBEBB6;
 
 
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+
+}
+
+#kassaKnapp{
+        text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 70%;
+    letter-spacing: auto;
+    position: relative;
+    background-color: #BBEBB6;
+    border: thick solid #BBEBB6;
+    color: #000;
+    padding: 1%;
+    width: 40%;
+    height:20%;
+    text-align: center;
+    transition-duration: 0.4s;
+    overflow: hidden;
+    margin-right: 1rem;
+
+    border-radius: 4px;
+    
+}
+
+#Blink{
+    width: fit-content;
 }
 
 /* #kopButton{
@@ -839,14 +931,15 @@ label {
     text-align: center;
     text-transform: uppercase;
     cursor: pointer;
-    font-size: 12px;
-    letter-spacing: 1px;
+    font-size: 70%;
+    letter-spacing: auto;
     position: relative;
     background-color: #BBEBB6;
-    border: none;
+    border: thick solid #BBEBB6;
     color: #000;
-    padding: 15px;
-    width: 150px;
+    padding: 3%;
+    width: 50%;
+    height: 20%;
     text-align: center;
     transition-duration: 0.4s;
     overflow: hidden;
@@ -857,12 +950,14 @@ label {
 #kopButton:hover {
     background: #DB1896;
     box-shadow: 0px 2px 10px 5px #213458;
+    background: white;
+    /* box-shadow: 0px 2px 10px 5px #213458; */
     color: #000;
 }
 
 #kopButton:after {
     content: "";
-    background: #213458;
+    background: #BBEBB6;
     display: block;
     position: absolute;
     padding-top: 300%;
@@ -870,7 +965,7 @@ label {
     margin-left: -20px !important;
     margin-top: -120%;
     opacity: 0;
-    transition: all 0.8s
+    transition: all 0.8s; 
 }
 
 #kopButton:active:after {
@@ -929,6 +1024,7 @@ strong {
     line-height: 1;
     text-align: justify;
     margin-left: 50px;
+
 }
 
 .footer_bild {
@@ -938,6 +1034,12 @@ strong {
     height: auto;
     float: left;
 }
+
+
+
+
+
+
 
 .tKunder {
     border-top: thick solid #BBEBB6;
