@@ -1013,7 +1013,7 @@ ul {
 }
 
 .footercolumn .footercolumn_inner {
-    width: calc(21.6666666667% - 20px);
+    width: calc(26%);
     margin-right: 10px;
     float: left;
     text-align: justify;
@@ -1037,6 +1037,9 @@ strong {
     width: 150px;
     height: auto;
     float: left;
+    margin-left: auto;
+    margin-right: auto;
+    
 }
 
 
