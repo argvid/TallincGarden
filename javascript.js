@@ -83,6 +83,11 @@ const app = Vue.createApp({
       //console.log(this.cart);
       this.cart = [...new Set(this.cart)];
     },
+
+    removeItemToCart() {
+      this.cart.length = 0;
+      this.totalSum = 0;
+    },
     test1() {
       sessionStorage.setItem("kopta", JSON.stringify(this.cart));
     },
@@ -370,4 +375,3 @@ function textHoverLeave(x) {
     false
   );
 }
-
