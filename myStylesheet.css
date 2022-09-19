@@ -297,6 +297,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    overflow-x: hidden;
 }
 
 .containerLeft {
@@ -653,6 +654,10 @@ label {
     transform: translateX(-150px);
     opacity: 0;
     transition: 0.25s all ease;
+    border-radius: 0.5;
+    margin:auto;
+    max-height: 100%;
+
 }
 
 .revealLeft.active {
@@ -665,7 +670,9 @@ label {
     transform: translateX(150px);
     opacity: 0;
     transition: 0.25s all ease;
-    background-color: green;
+    background-color: white;
+    margin:auto;
+    max-height: 100%;
 }
 
 .revealRight.active {
@@ -759,7 +766,6 @@ label {
 
 #skillsHeader {
     font-size: xx-large;
-
     width: 100%;
 }
 
@@ -817,9 +823,7 @@ label {
     grid-row-start: 3;
     grid-row-end: 7;
     padding: 50px;
-
     box-shadow: -1px 2px 31px 4px rgba(0, 0, 0, 0.71);
-
 }
 
 
