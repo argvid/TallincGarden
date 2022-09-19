@@ -1055,7 +1055,7 @@ strong {
 
     scroll-margin-top: 150px;
     grid-row-start: 25;
-    grid-row-end: 31;
+    grid-row-end: 29;
     grid-column-start: 1;
     grid-column-end: 7;
     background-color: white;
@@ -1065,7 +1065,8 @@ strong {
     object-fit: cover;
     border-left: thin solid #C2E500;
     border-right: thin solid #C2E500;
-
+    
+    
 
 }
 
