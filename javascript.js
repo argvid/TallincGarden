@@ -57,7 +57,7 @@ const app = Vue.createApp({
         {
           namn: "Niklas Sagström",
           roll: "Grässpecialist",
-          bild: "bilder/skriet.jpg",
+          bild: "bilder/sagis.jpg",
           sida: "niklas.html",
         },
       ],
@@ -192,19 +192,19 @@ function smoothScrollTjanster() {
   });
 }
 
-const btn = document.querySelector("#btn");
-btn.addEventListener("click", (event) => {
-  let checkboxes = document.querySelectorAll('input[name="tjanst"]:checked');
-  let values = [];
-  checkboxes.forEach((checkbox) => {
-    values.push(checkbox.value);
-  });
-  document.getElementById("valdaTjanster").innerHTML =
-    "Du vill ha hjälp med att " + values + "!";
-  // values.forEach((value) => {
-  //     alert("Du vill ha hjälp med att " + value)
-  // })
-});
+// const btn = document.querySelector("#btn");
+// btn.addEventListener("click", (event) => {
+//   let checkboxes = document.querySelectorAll('input[name="tjanst"]:checked');
+//   let values = [];
+//   checkboxes.forEach((checkbox) => {
+//     values.push(checkbox.value);
+//   });
+//   document.getElementById("valdaTjanster").innerHTML =
+//     "Du vill ha hjälp med att " + values + "!";
+//   // values.forEach((value) => {
+//   //     alert("Du vill ha hjälp med att " + value)
+//   // })
+// });
 
 function revealer() {
   var rev = document.querySelectorAll(".revealRight");
