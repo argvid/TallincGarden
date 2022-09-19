@@ -306,6 +306,14 @@ body {
     justify-content: space-around;
 }
 
+.tjanstNy{
+    text-align: center;
+    width: 20vW;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .tjanster-container {
     border-top:thick solid #BBEBB6;
     border-bottom:thick solid #BBEBB6;
@@ -323,8 +331,14 @@ body {
     object-fit: cover;
     border-left: thin solid #C2E500;
     border-right: thin solid #C2E500;
-
-
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-top:5%;
+}
+.tjanst-header{
+    font-size: larger;
+    font-weight: bold;
 }
 
 .tjanst-titel {
@@ -337,6 +351,7 @@ body {
 
 .tjanst-beskrivning {
     padding: 3%;
+    height: 20%;
 }
 
 .tjanst-symbol {
@@ -803,18 +818,35 @@ label {
     padding: 3px;
     border-radius: 3px;
 }
+.cartDropDown2 img{
+    margin-top: 3%;
+    height: 20%;
+    width: 20%;
+
+}
+.cartDropDown2 li{
+    width: 250px;
+    line-height: 70px;
+    font-size: 3vh;
+    border-bottom: thin solid black;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+}
 
 .cartDropDown2{
     position: absolute;
-    top: 50px;
     right: 0;
     font-size: small;
     background-color: white;
     color: black;
-    padding: 99px;
+    padding: 10px;
     border-radius: 3px;
     border: thick solid #BBEBB6;
-    
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
     
 }
 
@@ -833,14 +865,15 @@ label {
     text-align: center;
     text-transform: uppercase;
     cursor: pointer;
-    font-size: 12px;
-    letter-spacing: 1px;
+    font-size: 70%;
+    letter-spacing: auto;
     position: relative;
     background-color: #BBEBB6;
-    border: none;
+    border: thick solid #BBEBB6;
     color: #000;
-    padding: 15px;
-    width: 150px;
+    padding: 3%;
+    width: 50%;
+    height:20%;
     text-align: center;
     transition-duration: 0.4s;
     overflow: hidden;
@@ -849,14 +882,14 @@ label {
   }
   
   #kopButton:hover {
-    background: #DB1896;
-    box-shadow: 0px 2px 10px 5px #213458;
+    background: white;
+    /* box-shadow: 0px 2px 10px 5px #213458; */
     color: #000;
   }
   
   #kopButton:after {
     content: "";
-    background: #213458;
+    background: #BBEBB6;
     display: block;
     position: absolute;
     padding-top: 300%;
@@ -864,7 +897,7 @@ label {
     margin-left: -20px !important;
     margin-top: -120%;
     opacity: 0;
-    transition: all 0.8s
+    transition: all 1s
   }
   
   #kopButton:active:after {

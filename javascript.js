@@ -28,7 +28,7 @@ const app = Vue.createApp({
             "Vi klipper dina buskar och träd i diverse former eller underhåller för att hålla din trädgård snygg.",
         },
         {
-          namn: "Rensa",
+          namn: "Vattna",
           cost: "490",
           image: "bilder/garden.png",
           beskrivning:
@@ -344,7 +344,8 @@ function slide() {
 // newWin.document.write("Hello, world!");
 
 // ----card text---------
-
+imgMouseEnter(x);
+imgMouseLeave(x);
 function textHover(x) {
   let skillContainer = document.getElementById("skillContainer");
   let presentationContainer = document.getElementById("presentationContainer");
@@ -369,5 +370,4 @@ function textHoverLeave(x) {
     false
   );
 }
-imgMouseEnter(x);
-imgMouseLeave(x);
+

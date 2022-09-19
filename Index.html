@@ -220,11 +220,9 @@
             </div> -->
 
             <div class="tjanster-container">
-                <div class="tjanst-titel">
-                    <h3>Olika tjänster</h2>
-                </div>
+
                 <div class = "tjanst tjanstNy"  v-for="product in products" :key ="product.name">
-                    <div>{{product.namn}}</div>
+                    <div class="tjanst-header">{{product.namn}}</div>
                     <img :src="product.image" class="tjanst-symbol"/>
                     <div>{{product.cost}} svenska riksdaler</div>
                     <p class="tjanst-beskrivning">{{product.beskrivning}} </p>
