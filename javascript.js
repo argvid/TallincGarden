@@ -176,8 +176,8 @@ app.mount("#app");
   window.addEventListener("scroll", checkScroll);
 })();
 
-function smoothScrollIntresse() {
-  document.querySelector(".valjTjansterContainer").scrollIntoView({
+function smoothScrollMedarbetare() {
+  document.querySelector(".gruppmedlemmarContainer").scrollIntoView({
     behavior: "smooth",
   });
 }

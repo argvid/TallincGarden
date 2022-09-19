@@ -37,7 +37,7 @@
             <h2><span style="background-color:#BBEBB6; padding:3px">Trädgårds</span><span
                     style="border: solid #BBEBB6">hjälpen</span></h2>
             <div class="second-header">
-                <p class="webContent" onclick="smoothScrollIntresse()">Anmäl intresse</p>
+                <p class="webContent" onclick="smoothScrollMedarbetare()">Våra medarbetare</p>
                 <p class="webContent" onclick="smoothScrollBeskrivning()">Beskrivning</p>
                 <p class="webContent" @click="test4">Tjänster </p>
                 <div>
@@ -56,16 +56,16 @@
                                     Summa: {{totalSum}} kr
                                 </p>
                                 <div>
-                                    
-                               
-                                <button id="kassaKnapp"  @click="removeItemToCart()"> Rensa Varukorg</button>
 
-                                <a id="bLink" href="kassa.html">
-                                <button id="kassaKnapp" @click="test1()"> Gå till kassan</button>
 
-                            </a>
+                                    <button id="kassaKnapp" @click="removeItemToCart()"> Rensa Varukorg</button>
 
-                        </div>
+                                    <a id="bLink" href="kassa.html">
+                                        <button id="kassaKnapp" @click="test1()"> Gå till kassan</button>
+
+                                    </a>
+
+                                </div>
                             </ul>
                         </div>
 
@@ -229,7 +229,7 @@
             </div> -->
 
             <div class="tjanster-container">
-
+                <h1 class="headerTjanster">Våra tjanster</h1>
                 <div class="tjanst tjanstNy" v-for="product in products" :key="product.name">
                     <div class="vattna">{{product.namn}}</div>
                     <img :src="product.image" class="tjanst-symbol" />
@@ -349,39 +349,39 @@
                 </div>
             </div>
         </div> -->
-        <div class="footer">
-            <img class="footer_bild" src="bilder/tallincbild.png">
-            <div class="footer_row">
-                <div class="footercolumn">
-                    <div class="footercolumn_inner">
-                        <div class="columnTitel">
-                            <strong><a href="kontakt.html"> Kontakta oss</a></strong>
-                        
+    <div class="footer">
+        <img class="footer_bild" src="bilder/tallincbild.png">
+        <div class="footer_row">
+            <div class="footercolumn">
+                <div class="footercolumn_inner">
+                    <div class="columnTitel">
+                        <strong><a href="kontakt.html"> Kontakta oss</a></strong>
+
                         <ul>
                             <li>Åstadalsvägen 1E</li>
                             <li>702 21 Örebro</li>
                             <li>info@tradgardshjalpen.se</li>
                             <li>076 - 058 98 05</li>
-                           
+
                         </ul>
                     </div>
-                    </div>
-                    <div class="footercolumn_inner">
-                        <div class="columnTitel">
-                            <strong>Om ™ Trädgårdshjälpen</strong>
-                        
+                </div>
+                <div class="footercolumn_inner">
+                    <div class="columnTitel">
+                        <strong>Om ™ Trädgårdshjälpen</strong>
+
                         <ul>
                             <li>Om oss</li>
                             <li>Hitta lokalkontor</li>
                             <li>Bli franchisetagare</li>
-                            <li>FAQ</li>
+                            
                         </ul>
                     </div>
-                    </div>
-                    <div class="footercolumn_inner">
-                        <div class="columnTitel">
-                            <strong>Vårt erbjudande</strong>
-                        
+                </div>
+                <div class="footercolumn_inner">
+                    <div class="columnTitel">
+                        <strong>Vårt erbjudande</strong>
+
                         <ul>
                             <li>Privatkund</li>
                             <li>Företagskund</li>
@@ -389,11 +389,11 @@
                             <li>Lediga jobb</li>
                         </ul>
                     </div>
-                    </div>
-                    <div class="footercolumn_inner">
-                        <div class="columnTitel">
-                            <strong>Kontakta oss</strong>
-                        
+                </div>
+                <div class="footercolumn_inner">
+                    <div class="columnTitel">
+                        <strong>Kontakta oss</strong>
+
                         <ul>
                             <li>Åstadalsvägen 1E</li>
                             <li>702 21 Örebro</li>
@@ -401,15 +401,15 @@
                             <li>076 - 058 98 05</li>
                         </ul>
                     </div>
-                    </div>
-    
                 </div>
-    
+
             </div>
+
         </div>
-    
-        
-            </div>
+    </div>
+
+
+    </div>
     </div>
 
 
