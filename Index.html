@@ -2,7 +2,7 @@
 <html lang="sv">
 
 <head>
-    <script src="https://unpkg.com/vue@next" defer ></script>
+    <script src="https://unpkg.com/vue@next" defer></script>
     <script src="javascript.js" defer></script>
     <link rel="stylesheet" href="myStylesheet.css" />
     <meta charset="utf-8" />
@@ -17,7 +17,7 @@
 
 
 <body>
-    <div id = "app">
+    <div id="app">
 
 
         <div id="header">
@@ -41,20 +41,21 @@
                 <p class="webContent" onclick="smoothScrollBeskrivning()">Beskrivning</p>
                 <p class="webContent" @click="test4">Tjänster </p>
                 <div>
-                    <div class="cart" @click="showCart =!showCart" >
-                        
+                    <div class="cart" @click="showCart =!showCart">
+
                         <i class="bi bi-cart2"></i>
-                        
+
                         <div class="cartAmount">{{cart.length}}</div>
                         <div v-if="showCart" class="cartDropDown">
                             <ul class="cartDropDown2">
-                                <li v-for="c in cart" :key ="cart.name">
-                                     {{c.namn}}
+                                <li v-for="c in cart" :key="cart.name">
+                                    {{c.namn}}
                                     <img v-bind:src="c.image" />
                                 </li>
                                 <p>
                                     Summa: {{totalSum}} kr
                                 </p>
+<<<<<<< Updated upstream
                                 <div>
                                     
                                
@@ -66,16 +67,21 @@
                             </a>
 
                         </div>
+=======
+                                <a href="kassa.html">
+                                    <button @click="test1()"> Gå till kassan</button>
+                                </a>
+>>>>>>> Stashed changes
                             </ul>
                         </div>
 
-        
+
                     </div>
 
 
                 </div>
             </div>
-        
+
 
 
         </div>
@@ -87,7 +93,7 @@
             <div class="nice-picture enSlide fade">
                 <img src="bilder/trädgårdsskötsel3.jpg" class="gallery__img" />
             </div>
-            <div class="nice-picture enSlide fade" >
+            <div class="nice-picture enSlide fade">
                 <img src="bilder/trädgårdsskötsel4.jpg" class="gallery__img" />
             </div>
             <div class="nice-picture enSlide fade">
@@ -97,7 +103,7 @@
             <div class="presentation">
 
                 <div class="presentation-bild">
-                    <img src="bilder/arvid.jpg"/>
+                    <img src="bilder/arvid.jpg" />
                     <p><a href=""></a>Arvid Eriksson</p>
                 </div>
                 <div class="presentation-text">
@@ -183,11 +189,12 @@
             <div class="gruppmedlemmarContainer">
                 <h1>Våra medarbetare</h1>
                 <div class="gruppmedlemmar">
-                    <div class="medlem" v-for="aa in medarbetare" :key ="aa.name">
+                    <div class="medlem" v-for="aa in medarbetare" :key="aa.name">
                         <div class="bild">
                             <img onmouseenter="imgMouseEnter(this)" onmouseleave="imgMouseLeave(this)"
-                            id="arvidProfilbild" class="profilbild" v-bind:src="aa.bild">                        
-                                <div id="textRuta" class="namnText"><a v-bind:href="aa.sida">{{aa.namn}}<br>{{aa.roll}}</a></div>                        
+                                id="arvidProfilbild" class="profilbild" v-bind:src="aa.bild">
+                            <div id="textRuta" class="namnText"><a v-bind:href="aa.sida">{{aa.namn}}<br>{{aa.roll}}</a>
+                            </div>
                         </div>
 
                     </div>
@@ -229,12 +236,12 @@
 
             <div class="tjanster-container">
 
-                <div class = "tjanst tjanstNy"  v-for="product in products" :key ="product.name">
-                    <div class="tjanst-header">{{product.namn}}</div>
-                    <img :src="product.image" class="tjanst-symbol"/>
+                <div class="tjanst tjanstNy" v-for="product in products" :key="product.name">
+                    <div class="vattna">{{product.namn}}</div>
+                    <img :src="product.image" class="tjanst-symbol" />
                     <div>{{product.cost}} svenska riksdaler</div>
                     <p class="tjanst-beskrivning">{{product.beskrivning}} </p>
-                    <button id="kopButton"  @click="addItemToCart(product); test3()"> Lägg i varukorgen</button>
+                    <button id="kopButton" @click="addItemToCart(product); test3()"> Lägg i varukorgen</button>
                 </div>
 
             </div>
@@ -253,29 +260,29 @@
                 </div>
                 <table class="table table-bordered">
                     <thead>
-                      <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Address</th>
-                        <th scope="col">City</th>
-                      </tr>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Address</th>
+                            <th scope="col">City</th>
+                        </tr>
                     </thead>
                     <tbody>
-                      <tr v-for="user, index in lista2">
-                        <th scope="row">{{ index + 1 }}</th>
-                        <td>{{ user.name }}</td>
-                        <td>{{ user.email.toLowerCase() }}</td>
-                        <td>{{ user.address.street }}, {{user.address.suite }}</td>
-                        <td>{{ user.address.city }}</td>
-                      </tr>
+                        <tr v-for="user, index in lista2">
+                            <th scope="row">{{ index + 1 }}</th>
+                            <td>{{ user.name }}</td>
+                            <td>{{ user.email.toLowerCase() }}</td>
+                            <td>{{ user.address.street }}, {{user.address.suite }}</td>
+                            <td>{{ user.address.city }}</td>
+                        </tr>
                     </tbody>
-                  </table>
-                </div>
-
+                </table>
             </div>
-            
-            <!-- <div class="bildspelContainer">
+
+        </div>
+
+        <!-- <div class="bildspelContainer">
                 <div class="enSlide fade" id="bild1">
                     <img src="bilder/trädgårdsskötsel1.jpg">
                 </div>
@@ -288,11 +295,11 @@
 
             </div> -->
 
-        
 
 
-        </div>
-        <div class="valjTjansterContainer">
+
+    </div>
+    <!-- <div class="valjTjansterContainer">
             <div class="checkContainer">
                 <h3 id="checkboxHeader">Vad vill du ha hjälp med?</h3>
                 <div class="checkboxContainer">
@@ -346,6 +353,7 @@
                 <div>
                     <input class="button1" id="btn" type="submit" value="Skicka intresseanmälan">
                 </div>
+<<<<<<< Updated upstream
             </div>
         </div>
         <div class="footer">
@@ -408,6 +416,18 @@
         </div>
     
         
+=======
+            </div> -->
+    </div>
+    <div class="footer">
+
+        <img class="footer_bild" src="bilder/tallincbild.png">
+
+
+    </div>
+
+
+>>>>>>> Stashed changes
     </div>
 
 
