@@ -294,7 +294,8 @@ bytBild.addEventListener("click", function () {
   clearTimeout(nytimeout);
   bildspel();
 });
-
+textHover(x);
+textHoverLeave(x);
 // ----- medlemshover ---------
 imgMouseEnter(x);
 imgMouseLeave(x);
@@ -343,9 +344,8 @@ function slide() {
 
 // newWin.document.write("Hello, world!");
 
-// ----card text---------
-imgMouseEnter(x);
-imgMouseLeave(x);
+//  Arvids card text---------
+
 function textHover(x) {
   let skillContainer = document.getElementById("skillContainer");
   let presentationContainer = document.getElementById("presentationContainer");

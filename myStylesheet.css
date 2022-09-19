@@ -93,7 +93,7 @@ body {
 
 }
 
-#bytBild{
+#bytBild {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 4;
@@ -102,6 +102,7 @@ body {
     cursor: pointer;
 
 }
+
 .nice-picture {
     background-color: green;
     filter: blur(5px);
@@ -122,7 +123,7 @@ body {
 }
 
 .gruppmedlemmarContainer {
-    border-bottom:thick solid #BBEBB6;
+    border-bottom: thick solid #BBEBB6;
     box-shadow: -1px 2px 31px 4px rgba(0, 0, 0, 0.71);
 
     scroll-margin-top: 150px;
@@ -137,9 +138,10 @@ body {
     display: flex;
     flex-direction: column;
 }
-.gruppmedlemmarContainer h1{
-    font-size:3rem;
-    font-weight:bolder;
+
+.gruppmedlemmarContainer h1 {
+    font-size: 3rem;
+    font-weight: bolder;
 }
 
 .gruppmedlemmar {
@@ -189,7 +191,8 @@ body {
 
 
 }
-#arvidProfilbild:hover + #textRuta {
+
+#arvidProfilbild:hover+#textRuta {
     opacity: 0;
     position: absolute;
     background-color: #BBEBB6;
@@ -198,7 +201,7 @@ body {
     transition: .5s ease;
     cursor: pointer;
     opacity: 1;
-  
+
 }
 
 .profilbildBlur {
@@ -306,7 +309,7 @@ body {
     justify-content: space-around;
 }
 
-.tjanstNy{
+.tjanstNy {
     text-align: center;
     width: 20vW;
     height: 100%;
@@ -314,9 +317,10 @@ body {
     flex-direction: column;
     align-items: center;
 }
+
 .tjanster-container {
-    border-top:thick solid #BBEBB6;
-    border-bottom:thick solid #BBEBB6;
+    border-top: thick solid #BBEBB6;
+    border-bottom: thick solid #BBEBB6;
     box-shadow: -1px 2px 31px 4px rgba(0, 0, 0, 0.71);
 
     scroll-margin-top: 150px;
@@ -334,9 +338,10 @@ body {
     display: flex;
     justify-content: center;
     align-content: center;
-    padding-top:5%;
+    padding-top: 5%;
 }
-.tjanst-header{
+
+.tjanst-header {
     font-size: larger;
     font-weight: bold;
 }
@@ -684,7 +689,8 @@ label {
     border-bottom: thick solid #BBEBB6;
 
 }
-.personligHeader a{
+
+.personligHeader a {
     text-decoration: none;
 }
 
@@ -757,14 +763,37 @@ label {
     width: 100%;
 }
 
+.skillContainerOpacity {
+    transition: 1s;
+    opacity: 0 !important;
+}
+
+#presentationContainer {
+    opacity: 0;
+    padding: 10%;
+    background-color: #BBEBB6;
+    grid-row-start: 1;
+    grid-row-end: 5;
+    grid-column-start: 4;
+    grid-column-end: 6;
+}
+
+.presentationContainerOpacity {
+    transition-delay: 1s;
+    transition: 1s;
+    opacity: 1 !important;
+    z-index: 99;
+
+}
+
 .fardigheterText {
     font-weight: bold;
     margin-bottom: 1%;
 }
 
 
-    
-.kontaktBody{
+
+.kontaktBody {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(7, 100px);
@@ -772,20 +801,22 @@ label {
     grid-row-gap: 1px;
 
 }
-.kontaktTitel{
-  font-size: 30px;
-  color: black;
-  font-weight: bold;
+
+.kontaktTitel {
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
 }
-.form{
-    border-left:thick solid #BBEBB6;
-    border-right:thick solid #BBEBB6;
+
+.form {
+    border-left: thick solid #BBEBB6;
+    border-right: thick solid #BBEBB6;
     background-color: white;
     grid-column-start: 2;
     grid-column-end: 5;
     grid-row-start: 3;
     grid-row-end: 7;
-    padding:50px;
+    padding: 50px;
 
     box-shadow: -1px 2px 31px 4px rgba(0, 0, 0, 0.71);
 
@@ -794,21 +825,21 @@ label {
 
 
 
-.cart{
+.cart {
     position: relative;
     background-color: #fff;
     color: #213458;
     font-size: 25px;
     padding: 5px;
-    border-radius: 4px ;
+    border-radius: 4px;
     /* margin-bottom: 7px;
     margin-top: 7px; */
     margin: 1rem;
     cursor: pointer;
-    
+
 }
 
-.cartAmount{
+.cartAmount {
     position: absolute;
     top: -10px;
     right: -6px;
@@ -818,13 +849,15 @@ label {
     padding: 3px;
     border-radius: 3px;
 }
-.cartDropDown2 img{
+
+.cartDropDown2 img {
     margin-top: 3%;
     height: 20%;
     width: 20%;
 
 }
-.cartDropDown2 li{
+
+.cartDropDown2 li {
     width: 250px;
     line-height: 70px;
     font-size: 3vh;
@@ -835,7 +868,7 @@ label {
     justify-content: space-between;
 }
 
-.cartDropDown2{
+.cartDropDown2 {
     position: absolute;
     right: 0;
     font-size: small;
@@ -847,7 +880,7 @@ label {
     display: flex;
     flex-direction: column;
     z-index: 1;
-    
+
 }
 
 /* #kopButton{
@@ -873,21 +906,21 @@ label {
     color: #000;
     padding: 3%;
     width: 50%;
-    height:20%;
+    height: 20%;
     text-align: center;
     transition-duration: 0.4s;
     overflow: hidden;
     box-shadow: 0 5px 15px #193047;
     border-radius: 4px;
-  }
-  
-  #kopButton:hover {
+}
+
+#kopButton:hover {
     background: white;
     /* box-shadow: 0px 2px 10px 5px #213458; */
     color: #000;
-  }
-  
-  #kopButton:after {
+}
+
+#kopButton:after {
     content: "";
     background: #BBEBB6;
     display: block;
@@ -898,27 +931,29 @@ label {
     margin-top: -120%;
     opacity: 0;
     transition: all 1s
-  }
-  
-  #kopButton:active:after {
+}
+
+#kopButton:active:after {
     padding: 0;
     margin: 0;
     opacity: 1;
     transition: 0s
-  }
-  
-  #kopButton:focus { outline:0; }
+}
 
-ul{
-    list-style-type:none;
-    }
+#kopButton:focus {
+    outline: 0;
+}
 
-    /* border: solid black; */
+ul {
+    list-style-type: none;
+}
 
-.grid-container{
-  display: grid;
-  height: 400px;
-  align-content: center;  
+/* border: solid black; */
+
+.grid-container {
+    display: grid;
+    height: 400px;
+    align-content: center;
 
 }
 
@@ -931,23 +966,24 @@ ul{
     background-color: #BBEBB6;
     color: white;
     text-align: center;
-    
-  }
-  .footer_bild{
+
+}
+
+.footer_bild {
     border: 1px solid #ddd;
-  border-radius: 4px;
-  width: 150px;
-  height: auto;
-  float: left;
+    border-radius: 4px;
+    width: 150px;
+    height: auto;
+    float: left;
 
 
 
-  }
+}
 
 
-  .tKunder {
-    border-top:thick solid #BBEBB6;
-    border-bottom:thick solid #BBEBB6;
+.tKunder {
+    border-top: thick solid #BBEBB6;
+    border-bottom: thick solid #BBEBB6;
     box-shadow: -1px 2px 31px 4px rgba(0, 0, 0, 0.71);
 
     scroll-margin-top: 150px;
@@ -965,10 +1001,11 @@ ul{
 
 
 }
+
 /* RESPONSIVE DESIGN */
 
 @media screen and (max-width: 500px) {
-   
+
     #bytBild {
         grid-column-start: 1;
         grid-column-end: 2;
