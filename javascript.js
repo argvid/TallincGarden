@@ -375,3 +375,18 @@ function textHoverLeave(x) {
     false
   );
 }
+
+// RESPONSIVE DESIGN
+
+const hamburger = document.querySelector(".hamburger");
+const secondheader = document.querySelector(".second-header");
+
+hamburger.addEventListener("click", () => {
+hamburger.classList.toggle("active");
+secondheader.classList.toggle("active");
+})
+
+secondheader.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+  hamburger.classList.remove("active");
+  navMenu.classList.remove("active");
+}))

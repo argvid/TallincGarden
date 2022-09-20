@@ -1026,26 +1026,46 @@ strong {
     border-right: thin solid #C2E500;
 }
 
-/* RESPONSIVE DESIGN */
 
-@media screen and (max-width: 500px) {
+.hamburger {
+    display: none;
+    cursor: pointer;
+   }
 
-    #bytBild {
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 4;
-        grid-row-end: 5;
-        z-index: 99;
-        width: 5px;
+/* RESPONSIV DESIGN */
+
+@media screen and (max-width: 575px) {
+   
+    .hamburger {
+     display: block !important;
     }
-
-    #presentation-text {
-
-        height: 400px;
+ 
+    .hamburger.active .content:nth-child(2){
+     opacity: 0;
     }
-<<<<<<< Updated upstream
-}
-=======
-
-}
->>>>>>> Stashed changes
+    .hamburger.active .content:nth-child(1){
+     transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .content:nth-child(3){
+     transform: translateY(-8px) rotate(-45deg);
+    }
+ 
+    .second-header{
+        display: none;
+     position: fixed;
+     height: 10%;
+     background-color: #BBEBB6;
+     width: 100%;
+     text-align: center;
+     transition: 0.3s;
+     
+    }
+ 
+    .content{
+     margin: 16px 0;
+    }
+ 
+    .second-header.active{
+     left: 0;
+    }
+ }
