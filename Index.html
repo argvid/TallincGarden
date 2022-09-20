@@ -66,12 +66,12 @@
                             </ul>
                         </div>
                     </div>
-
+                    <!-- 
                     <div class="hamburger">
                         <span class="content"></span>
                         <span class="content"></span>
                         <span class="content"></span>
-                    </div>
+                    </div> -->
 
 
                 </div>
@@ -184,7 +184,8 @@
                         <div class="bild">
                             <img onmouseenter="imgMouseEnter(this)" onmouseleave="imgMouseLeave(this)"
                                 id="arvidProfilbild" class="profilbild" v-bind:src="anstalld.bild">
-                            <div id="textRuta" class="namnText"><a v-bind:href="anstalld.sida">{{anstalld.namn}}<br>{{anstalld.roll}}</a>
+                            <div id="textRuta" class="namnText"><a
+                                    v-bind:href="anstalld.sida">{{anstalld.namn}}<br>{{anstalld.roll}}</a>
                             </div>
                         </div>
                     </div>
@@ -238,7 +239,7 @@
                 <button @click="page =!page">Visa</button>
             </div>
 
-            <div v-if ="page ===false" class="tKunder">
+            <div v-if="page ===false" class="tKunder">
                 <div class="tjanst-titel">
                     <h3>Tidigare kunder</h2>
                 </div>
@@ -264,7 +265,7 @@
                 </table>
             </div>
         </div>
-    
+
         <!-- <div class="bildspelContainer">
                 <div class="enSlide fade" id="bild1">
                     <img src="bilder/trädgårdsskötsel1.jpg">
@@ -339,57 +340,50 @@
             </div>
         </div> -->
     <div class="footer">
-        <img class="footer_bild" src="bilder/tallincbild.png">
-        <div class="footer_row">
-            <div class="footercolumn">
-                <div class="footercolumn_inner">
-                    <div class="columnTitel">
-                        <strong><a href="kontakt.html"> Kontakta oss</a></strong>
-                        <ul>
-                            <li>Åstadalsvägen 1E</li>
-                            <li>702 21 Örebro</li>
-                            <li>info@tradgardshjalpen.se</li>
-                            <li>076 - 058 98 05</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="footercolumn_inner">
-                    <div class="columnTitel">
-                        <strong>Om Trädgårdshjälpen</strong>
-                        <ul>
-                            <li><p class="webContent" onclick="smoothScrollMedarbetare()">Om oss</p></li>
-                            <li>Hitta lokalkontor</li>
-                            <li>Bli franchisetagare</li>                            
-                        </ul>
-                    </div>
-                </div>
-                <div class="footercolumn_inner">
-                    <div class="columnTitel">
-                        <strong>Vårt erbjudande</strong>
-                        <ul>
-                            <li>Privatkund</li>
-                            <li>Företagskund</li>
-                            <li>Bli veteran</li>
-                            <li>Lediga jobb</li>
-                        </ul>
-                    </div>
-                </div>
-                <img class="footer_bild" src="bilder/tgthjälpen.png">
-                <!-- <div class="footercolumn_inner">
-                    <div class="columnTitel">
-                        <strong>Kontakta oss</strong>
-
-                        <ul>
-                            <li>Åstadalsvägen 1E</li>
-                            <li>702 21 Örebro</li>
-                            <li>info@tradgardshjalpen.se</li>
-                            <li>076 - 058 98 05</li>
-                        </ul>
-                    </div>
-                </div> -->
-
+        <div class="footercolumn_inner">
+            <img class="footer_bild" src="bilder/tallincbild.png">
+        </div>
+        <div class="footercolumn_inner">
+            <div class="columnTitel">
+                <strong><a href="kontakt.html"> Kontakta oss</a></strong>
+                <ul>
+                    <li>Åstadalsvägen 1E</li>
+                    <li>702 21 Örebro</li>
+                    <li>info@tradgardshjalpen.se</li>
+                    <li>076 - 058 98 05</li>
+                </ul>
             </div>
         </div>
+        <div class="footercolumn_inner">
+            <div class="columnTitel">
+                <strong>Om Trädgårdshjälpen</strong>
+                <ul>
+                    <li>
+                        <p class="webContent" onclick="smoothScrollMedarbetare()">Om oss</p>
+                    </li>
+                    <li>Hitta lokalkontor</li>
+                    <li>Bli franchisetagare</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footercolumn_inner">
+            <div class="columnTitel">
+                <strong>Vårt erbjudande</strong>
+                <ul>
+                    <li>Privatkund</li>
+                    <li>Företagskund</li>
+                    <li>Bli veteran</li>
+                    <li>Lediga jobb</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footercolumn_inner">
+            <img class="footer_bild" src="bilder/tgthjälpen.png">
+
+        </div>
+
+
+
     </div>
     <!-- </div>
     </div>
