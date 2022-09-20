@@ -42,9 +42,7 @@
                 <p class="webContent" onclick="smoothScrollTjanster()">Tjänster </p>
                 <div>
                     <div class="cart" @click="showCart =!showCart">
-
                         <i class="bi bi-cart2"></i>
-
                         <div class="cartAmount">{{cart.length}}</div>
                         <div v-if="showCart" class="cartDropDown">
                             <ul class="cartDropDown2">
@@ -56,29 +54,19 @@
                                     Summa: {{totalSum}} kr
                                 </p>
                                 <div>
-
-
                                     <button id="kassaKnapp" @click="removeItemToCart()"> Rensa Varukorg</button>
 
                                     <a id="bLink" href="kassa.html">
                                         <button id="kassaKnapp" @click="test1()"> Gå till kassan</button>
-
                                     </a>
-
                                 </div>
                             </ul>
                         </div>
-
-
                     </div>
-
-
                 </div>
             </div>
-
-
-
         </div>
+
         <div class="body-content">
             <div id="bytBild"> <img src="bilder/arrow.png"></div>
             <div class="nice-picture enSlide fade">
@@ -131,8 +119,6 @@
                 </div>
             </div>
 
-
-
             <!-- <div class="gruppmedlemmarContainer">
                 <h1>Våra medarbetare</h1>
                 <div class="gruppmedlemmar">
@@ -183,22 +169,16 @@
             <div class="gruppmedlemmarContainer">
                 <h1>Våra medarbetare</h1>
                 <div class="gruppmedlemmar">
-                    <div class="medlem" v-for="aa in medarbetare" :key="aa.name">
+                    <div class="medlem" v-for="anstalld in medarbetare" :key="anstalld.name">
                         <div class="bild">
                             <img onmouseenter="imgMouseEnter(this)" onmouseleave="imgMouseLeave(this)"
-                                id="arvidProfilbild" class="profilbild" v-bind:src="aa.bild">
-                            <div id="textRuta" class="namnText"><a v-bind:href="aa.sida">{{aa.namn}}<br>{{aa.roll}}</a>
+                                id="arvidProfilbild" class="profilbild" v-bind:src="anstalld.bild">
+                            <div id="textRuta" class="namnText"><a v-bind:href="anstalld.sida">{{anstalld.namn}}<br>{{anstalld.roll}}</a>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
-      
-
-
-            
-
 
             <!-- <div class="tjanster-container">
                 <div class="tjanst-titel">
@@ -241,26 +221,12 @@
                     <p class="tjanst-beskrivning">{{product.beskrivning}} </p>
                     <button id="kopButton" @click="addItemToCart(product); test3()"> Lägg i varukorgen</button>
                 </div>
-
             </div>
-
-
-            <!-- <div>
-                <li v-for="(value, name) in lista2">
-                    {{user.id}} {{user.name}} {{user.address.street}} {{user.address.suite}}
-                </li>
-
-            </div> -->
 
             <div>
                 <button @click="page =!page">Visa</button>
             </div>
 
-            
-
-
-
-            
             <div v-if ="page ===false" class="tKunder">
                 <div class="tjanst-titel">
                     <h3>Tidigare kunder</h2>
@@ -285,9 +251,7 @@
                         </tr>
                     </tbody>
                 </table>
-
             </div>
-        
         </div>
     
         <!-- <div class="bildspelContainer">
@@ -370,20 +334,17 @@
                 <div class="footercolumn_inner">
                     <div class="columnTitel">
                         <strong><a href="kontakt.html"> Kontakta oss</a></strong>
-
                         <ul>
                             <li>Åstadalsvägen 1E</li>
                             <li>702 21 Örebro</li>
                             <li>info@tradgardshjalpen.se</li>
                             <li>076 - 058 98 05</li>
-
                         </ul>
                     </div>
                 </div>
                 <div class="footercolumn_inner">
                     <div class="columnTitel">
                         <strong>Om Trädgårdshjälpen</strong>
-
                         <ul>
                             <li><p class="webContent" onclick="smoothScrollMedarbetare()">Om oss</p></li>
                             <li>Hitta lokalkontor</li>
@@ -394,7 +355,6 @@
                 <div class="footercolumn_inner">
                     <div class="columnTitel">
                         <strong>Vårt erbjudande</strong>
-
                         <ul>
                             <li>Privatkund</li>
                             <li>Företagskund</li>
@@ -418,17 +378,14 @@
                 </div> -->
 
             </div>
-
         </div>
     </div>
-
-
-    </div>
+    <!-- </div>
     </div>
 
 
 
-    </div>
+    </div> -->
 
 
 
