@@ -890,14 +890,6 @@ label {
     width: fit-content;
 }
 
-/* #kopButton{
-    background-color: #fff;
-    border: solid #213458;
-    color: #213458;
-    padding: 1rem;
-    cursor: pointer;
-} */
-
 #kopButton {
     text-align: center;
     text-transform: uppercase;
@@ -1009,11 +1001,6 @@ strong {
 }
 /* Slut på footer **/
 
-
-
-
-
-
 .tKunder {
     border-top: thick solid #BBEBB6;
     border-bottom: thick solid #BBEBB6;
@@ -1031,9 +1018,6 @@ strong {
     object-fit: cover;
     border-left: thin solid #C2E500;
     border-right: thin solid #C2E500;
-    
-    
-
 }
 
 /* RESPONSIVE DESIGN */
@@ -1053,6 +1037,4 @@ strong {
 
         height: 400px;
     }
-
-
 }
