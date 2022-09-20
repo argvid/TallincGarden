@@ -782,7 +782,7 @@ label {
     font-weight: bold;
     margin-bottom: 1%;
 }
-/* Kontakt sidans CSS */
+/* Kontaktsidans CSS */
 .kontaktBody {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
