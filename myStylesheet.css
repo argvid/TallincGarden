@@ -975,6 +975,7 @@ ul {
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 1.17em;
     bottom: -30px; 
+    overflow: hidden;
 }
 
 .footercolumn .footercolumn_inner {
