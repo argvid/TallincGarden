@@ -110,6 +110,8 @@ body {
     display: block;
 }
 
+/* Gruppmedlemmar */
+
 .gruppmedlemmarContainer {
     border-bottom: thick solid #BBEBB6;
     box-shadow: -1px 2px 31px 4px rgba(0, 0, 0, 0.71);
@@ -185,11 +187,6 @@ body {
     opacity: 1;
 }
 
-.profilbildBlur {
-    opacity: 0.4;
-    transition: .5s ease;
-}
-
 .namnText {
     opacity: 0;
     position: absolute;
@@ -216,10 +213,17 @@ body {
     color: black !important;
 }
 
+.profilbildBlur {
+    opacity: 0.4;
+    transition: .5s ease;
+}
+
 .namnTextOpacity {
     transition: .5s ease;
     opacity: 1;
 }
+
+/* Slut på gruppmedlemmar */
 
 .content {
     display: flex;
@@ -807,6 +811,8 @@ label {
     box-shadow: -1px 2px 31px 4px rgba(0, 0, 0, 0.71);
 }
 /* Kontaktsidans CSS slut */
+
+/* Varukorg  */
 .cart {
     position: relative;
     background-color: #fff;
@@ -882,6 +888,8 @@ label {
     border-radius: 4px;
     margin-bottom: 1%;
 }
+
+/* Slut på varukorg */
 
 /* Kassa sidan  */
 .kassaProdukt img {
