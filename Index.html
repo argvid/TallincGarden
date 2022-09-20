@@ -47,7 +47,7 @@
                     <div class="cart" @click="showCart =!showCart">
                         <i class="bi bi-cart2"></i>
                         <div class="cartAmount">{{cart.length}}</div>
-                        <div v-if="showCart" class="cartDropDown">
+                        <div v-if="showCart">
                             <ul class="cartDropDown2">
                                 <li v-for="c in cart" :key="cart.name">
                                     {{c.namn}}
@@ -66,8 +66,13 @@
                             </ul>
                         </div>
                     </div>
+<<<<<<< HEAD
                     <!-- 
                     <div class="hamburger">
+=======
+
+                    <!-- <div class="hamburger">
+>>>>>>> 569560f053f1ebb2de6cef00a1a2197ec19b14b2
                         <span class="content"></span>
                         <span class="content"></span>
                         <span class="content"></span>
@@ -130,53 +135,6 @@
                 </div>
             </div>
 
-            <!-- <div class="gruppmedlemmarContainer">
-                <h1>Våra medarbetare</h1>
-                <div class="gruppmedlemmar">
-                    <div class="medlem">
-                        <div class="bild">
-                            <img onmouseenter="imgMouseEnter(this)" onmouseleave="imgMouseLeave(this)" id="arvidProfilbild" class="profilbild" src="bilder/arvid.jpg">                        
-                                <div id="textRuta" class="namnText"><a href="arvid.html">Arvid Eriksson<br>VD</a></div>                        
-                        </div>
-
-                    </div>
-                    <div class="medlem">
-                        <div class="bild">
-                            <img class="profilbild" src="bilder/skriet.jpg">
-
-                        </div>
-                        <p class="besText namn">
-                            <a href="william.html">William Åberg<br>Krattmästare</a>
-                        </p>
-
-
-                    </div>
-                    <div class="medlem">
-                        <div class="bild">
-                            <img class="profilbild" src="bilder/batman.png">
-
-                        </div>
-                        <p class="besText namn">
-                            <a href="oliver.html">Oliver Timmerman<br>Grässpecialist</a>
-                        </p>
-
-
-                    </div>
-                    <div class="medlem">
-                        <div class="bild">
-                            <img class="profilbild" src="bilder/skriet.jpg">
-
-                        </div>
-                        <p class="besText namn">
-                            <a href="niklas.html">Niklas Sagström<br>Ogräsdödare</a>
-                        </p>
-                        <p class="besText">
-                            Jag kan gräva
-                        </p>
-
-                    </div>
-                </div>
-            </div> -->
             <div class="gruppmedlemmarContainer">
                 <h1>Våra medarbetare</h1>
                 <div class="gruppmedlemmar">
@@ -191,38 +149,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- <div class="tjanster-container">
-                <div class="tjanst-titel">
-                    <h3>Olika tjänster</h2>
-                </div>
-                <div class="tjanst tjanst1">
-                    <img src="bilder/plant.png" class="tjanst-symbol" />
-                    <p class="tjanst-beskrivning">Vi hjälper dig att välja ut och plantera blommor som passar klimatet och
-                        stilen i din trädgård. </p>
-                </div>
-                <div class="tjanst tjanst2">
-                    <img src="bilder/lawn-mower.png" class="tjanst-symbol" />
-                    <p class="tjanst-beskrivning">Vi håller din gräsmatta vältrimmad genom gräsklippning av olika typer.
-                        Både underhåll samt nyklippning. </p>
-                        <button  @click="test1()">Köp</button>
-                        
-
-                </div>
-                <div class="tjanst tjanst3">
-                    <img src="bilder/scissor.png" class="tjanst-symbol" />
-                    <p class="tjanst-beskrivning">Vi klipper dina buskar och träd i diverse former eller underhåller för att
-                        hålla din trädgård snygg.</p>
-
-                </div>
-                <div class="tjanst tjanst4">
-                    <img src="bilder/garden.png" class="tjanst-symbol" />
-                    <p class="tjanst-beskrivning">Ska du resa bort eller har inte tid att vattna dina blommor? Vi hjälper
-                        dig med detta så att din trädgård håller sig grön.</p>
-
-
-                </div>
-            </div> -->
 
             <div class="tjanster-container">
                 <h1 class="headerTjanster">Våra tjanster</h1>
@@ -265,6 +191,7 @@
                 </table>
             </div>
         </div>
+<<<<<<< HEAD
 
         <!-- <div class="bildspelContainer">
                 <div class="enSlide fade" id="bild1">
@@ -282,64 +209,12 @@
 
 
 
+=======
+>>>>>>> 569560f053f1ebb2de6cef00a1a2197ec19b14b2
     </div>
-    <!-- <div class="valjTjansterContainer">
-            <div class="checkContainer">
-                <h3 id="checkboxHeader">Vad vill du ha hjälp med?</h3>
-                <div class="checkboxContainer">
-                    <p>Gräsklippning:</p>
-                    <input name="tjanst" type="checkbox" class="grasklippning" value="klippa gräset">
-                </div>
-                <div class="checkboxContainer">
-                    <p>Plantera blommor:</p>
 
-                    <input name="tjanst" type="checkbox" class="planteraBlommor" value="plantera blommor">
-                </div>
-                <div class="checkboxContainer">
-                    <p>Vattna:</p>
-
-                    <input name="tjanst" type="checkbox" class="vattna" value="vattna din trädgård">
-                </div>
-                <div class="checkboxContainer">
-                    <p>Plocka frukt:</p>
-
-                    <input name="tjanst" type="checkbox" class="plockaFrukt" value="plocka frukt">
-                </div>
-                <div class="checkboxContainer">
-                    <input class="button1" id="btn" type="submit" value="Välj" onclick="kollaValdaTjanster()">
-                </div>fgv
-
-            </div>
-            <div class="confirmContainer">
-                <div>
-                    <h3>Gör intresseanmälan!</h3>
-                    <label>Förnamn:</label>
-                    <input type="text">
-                    <br>
-                    <br>
-                    <label>Efternamn:</label>
-                    <input type="text">
-                    <br>
-                    <br>
-                    <label>Adress:</label>
-                    <input type="text">
-                    <br>
-                    <br>
-                    <label>Telefonnr:</label>
-                    <input type="text">
-                </div>
-                <div>
-                    <div class="summeradText">
-                        <h4 id="valdaTjanster">
-                            </p>
-                    </div>
-                </div>
-                <div>
-                    <input class="button1" id="btn" type="submit" value="Skicka intresseanmälan">
-                </div>
-            </div>
-        </div> -->
     <div class="footer">
+<<<<<<< HEAD
         <div class="footercolumn_inner">
             <img class="footer_bild" src="bilder/tallincbild.png">
         </div>
@@ -352,6 +227,46 @@
                     <li>info@tradgardshjalpen.se</li>
                     <li>076 - 058 98 05</li>
                 </ul>
+=======
+        <img class="footer_bild" src="bilder/tallincbild.png">
+        <div class="footer_row">
+            <div class="footercolumn">
+                <div class="footercolumn_inner">
+                    <div class="columnTitel">
+                        <strong><a href="kontakt.html"> Kontakta oss</a></strong>
+                        <ul>
+                            <li>Åstadalsvägen 1E</li>
+                            <li>702 21 Örebro</li>
+                            <li>info@tradgardshjalpen.se</li>
+                            <li>076 - 058 98 05</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footercolumn_inner">
+                    <div class="columnTitel">
+                        <strong>Om Trädgårdshjälpen</strong>
+                        <ul>
+                            <li><p class="webContent" onclick="smoothScrollMedarbetare()">Om oss</p></li>
+                            <li>Hitta lokalkontor</li>
+                            <li>Bli franchisetagare</li>                            
+                        </ul>
+                    </div>
+                </div>
+                <div class="footercolumn_inner">
+                    <div class="columnTitel">
+                        <strong>Vårt erbjudande</strong>
+                        <ul>
+                            <li>Privatkund</li>
+                            <li>Företagskund</li>
+                            <li>Bli veteran</li>
+                            <li>Lediga jobb</li>
+                        </ul>
+                    </div>
+                </div>
+                <img class="footer_bild" src="bilder/tgthjälpen.png">
+
+
+>>>>>>> 569560f053f1ebb2de6cef00a1a2197ec19b14b2
             </div>
         </div>
         <div class="footercolumn_inner">
@@ -385,19 +300,6 @@
 
 
     </div>
-    <!-- </div>
-    </div>
-
-
-
-    </div> -->
-
-
-
-
-
-
-
 </body>
 
 </html>
