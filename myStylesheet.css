@@ -284,15 +284,8 @@ body {
     justify-content: space-around;
 }
 
-.tjanstNy {
-    text-align: center;
-    width: 20vW;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
+/* Tjänster */
 .tjanster-container {
     border-top: thick solid #BBEBB6;
     border-bottom: thick solid #BBEBB6;
@@ -315,26 +308,20 @@ body {
     padding-top: 5%;
 }
 
-.tjanst-header {
-    font-size: larger;
-    font-weight: bold;
+.headerTjanster {
+    position: absolute;
+    font-size: 2vmax;
+    font-weight: bolder;
+    margin-top: -4%;
 }
 
-.tjanst-titel {
+.tjanstNy {
     text-align: center;
-    font-size: 20px;
-    grid-column-start: 3;
-    grid-column-end: 7;
-}
-
-.tjanst-beskrivning {
-    padding: 3%;
-    height: 20%;
-}
-
-.tjanst-symbol {
-    width: 20%;
-    height: 20%;
+    width: 20vW;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .tjanst {
@@ -342,7 +329,83 @@ body {
     grid-row-end: 7;
 }
 
-.tjanst1 {
+.vattna{
+    font-weight: bolder;
+}
+.tjanst-symbol {
+    width: 20%;
+    height: 20%;
+}
+.tjanst-beskrivning {
+    padding: 3%;
+    height: 20%;
+}
+
+#kopButton {
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 70%;
+    letter-spacing: auto;
+    position: relative;
+    background-color: #BBEBB6;
+    border: thick solid #BBEBB6;
+    color: #000;
+    padding: 3%;
+    width: 50%;
+    height: 20%;
+    text-align: center;
+    transition-duration: 0.4s;
+    overflow: hidden;
+    box-shadow: 0 5px 15px #193047;
+    border-radius: 4px;
+}
+
+#kopButton:hover {
+    background: #DB1896;
+    box-shadow: 0px 2px 10px 5px #213458;
+    background: white;
+    /* box-shadow: 0px 2px 10px 5px #213458; */
+    color: #000;
+}
+
+#kopButton:after {
+    content: "";
+    background: #BBEBB6;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s;
+}
+
+#kopButton:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+#kopButton:focus {
+    outline: 0;
+}
+
+/* .tjanst-header {
+    font-size: larger;
+    font-weight: bold;
+} */
+
+/* .tjanst-titel {
+    text-align: center;
+    font-size: 20px;
+    grid-column-start: 3;
+    grid-column-end: 7;
+} */
+
+/* .tjanst1 {
     grid-column-start: 1;
     grid-column-end: 3;
     border-right: thin solid #BBEBB6;
@@ -367,7 +430,9 @@ body {
     grid-column-start: 7;
     grid-column-end: 9;
     text-align: center;
-}
+} */
+
+/* Slut på tjänst */
 
 .bildspelContainer {
     grid-row-start: 17;
@@ -501,7 +566,7 @@ body {
     grid-column-end: 8;
 }
 
-.valjTjansterContainer {
+/* .valjTjansterContainer {
     grid-row-start: 32;
     grid-row-end: 35;
     grid-column-start: 2;
@@ -515,17 +580,9 @@ body {
     height: 80%;
     margin-bottom: 10%;
     flex-wrap: wrap
-}
+} */
 
-.headerTjanster {
-    position: absolute;
-    font-size: 2vmax;
-    font-weight: bolder;
-    margin-top: -4%;
-}
-.vattna{
-    font-weight: bolder;
-}
+
 
 .checkContainer {
     height: 80%;
@@ -890,57 +947,7 @@ label {
     width: fit-content;
 }
 
-#kopButton {
-    text-align: center;
-    text-transform: uppercase;
-    cursor: pointer;
-    font-size: 70%;
-    letter-spacing: auto;
-    position: relative;
-    background-color: #BBEBB6;
-    border: thick solid #BBEBB6;
-    color: #000;
-    padding: 3%;
-    width: 50%;
-    height: 20%;
-    text-align: center;
-    transition-duration: 0.4s;
-    overflow: hidden;
-    box-shadow: 0 5px 15px #193047;
-    border-radius: 4px;
-}
 
-#kopButton:hover {
-    background: #DB1896;
-    box-shadow: 0px 2px 10px 5px #213458;
-    background: white;
-    /* box-shadow: 0px 2px 10px 5px #213458; */
-    color: #000;
-}
-
-#kopButton:after {
-    content: "";
-    background: #BBEBB6;
-    display: block;
-    position: absolute;
-    padding-top: 300%;
-    padding-left: 350%;
-    margin-left: -20px !important;
-    margin-top: -120%;
-    opacity: 0;
-    transition: all 0.8s;
-}
-
-#kopButton:active:after {
-    padding: 0;
-    margin: 0;
-    opacity: 1;
-    transition: 0s
-}
-
-#kopButton:focus {
-    outline: 0;
-}
 
 ul {
     list-style-type: none;
