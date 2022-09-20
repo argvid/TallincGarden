@@ -62,6 +62,7 @@ const app = Vue.createApp({
         },
       ],
 
+      visaMeny: false,
       showCart: false,
       cart2: [],
       storedKop: JSON.parse(sessionStorage.getItem("kopta")),
@@ -378,15 +379,21 @@ function textHoverLeave(x) {
 
 // RESPONSIVE DESIGN
 
-const hamburger = document.querySelector(".hamburger");
-const secondheader = document.querySelector(".second-header");
+// const hamburger = document.querySelector(".hamburger");
+// const secondheader = document.querySelector(".second-header");
 
-hamburger.addEventListener("click", () => {
-hamburger.classList.toggle("active");
-secondheader.classList.toggle("active");
+// hamburger.addEventListener("click", () => {
+// hamburger.classList.toggle("active");
+// secondheader.classList.toggle("active");
+// })
+
+// secondheader.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+//   hamburger.classList.remove("active");
+//   navMenu.classList.remove("active");
+// }))
+
+const hamburgare = document.getElementById('hamburgare');
+const meny = document.getElementById('mobilMeny');
+hamburgare.addEventListener("click", function () {
+
 })
-
-secondheader.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
-  hamburger.classList.remove("active");
-  navMenu.classList.remove("active");
-}))

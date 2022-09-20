@@ -46,24 +46,28 @@
 
 /* Olivers Bars */
 
-.obar1{
+.obar1 {
     width: 20%;
     animation-name: slideinoBars1;
 }
-.obar2{
+
+.obar2 {
     width: 80%;
     animation-name: slideinoBars2;
 }
-.obar3{
+
+.obar3 {
     width: 50%;
     animation-name: slideinoBars3;
 }
-.obar4{
+
+.obar4 {
     width: 65%;
     animation-name: slideinoBars4;
 
 }
-.obar5{
+
+.obar5 {
     width: 95%;
     animation-name: slideinoBars5;
 }
@@ -219,7 +223,8 @@
 
     to {
         width: 10%;
-        }}
+    }
+}
 
 
 /* Olivers keyframes */
@@ -271,7 +276,8 @@
 
     to {
         width: 95%;
-        }}
+    }
+}
 
 
 /* Sagis keyframes */
@@ -323,4 +329,7 @@
 
     to {
         width: 20%;
-        }}
+    }
+}
+
+/*/////////////*/
