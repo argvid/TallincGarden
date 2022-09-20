@@ -934,24 +934,22 @@ label {
     text-align: center;
     text-transform: uppercase;
     cursor: pointer;
-    font-size: 70%;
+    font-size: 50%;
     letter-spacing: auto;
     position: relative;
     background-color: #BBEBB6;
     border: thick solid #BBEBB6;
     color: #000;
-    padding: 3%;
-    width: 50%;
-    height: 20%;
+    width: 40%;
+    height: 10%;
     text-align: center;
-    transition-duration: 0.4s;
+    transition-duration: 1s;
     overflow: hidden;
     box-shadow: 0 5px 15px #193047;
     border-radius: 4px;
 }
 
 #kopButton:hover {
-    background: #DB1896;
     box-shadow: 0px 2px 10px 5px #213458;
     background: white;
     /* box-shadow: 0px 2px 10px 5px #213458; */
@@ -968,7 +966,7 @@ label {
     margin-left: -20px !important;
     margin-top: -120%;
     opacity: 0;
-    transition: all 0.8s;
+    transition: 3s;
 }
 
 #kopButton:active:after {
