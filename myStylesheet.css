@@ -992,6 +992,7 @@ strong {
 }
 
 .columnTitel {
+    padding-top:10%;
     line-height: 1;
     text-align: justify;
     margin-left: 50px;
