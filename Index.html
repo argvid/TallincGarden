@@ -36,6 +36,17 @@
             </div>
             <h2><span style="background-color:#BBEBB6; padding:3px">Trädgårds</span><span
                     style="border: solid #BBEBB6">hjälpen</span></h2>
+                    <div class="hamburger">
+            
+                        <i @click="visaMeny =! visaMeny" class="bi bi-list"></i>
+                        <div class="meny">
+                            <div v-if="visaMeny" id="mobilMeny">
+                                <span class="content" onclick="smoothScrollTjanster()">Tjänster</span>
+                                <span class="content" onclick="smoothScrollMedarbetare()">Våra medarbetare</span>
+                                <span class="content" onclick="smoothScrollBeskrivning()">Beskrivning</span>
+                            </div>
+                        </div>
+                    </div>
             <div class="second-header">
                 <p class="webContent" onclick="smoothScrollMedarbetare()">Våra medarbetare</p>
                 <p class="webContent" onclick="smoothScrollBeskrivning()">Beskrivning</p>
@@ -72,17 +83,7 @@
                 </div>
             </div>
         </div>
-        <div class="hamburger">
-            
-            <i @click="visaMeny =! visaMeny" class="bi bi-list"></i>
-            <div class="meny">
-                <div v-if="visaMeny" id="mobilMeny">
-                    <span class="content" onclick="smoothScrollTjanster()">Tjänster</span>
-                    <span class="content" onclick="smoothScrollMedarbetare()">Våra medarbetare</span>
-                    <span class="content" onclick="smoothScrollBeskrivning()">Beskrivning</span>
-                </div>
-            </div>
-        </div>
+
 
         <div class="body-content">
             <div id="bytBild"> <img src="bilder/arrow.png"></div>
@@ -241,11 +242,9 @@
                 </div>
             </div>
 
-            <div>
-                <button @click="page =!page">Visa</button>
-            </div>
 
-            <div v-if="page ===false" class="tKunder">
+
+            <div class="tKunder">
                 <div class="tjanst-titel">
                     <h3>Tidigare kunder</h2>
                 </div>
