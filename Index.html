@@ -11,7 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
-
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet"> 
 
 </head>
 
@@ -36,17 +37,41 @@
             </div>
             <h2><span style="background-color:#BBEBB6; padding:3px">Trädgårds</span><span
                     style="border: solid #BBEBB6">hjälpen</span></h2>
-                    <div class="hamburger">
-            
-                        <i @click="visaMeny =! visaMeny" class="bi bi-list"></i>
-                        <div class="meny">
-                            <div v-if="visaMeny" id="mobilMeny">
-                                <span class="content" onclick="smoothScrollTjanster()">Tjänster</span>
-                                <span class="content" onclick="smoothScrollMedarbetare()">Våra medarbetare</span>
-                                <span class="content" onclick="smoothScrollBeskrivning()">Beskrivning</span>
-                            </div>
+            <div class="hamburger">
+                <div class="hamburgerFlex">
+                    <i @click="visaMeny =! visaMeny" class="bi bi-list"></i>
+                    <div class="cart" @click="showCart =!showCart">
+                        <i class="bi bi-cart2"></i>
+                        <div class="cartAmount">{{cart.length}}</div>
+                        <div v-if="showCart" class="cartDropDown">
+                            <ul class="cartDropDown2">
+                                <li v-for="c in cart" :key="cart.name">
+                                    {{c.namn}}
+                                    <img v-bind:src="c.image" />
+                                </li>
+                                <p>
+                                    Summa: {{totalSum}} kr
+                                </p>
+                                <div>
+                                    <button id="kassaKnapp" @click="removeItemToCart()"> Rensa Varukorg</button>
+
+                                    <a id="bLink" href="kassa.html">
+                                        <button id="kassaKnapp" @click="test1()"> Gå till kassan</button>
+                                    </a>
+                                </div>
+                            </ul>
                         </div>
                     </div>
+                </div>
+                <div class="meny">
+                    <div v-if="visaMeny" id="mobilMeny">
+                        <span class="content" onclick="smoothScrollTjanster()">Tjänster</span>
+                        <span class="content" onclick="smoothScrollMedarbetare()">Våra medarbetare</span>
+                        <span class="content" onclick="smoothScrollBeskrivning()">Beskrivning</span>
+                    </div>
+                </div>
+
+            </div>
             <div class="second-header">
                 <p class="webContent" onclick="smoothScrollMedarbetare()">Våra medarbetare</p>
                 <p class="webContent" onclick="smoothScrollBeskrivning()">Beskrivning</p>

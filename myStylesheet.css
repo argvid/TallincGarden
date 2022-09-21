@@ -1117,6 +1117,9 @@ strong {
         text-align: center;
         z-index: 99;
     }
+    .presentation-text{
+        margin:2%;
+    }
 
     .containerRight {
         grid-row-start: 7;
@@ -1250,6 +1253,16 @@ strong {
         grid-row-end: 33;
         grid-column-start: 1;
         grid-column-end: 7;
+    }
+    .cart{
+        width: 10%;
+        padding:2px;
+        margin-top:1%;
+    }
+    .hamburgerFlex{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
 
 
