@@ -813,6 +813,8 @@ label {
 }
 
 /* Kontaktsidans CSS slut */
+
+/* Varukorg */
 .cart {
     position: relative;
     background-color: #fff;
@@ -888,6 +890,7 @@ label {
     border-radius: 4px;
     margin-bottom: 1%;
 }
+/* slut på varukorg  */
 
 /* Kassa sidan  */
 .kassaProdukt img {
