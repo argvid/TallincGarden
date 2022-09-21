@@ -94,7 +94,8 @@ const app = Vue.createApp({
     },
     test2() {
       sessionStorage.clear();
-      window.location.reload();
+      // window.location.reload();
+      // watch kolla på de!
     },
     test3() {
       // Tar ut summan av de värderna som ligger i korgen
@@ -392,8 +393,16 @@ function textHoverLeave(x) {
 //   navMenu.classList.remove("active");
 // }))
 
-const hamburgare = document.getElementById('hamburgare');
-const meny = document.getElementById('mobilMeny');
-hamburgare.addEventListener("click", function () {
+const hamburgare = document.getElementById("hamburgare");
+const meny = document.getElementById("mobilMeny");
+hamburgare.addEventListener("click", function () {});
 
-})
+// document.getElementById("id").addEventListener("change/input",(event) => {
+//   const input = event.target.value;
+//   if(input){
+//     alert('input är' + input)
+//   } else{
+//     alert("det finns ingen input")
+
+//   }
+// });
