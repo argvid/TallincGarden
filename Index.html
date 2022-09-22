@@ -185,7 +185,7 @@
                 <h1 class="headerTjanster">Våra tjanster</h1>
                 <div class="tjanst tjanstNy" v-for="product in products" :key="product.name">
                     <div class="vattna">{{product.namn}}</div>
-                    <img :src="product.image" class="tjanst-symbol" />
+                    <img :src="product.image" alt="plant" class="tjanst-symbol" />
                     <div>{{product.cost}} svenska riksdaler</div>
                     <p class="tjanst-beskrivning">{{product.beskrivning}} </p>
                     <button id="kopButton" @click="addItemToCart(product); test3()"> Lägg i varukorgen</button>
@@ -230,7 +230,7 @@
     
     <div class="footer">
         <div class="footercolumn_inner">
-            <img class="footer_bild" src="bilder/tallincbild.png">
+            <img class="footer_bild" src="bilder/tallincbild.png" alt="footerbild">
         </div>
         <div class="footercolumn_inner">
             <div class="columnTitel">
@@ -267,7 +267,7 @@
             </div>
         </div>
         <div class="footercolumn_inner">
-            <img class="footer_bild" src="bilder/tgthjälpen.png">
+            <img class="footer_bild" src="bilder/tgthjälpen.png" alt="footerbild">
 
         </div>
 
