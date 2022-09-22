@@ -23,16 +23,16 @@
 
         <div id="header">
             <div class="grassContainer">
-                <img class="grass" src="bilder/new grass.jpg">
-                <img class="grass" src="bilder/new grass.jpg">
-                <img class="grass" src="bilder/new grass.jpg">
-                <img class="grass" src="bilder/new grass.jpg">
-                <img class="grass" src="bilder/new grass.jpg">
-                <img class="grass" src="bilder/new grass.jpg">
-                <img class="grass" src="bilder/new grass.jpg">
-                <img class="grass" src="bilder/new grass.jpg">
-                <img class="grass" src="bilder/new grass.jpg">
-                <img class="grass" src="bilder/new grass.jpg">
+                <img class="grass" src="bilder/new grass.jpg" alt="gräs">
+                <img class="grass" src="bilder/new grass.jpg" alt="gräs">
+                <img class="grass" src="bilder/new grass.jpg" alt="gräs">
+                <img class="grass" src="bilder/new grass.jpg" alt="gräs">
+                <img class="grass" src="bilder/new grass.jpg" alt="gräs">
+                <img class="grass" src="bilder/new grass.jpg" alt="gräs">
+                <img class="grass" src="bilder/new grass.jpg" alt="gräs">
+                <img class="grass" src="bilder/new grass.jpg" alt="gräs">
+                <img class="grass" src="bilder/new grass.jpg" alt="gräs">
+                <img class="grass" src="bilder/new grass.jpg" alt="gräs">
 
             </div>
             <h2><span style="background-color:#BBEBB6; padding:3px">Trädgårds</span><span
@@ -47,7 +47,7 @@
                             <ul class="cartDropDown2">
                                 <li v-for="c in cart" :key="cart.name">
                                     {{c.namn}}
-                                    <img v-bind:src="c.image" />
+                                    <img v-bind:src="c.image"/>
                                 </li>
                                 <p>
                                     Summa: {{totalSum}} kr
