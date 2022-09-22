@@ -78,7 +78,7 @@ body {
     margin-top: 100px;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(31, 100px);
+    grid-template-rows: repeat(29, 100px);
     grid-column-gap: 10px;
     grid-row-gap: 0px;
 }
@@ -450,7 +450,7 @@ body {
 }
 
 .enSlide {
-    animation: 4s;
+  
     display: none;
 }
 
@@ -972,6 +972,7 @@ ul {
 
 /*Footer till hemsidan**/
 .footer {
+    z-index: 99;
     width: 100%;
     height: 150px;
     background-color: #BBEBB6;
@@ -1031,6 +1032,15 @@ strong {
     border-left: thin solid #C2E500;
     border-right: thin solid #C2E500;
 }
+.tjanst-titel{
+    text-align: center;
+}
+.table{
+    width: 100%;
+}
+.table thead{
+    text-align: left;
+}
 
 
 .hamburger {
@@ -1040,6 +1050,14 @@ strong {
 }
 
 /* RESPONSIV DESIGN */
+@media screen and (max-width: 900px) {
+.tjanster-container{
+    font-size: 70%;
+}
+
+}
+
+
 
 @media screen and (max-width: 575px) {
 
