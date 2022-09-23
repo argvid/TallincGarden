@@ -171,8 +171,8 @@
                     <div class="medlem" v-for="anstalld in medarbetare" :key="anstalld.name">
                         <div class="bild">
                             <img onmouseenter="imgMouseEnter(this)" onmouseleave="imgMouseLeave(this)"
-                                 class="profilbild" v-bind:src="anstalld.bild" alt="anstalld">
-                            <div  class="namnText"><a
+                                class="profilbild" v-bind:src="anstalld.bild" alt="anstalld">
+                            <div class="namnText"><a
                                     v-bind:href="anstalld.sida">{{anstalld.namn}}<br>{{anstalld.roll}}</a>
                             </div>
                         </div>
@@ -253,7 +253,7 @@
                     <li>
                         <p class="webContent" onclick="smoothScrollMedarbetare()">Om oss</p>
                     </li>
-                    
+
                     <li>
                         <p class="webContent" onclick="smoothScrollTjanster()">Tjänster</p>
                     </li>
