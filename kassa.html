@@ -8,7 +8,7 @@
   <meta charset="utf-8" />
   <title>Kassan</title>
   <script src="//code.jquery.com/jquery-latest.min.js"></script>
-  <script src="jquery-3.6.0.min.js"></script>
+  <!-- <script src="jquery-3.6.0.min.js"></script> -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
 </head>
@@ -28,25 +28,42 @@
       <div class="formKassa">
         <div class="kontaktTitel">Kassa</div>
 
-        <form id="form" name="form" method="post" action=" ">
+        <form id="formKassa" name="form" method="post" action="">
 
+          <label for="fnamn">
+            Förnamn:</label><br>
+          <input id="forNamn" type="text" name="namn"><br>
+          <span id="errorNamn">
 
-          <label for="fnamn">Förnamn:</label><br>
-          <input type="text" name="fnamn" required maxlength="15"> <br>
+          </span> <br>
 
-          <label for="enamn"><br>
+          <label for="enamn">
             Efternamn:</label><br>
-          <input type="text" name="enamn" required maxlength="15"><br><br>
+          <input id="eftNamn" type="text" name="enamn"><br>
+          <span id="errorEnamn">
+
+          </span><br>
 
 
 
-          <label for="e-postadress">e-postadress:</label><br>
-          <input type="email" name="email" required> <br><br>
-          <label for="phone">Telefonnummer:</label><br>
-          <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}"><br><br>
+          <label for="e-postadress">
+            e-postadress:</label><br>
+          <input id="epost" type="email" name="email"> <br>
+          <span id="errorEpost">
+
+          </span><br>
+
+          <label for="phone">
+            Telefonnummer:</label><br>
+          <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}"><br>
+          <span id="errorTele">
+
+          </span>
+          <br>
+
+
+
           <button id="kassaKnapp2" @click="test2()">betala </button>
-
-
         </form>
 
         <div class="kassaProdukt">
