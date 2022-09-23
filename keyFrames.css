@@ -16,7 +16,7 @@
 /* Williams Bars */
 
 .wbar1 {
-    width: 15%;
+    width: 95%;
     animation-name: slideinwBars1;
 }
 
@@ -182,7 +182,7 @@
     }
 
     to {
-        width: 15%
+        width: 95%
     }
 }
 
