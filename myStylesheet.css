@@ -83,9 +83,19 @@ body {
     grid-row-gap: 0px;
 }
 
-#bytBild {
+#bytBild1 {
     grid-column-start: 1;
     grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    z-index: 99;
+    cursor: pointer;
+}
+#bytBild2{
+    transform: rotateZ(180deg);
+    text-align: left;
+    grid-column-start: 6;
+    grid-column-end: 7;
     grid-row-start: 4;
     grid-row-end: 5;
     z-index: 99;
@@ -450,7 +460,7 @@ body {
 }
 
 .enSlide {
-  
+
     display: none;
 }
 
@@ -890,9 +900,15 @@ label {
     border-radius: 4px;
     margin-bottom: 1%;
 }
+
 /* slut på varukorg  */
 
 /* Kassa sidan  */
+
+.hrefUtanStil{
+    text-decoration: none;
+    color:black;
+}
 .kassaProdukt img {
     margin-top: 0%;
     height: 35%;
@@ -921,8 +937,8 @@ label {
     border: thick solid #BBEBB6;
     color: #000;
     padding: 1%;
-    width: 20%;
-    height: 60%;
+    width: 80%;
+    height: 10%;
     text-align: center;
     transition-duration: 0.4s;
     overflow: hidden;
@@ -930,23 +946,30 @@ label {
     border-radius: 4px;
     margin-bottom: 1%;
 }
+.kontaktTitel{
+    display: none;
+}
 
 .formKassa {
-    border-left: thick solid #BBEBB6;
-    border-right: thick solid #BBEBB6;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
     background-color: white;
-    grid-column-start: 2;
-    grid-column-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 7;
     grid-row-start: 3;
     grid-row-end: 15;
     padding: 50px;
-    box-shadow: -1px 2px 31px 4px rgba(0, 0, 0, 0.71);
+    border-top: thick solid #BBEBB6
+}
+.formKassa form{
+    margin-top:1%;
 }
 
 #kassaSumma {
     font-size: large;
     font-weight: bold;
-    margin-left: 5%;
+    margin-left: 13%;
 }
 
 /* slut på kassa sidan */
@@ -1032,13 +1055,16 @@ strong {
     border-left: thin solid #C2E500;
     border-right: thin solid #C2E500;
 }
-.tjanst-titel{
+
+.tjanst-titel {
     text-align: center;
 }
-.table{
+
+.table {
     width: 100%;
 }
-.table thead{
+
+.table thead {
     text-align: left;
 }
 
@@ -1051,9 +1077,9 @@ strong {
 
 /* RESPONSIV DESIGN */
 @media screen and (max-width: 900px) {
-.tjanster-container{
-    font-size: 70%;
-}
+    .tjanster-container {
+        font-size: 70%;
+    }
 
 }
 
@@ -1105,7 +1131,7 @@ strong {
         display: none;
     }
 
-    #bytBild img {
+    #bytBild1 img {
         width: 70%;
         height: 50%;
     }
@@ -1135,8 +1161,9 @@ strong {
         text-align: center;
         z-index: 99;
     }
-    .presentation-text{
-        margin:2%;
+
+    .presentation-text {
+        margin: 2%;
     }
 
     .containerRight {
@@ -1272,12 +1299,14 @@ strong {
         grid-column-start: 1;
         grid-column-end: 7;
     }
-    .cart{
+
+    .cart {
         width: 10%;
-        padding:2px;
-        margin-top:1%;
+        padding: 2px;
+        margin-top: 1%;
     }
-    .hamburgerFlex{
+
+    .hamburgerFlex {
         display: flex;
         flex-direction: row;
         justify-content: space-between;

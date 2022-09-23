@@ -145,8 +145,8 @@ app.mount("#app");
 
   var checkScroll = function () {
     /*
-     ** Find the direction of scroll
-     ** 0 - initial, 1 - up, 2 - down
+     ** Kolla vilket håll det scrollas åt
+     ** 0 - från början, 1 - upp, 2 - ner
      */
 
     curScroll = w.scrollY || doc.scrollTop;
@@ -210,7 +210,7 @@ function smoothScrollTjanster() {
 
 function revealer() {
   var rev = document.querySelectorAll(".revealRight");
-
+console.log(rev)
   for (var x = 0; x < rev.length; x++) {
     var winHei = window.innerHeight;
 
@@ -296,8 +296,14 @@ function bildspel() {
   bild[bildIndex - 1].style.display = "block";
   nytimeout = setTimeout(bildspel, 4000);
 }
-let bytBild = document.getElementById("bytBild");
-bytBild.addEventListener("click", function () {
+let bytBild1 = document.getElementById("bytBild1");
+let bytBild2 = document.getElementById("bytBild2");
+
+bytBild1.addEventListener("click", function () {
+  clearTimeout(nytimeout);
+  bildspel();
+});
+bytBild2.addEventListener("click", function () {
   clearTimeout(nytimeout);
   bildspel();
 });
