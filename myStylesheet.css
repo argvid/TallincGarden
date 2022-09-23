@@ -83,13 +83,28 @@ body {
     grid-row-gap: 0px;
 }
 
-#bytBild {
+#bytBild1 {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 4;
     grid-row-end: 5;
     z-index: 99;
     cursor: pointer;
+}
+
+#bytBild2 {
+    text-align: right;
+    grid-column-start: 6;
+    grid-column-end: 7;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    z-index: 99;
+    cursor: pointer;
+}
+
+#bytBild2 img {
+    transform: rotateZ(180deg);
+
 }
 
 .nice-picture {
@@ -342,7 +357,7 @@ body {
     height: 20%;
 }
 
-#kopButton {
+.kopButton {
     text-align: center;
     text-transform: uppercase;
     cursor: pointer;
@@ -362,7 +377,7 @@ body {
     border-radius: 4px;
 }
 
-#kopButton:hover {
+.kopButton:hover {
     background: #DB1896;
     box-shadow: 0px 2px 10px 5px #213458;
     background: white;
@@ -370,7 +385,7 @@ body {
     color: #000;
 }
 
-#kopButton:after {
+.kopButton:after {
     content: "";
     background: #BBEBB6;
     display: block;
@@ -383,14 +398,14 @@ body {
     transition: all 0.8s;
 }
 
-#kopButton:active:after {
+.kopButton:active:after {
     padding: 0;
     margin: 0;
     opacity: 1;
     transition: 0s
 }
 
-#kopButton:focus {
+.kopButton:focus {
     outline: 0;
 }
 
@@ -893,6 +908,12 @@ label {
 /* slut på varukorg  */
 
 /* Kassa sidan  */
+
+.hrefUtanStil {
+    text-decoration: none;
+    color: black;
+}
+
 .kassaProdukt img {
     margin-top: 0%;
     height: 35%;
@@ -931,6 +952,10 @@ label {
     margin-bottom: 1%;
 }
 
+.kontaktTitel {
+    display: none;
+}
+
 .formKassa {
     border-left: thick solid #BBEBB6;
     border-right: thick solid #BBEBB6;
@@ -941,6 +966,11 @@ label {
     grid-row-end: 15;
     padding: 50px;
     box-shadow: -1px 2px 31px 4px rgba(0, 0, 0, 0.71);
+    border-top: thick solid #BBEBB6
+}
+
+.formKassa form {
+    margin-top: 1%;
 }
 
 #kassaSumma {
@@ -1087,7 +1117,12 @@ strong {
         display: none;
     }
 
-    #bytBild img {
+    #bytBild1 img {
+        width: 70%;
+        height: 50%;
+    }
+
+    #bytBild2 img {
         width: 70%;
         height: 50%;
     }
@@ -1263,6 +1298,66 @@ strong {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+    }
+
+    /*Personligsida*/
+    .arvidsBody {
+        margin-top: 15% !important;
+        grid-template-columns: repeat(6, 1fr) !important;
+        grid-template-rows: repeat(9, 1fr) !important;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        max-height: 100%;
+    }
+
+    .background {
+        border-top: thick solid #BBEBB6;
+        background-color: white;
+        width: 100%;
+        grid-column-start: 1;
+        grid-column-end: 8;
+        grid-row-start: 1;
+        grid-row-end: 10;
+        border-bottom: thick solid #BBEBB6;
+    }
+
+    #skillContainer {
+        z-index: 99;
+        background-color: #BBEBB6;
+        grid-row-start: 5;
+        grid-row-end: 10;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        padding-left: 15%;
+
+    }
+
+    #riktigProfilbild {
+        width: 240%;
+        height: 90%;
+        margin-top: 20%;
+
+
+        box-shadow: -1px 2px 31px 4px rgba(0, 0, 0, 0.71);
+    }
+    .presentationContainerOpacity{
+        opacity: 1 !important;
+    }
+    .skillContainerOpacity{
+        opacity: 1 !important;
+    }
+    #presentationContainer{
+        z-index: 99;
+        opacity: 1 !important;
+        padding: 10%;
+        background-color: #BBEBB6;
+        grid-row-start: 5;
+        grid-row-end: 10;
+        grid-column-start: 4;
+        grid-column-end: 8;
     }
 
 
