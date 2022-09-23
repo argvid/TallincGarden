@@ -357,7 +357,7 @@ body {
     text-transform: uppercase;
     cursor: pointer;
     font-size: 70%;
-    letter-spacing: auto;
+    /* letter-spacing: auto; */
     position: relative;
     background-color: #BBEBB6;
     border: thick solid #BBEBB6;
@@ -472,7 +472,7 @@ body {
 
 .fade {
     animation-name: fade;
-    animation-duration: 3s all ease;
+    animation-duration: 3s;
 }
 
 @keyframes fade {
@@ -660,7 +660,7 @@ label {
     transform: translateX(-150px);
     opacity: 0;
     transition: 0.25s all ease;
-    border-radius: 0.5;
+    border-radius: 0.5px;
     margin: auto;
     max-height: 100%;
 }
@@ -885,7 +885,7 @@ label {
     text-transform: uppercase;
     cursor: pointer;
     font-size: 70%;
-    letter-spacing: auto;
+    letter-spacing: normal;
     position: relative;
     background-color: #BBEBB6;
     border: thick solid #BBEBB6;
@@ -931,7 +931,7 @@ label {
     text-transform: uppercase;
     cursor: pointer;
     font-size: 70%;
-    letter-spacing: auto;
+    letter-spacing: normal;
     position: relative;
     background-color: #BBEBB6;
     border: thick solid #BBEBB6;
