@@ -1,10 +1,18 @@
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(URW-Type-Foundry-FlashD-Lig.woff2);
+  }
+
+
 body {
     background-image: url(bilder/leaves.webp);
     margin: 0;
     margin-top: -20px;
     padding: 0;
     overflow-x: hidden;
-    font-family: 'Roboto Condensed', sans-serif;
+    /* font-family: 'Roboto Condensed', sans-serif; */
+    font-family: myFirstFont;
 }
 
 #header {
