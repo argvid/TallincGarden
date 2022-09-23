@@ -184,7 +184,7 @@
             
 
             <div class="tjanster-container">
-                <h1 class="headerTjanster">Våra tjanster</h1>
+                <h1 class="headerTjanster">Våra tjänster</h1>
                 <div class="tjanst tjanstNy" v-for="product in products" :key="product.name">
                     <div class="vattna">{{product.namn}}</div>
                     <img :src="product.image" alt="plant" class="tjanst-symbol" />
@@ -252,22 +252,14 @@
                     <li>
                         <p class="webContent" onclick="smoothScrollMedarbetare()">Om oss</p>
                     </li>
-                    <li>Hitta lokalkontor</li>
-                    <li>Bli franchisetagare</li>
+                    <br>
+                    <li>
+                        <p class="webContent" onclick="smoothScrollTjanster()">Tjänster</p>
+                    </li>
                 </ul>
             </div>
         </div>
-        <div class="footercolumn_inner">
-            <div class="columnTitel">
-                <strong>Vårt erbjudande</strong>
-                <ul>
-                    <li>Privatkund</li>
-                    <li>Företagskund</li>
-                    <li>Bli veteran</li>
-                    <li>Lediga jobb</li>
-                </ul>
-            </div>
-        </div>
+        
         <div class="footercolumn_inner">
             <img class="footer_bild" src="bilder/tgthjälpen.png" alt="footerbild">
 
