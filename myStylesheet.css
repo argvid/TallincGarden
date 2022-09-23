@@ -78,24 +78,14 @@ body {
     margin-top: 100px;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(29, 100px);
+    grid-template-rows: repeat(31, 100px);
     grid-column-gap: 10px;
     grid-row-gap: 0px;
 }
 
-#bytBild1 {
+#bytBild {
     grid-column-start: 1;
     grid-column-end: 2;
-    grid-row-start: 4;
-    grid-row-end: 5;
-    z-index: 99;
-    cursor: pointer;
-}
-#bytBild2{
-    transform: rotateZ(180deg);
-    text-align: left;
-    grid-column-start: 6;
-    grid-column-end: 7;
     grid-row-start: 4;
     grid-row-end: 5;
     z-index: 99;
@@ -357,7 +347,7 @@ body {
     text-transform: uppercase;
     cursor: pointer;
     font-size: 70%;
-    /* letter-spacing: auto; */
+    letter-spacing: auto;
     position: relative;
     background-color: #BBEBB6;
     border: thick solid #BBEBB6;
@@ -372,7 +362,7 @@ body {
     border-radius: 4px;
 }
 
-.kopButton:hover {
+#kopButton:hover {
     background: #DB1896;
     box-shadow: 0px 2px 10px 5px #213458;
     background: white;
@@ -380,7 +370,7 @@ body {
     color: #000;
 }
 
-.kopButton:after {
+#kopButton:after {
     content: "";
     background: #BBEBB6;
     display: block;
@@ -393,14 +383,14 @@ body {
     transition: all 0.8s;
 }
 
-.kopButton:active:after {
+#kopButton:active:after {
     padding: 0;
     margin: 0;
     opacity: 1;
     transition: 0s
 }
 
-.kopButton:focus {
+#kopButton:focus {
     outline: 0;
 }
 
@@ -460,7 +450,7 @@ body {
 }
 
 .enSlide {
-
+    animation: 4s;
     display: none;
 }
 
@@ -472,7 +462,7 @@ body {
 
 .fade {
     animation-name: fade;
-    animation-duration: 3s;
+    animation-duration: 3s all ease;
 }
 
 @keyframes fade {
@@ -660,7 +650,7 @@ label {
     transform: translateX(-150px);
     opacity: 0;
     transition: 0.25s all ease;
-    border-radius: 0.5px;
+    border-radius: 0.5;
     margin: auto;
     max-height: 100%;
 }
@@ -885,7 +875,7 @@ label {
     text-transform: uppercase;
     cursor: pointer;
     font-size: 70%;
-    letter-spacing: normal;
+    letter-spacing: auto;
     position: relative;
     background-color: #BBEBB6;
     border: thick solid #BBEBB6;
@@ -900,15 +890,9 @@ label {
     border-radius: 4px;
     margin-bottom: 1%;
 }
-
 /* slut på varukorg  */
 
 /* Kassa sidan  */
-
-.hrefUtanStil{
-    text-decoration: none;
-    color:black;
-}
 .kassaProdukt img {
     margin-top: 0%;
     height: 35%;
@@ -931,14 +915,14 @@ label {
     text-transform: uppercase;
     cursor: pointer;
     font-size: 70%;
-    letter-spacing: normal;
+    letter-spacing: auto;
     position: relative;
     background-color: #BBEBB6;
     border: thick solid #BBEBB6;
     color: #000;
     padding: 1%;
-    width: 80%;
-    height: 10%;
+    width: 20%;
+    height: 60%;
     text-align: center;
     transition-duration: 0.4s;
     overflow: hidden;
@@ -946,30 +930,23 @@ label {
     border-radius: 4px;
     margin-bottom: 1%;
 }
-.kontaktTitel{
-    display: none;
-}
 
 .formKassa {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    border-left: thick solid #BBEBB6;
+    border-right: thick solid #BBEBB6;
     background-color: white;
-    grid-column-start: 1;
-    grid-column-end: 7;
+    grid-column-start: 2;
+    grid-column-end: 5;
     grid-row-start: 3;
     grid-row-end: 15;
     padding: 50px;
-    border-top: thick solid #BBEBB6
-}
-.formKassa form{
-    margin-top:1%;
+    box-shadow: -1px 2px 31px 4px rgba(0, 0, 0, 0.71);
 }
 
 #kassaSumma {
     font-size: large;
     font-weight: bold;
-    margin-left: 13%;
+    margin-left: 5%;
 }
 
 /* slut på kassa sidan */
@@ -995,7 +972,6 @@ ul {
 
 /*Footer till hemsidan**/
 .footer {
-    z-index: 99;
     width: 100%;
     height: 150px;
     background-color: #BBEBB6;
@@ -1056,18 +1032,6 @@ strong {
     border-right: thin solid #C2E500;
 }
 
-.tjanst-titel {
-    text-align: center;
-}
-
-.table {
-    width: 100%;
-}
-
-.table thead {
-    text-align: left;
-}
-
 
 .hamburger {
     text-align: left;
@@ -1076,14 +1040,6 @@ strong {
 }
 
 /* RESPONSIV DESIGN */
-@media screen and (max-width: 900px) {
-    .tjanster-container {
-        font-size: 70%;
-    }
-
-}
-
-
 
 @media screen and (max-width: 575px) {
 
@@ -1131,7 +1087,7 @@ strong {
         display: none;
     }
 
-    #bytBild1 img {
+    #bytBild img {
         width: 70%;
         height: 50%;
     }
@@ -1161,9 +1117,8 @@ strong {
         text-align: center;
         z-index: 99;
     }
-
-    .presentation-text {
-        margin: 2%;
+    .presentation-text{
+        margin:2%;
     }
 
     .containerRight {
@@ -1299,14 +1254,12 @@ strong {
         grid-column-start: 1;
         grid-column-end: 7;
     }
-
-    .cart {
+    .cart{
         width: 10%;
-        padding: 2px;
-        margin-top: 1%;
+        padding:2px;
+        margin-top:1%;
     }
-
-    .hamburgerFlex {
+    .hamburgerFlex{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
