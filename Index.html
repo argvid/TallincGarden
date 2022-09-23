@@ -147,7 +147,7 @@
 
             <div class="containerRight revealRight">
                 <div class="tradgardsbild">
-                    <img src="bilder/trädgårdsskötsel1.jpg" alt="trädgård" class="gallery__img">
+                    <img src="bilder/tradgardsskotsel.jpg" alt="trädgård" class="gallery__img">
                 </div>
                 <div class="tradgardsbild">
                     <img src="bilder/trädgårdsskötsel2.webp" alt="trädgård" class="gallery__img">
@@ -172,8 +172,8 @@
                     <div class="medlem" v-for="anstalld in medarbetare" :key="anstalld.name">
                         <div class="bild">
                             <img onmouseenter="imgMouseEnter(this)" onmouseleave="imgMouseLeave(this)"
-                                id="arvidProfilbild" class="profilbild" v-bind:src="anstalld.bild" alt="anstalld">
-                            <div id="textRuta" class="namnText"><a
+                                 class="profilbild" v-bind:src="anstalld.bild" alt="anstalld">
+                            <div  class="namnText"><a
                                     v-bind:href="anstalld.sida">{{anstalld.namn}}<br>{{anstalld.roll}}</a>
                             </div>
                         </div>
@@ -190,7 +190,7 @@
                     <img :src="product.image" alt="plant" class="tjanst-symbol" />
                     <div>{{product.cost}} svenska riksdaler</div>
                     <p class="tjanst-beskrivning">{{product.beskrivning}} </p>
-                    <button id="kopButton" @click="addItemToCart(product); test3()"> Lägg i varukorgen</button>
+                    <button class="kopButton" @click="addItemToCart(product); test3()"> Lägg i varukorgen</button>
                 </div>
             </div>
 
@@ -254,7 +254,7 @@
                     <li>
                         <p class="webContent" onclick="smoothScrollMedarbetare()">Om oss</p>
                     </li>
-                    <br>
+                    
                     <li>
                         <p class="webContent" onclick="smoothScrollTjanster()">Tjänster</p>
                     </li>
