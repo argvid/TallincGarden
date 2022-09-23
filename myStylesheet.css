@@ -376,13 +376,13 @@ body {
     color: #000;
     padding: 3%;
     width: 50%;
-    height: 10%;
+    height: 15%;
     text-align: center;
     transition-duration: 0.4s;
     overflow: hidden;
     box-shadow: 0 5px 15px #193047;
     border-radius: 4px;
-    margin-bottom: 10%;
+    margin-bottom: 15%;
 }
 
 .kopButton:hover {
