@@ -1,8 +1,7 @@
-
 @font-face {
     font-family: myFirstFont;
     src: url(URW-Type-Foundry-FlashD-Lig.woff2);
-  }
+}
 
 
 body {
@@ -913,6 +912,7 @@ label {
     border-radius: 4px;
     margin-bottom: 1%;
 }
+
 /* slut på varukorg  */
 
 /* Kassa sidan  */
@@ -950,8 +950,8 @@ label {
     border: thick solid #BBEBB6;
     color: #000;
     padding: 1%;
-    width: 20%;
-    height: 60%;
+    width: 100%;
+    height: 10%;
     text-align: center;
     transition-duration: 0.4s;
     overflow: hidden;
@@ -965,15 +965,15 @@ label {
 }
 
 .formKassa {
-    border-left: thick solid #BBEBB6;
-    border-right: thick solid #BBEBB6;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
     background-color: white;
-    grid-column-start: 2;
-    grid-column-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 7;
     grid-row-start: 3;
     grid-row-end: 15;
     padding: 50px;
-    box-shadow: -1px 2px 31px 4px rgba(0, 0, 0, 0.71);
     border-top: thick solid #BBEBB6
 }
 
@@ -1070,24 +1070,27 @@ strong {
     border-right: thin solid #C2E500;
 
 }
-.tableContainer{
+
+.tableContainer {
     display: flex;
     justify-content: space-evenly;
-    width:100%;
+    width: 100%;
     height: 80%;
 
 }
 
-.tKunder table{
-    width:90%;
+.tKunder table {
+    width: 90%;
     table-layout: fixed;
     word-wrap: break-word;
     white-space: pre-line;
 }
-.tKunder th{
+
+.tKunder th {
     text-align: left;
 }
-.tjanst-titel{
+
+.tjanst-titel {
     text-align: center;
     font-size: x-large;
 }
@@ -1100,11 +1103,19 @@ strong {
 
 /* RESPONSIV DESIGN */
 
-@media screen and (max-width: 575px) {
-
-    .tKunder{
+@media screen and (max-width: 900px) {
+    .tjanster-container {
         font-size: 70%;
     }
+
+}
+
+@media screen and (max-width: 575px) {
+
+    .tKunder {
+        font-size: 70%;
+    }
+
     .grassContainer {
         display: none;
     }
@@ -1184,8 +1195,9 @@ strong {
         text-align: center;
         z-index: 99;
     }
-    .presentation-text{
-        margin:2%;
+
+    .presentation-text {
+        margin: 2%;
     }
 
     .containerRight {
@@ -1321,12 +1333,14 @@ strong {
         grid-column-start: 1;
         grid-column-end: 7;
     }
-    .cart{
+
+    .cart {
         width: 10%;
-        padding:2px;
-        margin-top:1%;
+        padding: 2px;
+        margin-top: 1%;
     }
-    .hamburgerFlex{
+
+    .hamburgerFlex {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -1375,13 +1389,16 @@ strong {
 
         box-shadow: -1px 2px 31px 4px rgba(0, 0, 0, 0.71);
     }
-    .presentationContainerOpacity{
+
+    .presentationContainerOpacity {
         opacity: 1 !important;
     }
-    .skillContainerOpacity{
+
+    .skillContainerOpacity {
         opacity: 1 !important;
     }
-    #presentationContainer{
+
+    #presentationContainer {
         z-index: 99;
         opacity: 1 !important;
         padding: 10%;
@@ -1401,5 +1418,35 @@ strong {
 
     .second-header.active {
         left: 0;
+    }
+
+    /*KASSA*/
+    .kassaProdukt{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left:-5%;
+    }
+    .formKassa {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-evenly;
+        background-color: white;
+        grid-column-start: 1;
+        grid-column-end: 7;
+        grid-row-start: 3;
+        grid-row-end: 15;
+        padding: 50px;
+        border-top: thick solid #BBEBB6
+    }
+    #form{
+        text-align: center;
+    }
+    #kassaKnapp2{
+        width:50%;
+        margin-right: 0px;
+    }
+    #kassaSumma{
+        text-align: center;
     }
 }
