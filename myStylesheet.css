@@ -91,8 +91,6 @@ body {
     z-index: 99;
     cursor: pointer;
 }
-<<<<<<< Updated upstream
-=======
 
 #bytBild2 {
     text-align: right;
@@ -103,7 +101,6 @@ body {
     z-index: 99;
     cursor: pointer;
 }
->>>>>>> Stashed changes
 
 #bytBild2 img {
     transform: rotateZ(180deg);
@@ -911,15 +908,12 @@ label {
 /* slut på varukorg  */
 
 /* Kassa sidan  */
-<<<<<<< Updated upstream
-=======
 
 .hrefUtanStil {
     text-decoration: none;
     color: black;
 }
 
->>>>>>> Stashed changes
 .kassaProdukt img {
     margin-top: 0%;
     height: 35%;
@@ -957,13 +951,10 @@ label {
     border-radius: 4px;
     margin-bottom: 1%;
 }
-<<<<<<< Updated upstream
-=======
 
 .kontaktTitel {
     display: none;
 }
->>>>>>> Stashed changes
 
 .formKassa {
     border-left: thick solid #BBEBB6;
@@ -974,15 +965,12 @@ label {
     grid-row-start: 3;
     grid-row-end: 15;
     padding: 50px;
-<<<<<<< Updated upstream
     box-shadow: -1px 2px 31px 4px rgba(0, 0, 0, 0.71);
-=======
     border-top: thick solid #BBEBB6
 }
 
 .formKassa form {
     margin-top: 1%;
->>>>>>> Stashed changes
 }
 
 #kassaSumma {
