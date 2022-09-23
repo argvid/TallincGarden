@@ -83,7 +83,7 @@ body {
     grid-row-gap: 0px;
 }
 
-#bytBild {
+#bytBild1 {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 4;
@@ -1117,7 +1117,7 @@ strong {
         display: none;
     }
 
-    #bytBild img {
+    #bytBild1 img {
         width: 70%;
         height: 50%;
     }
