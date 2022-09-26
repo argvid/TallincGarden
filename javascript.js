@@ -113,13 +113,22 @@ const app = Vue.createApp({
 app.mount("#app");
 
 const namnFinns = document.getElementById("forNamn");
+const testSida = document.getElementById("formKassa");
 let namnTest = false;
+console.log(testSida);
 
-if (namnFinns) {
-  namnFinns.addEventListener("change", (event) => {
+if (testSida) {
+  namnFinns.addEventListener("focusout", (event) => {
     const errorNamnMsg = document.getElementById("errorNamn");
     let input = event.target.value;
+    console.log(namnFinns);
+    console.log("WWWWWWWW");
+    console.log(input);
 
+    if (input.length == 0) {
+      errorNamnMsg.innerHTML = "JÄVLA PAPPSKALLE";
+      namnTest = false;
+    }
     if (input.length < 2) {
       errorNamnMsg.innerHTML = "JÄVLA PAPPSKALLE";
       namnTest = false;
@@ -133,8 +142,8 @@ if (namnFinns) {
 const eNamnFinns = document.getElementById("eftNamn");
 let eNamnTest = false;
 
-if (eNamnFinns) {
-  eNamnFinns.addEventListener("change", (event) => {
+if (testSida) {
+  eNamnFinns.addEventListener("focusout", (event) => {
     const errorNamnMsg = document.getElementById("errorEnamn");
     const input = event.target.value;
 
@@ -151,8 +160,8 @@ if (eNamnFinns) {
 const epost = document.getElementById("epost");
 let epostTest = false;
 
-if (epost) {
-  epost.addEventListener("change", (event) => {
+if (testSida) {
+  epost.addEventListener("focusout", (event) => {
     const errorNamnMsg = document.getElementById("errorEpost");
     const input = event.target.value;
 
@@ -173,8 +182,8 @@ if (epost) {
 const tele = document.getElementById("phone");
 let teleTest = false;
 
-if (tele) {
-  tele.addEventListener("input", (event) => {
+if (testSida) {
+  tele.addEventListener("focusout", (event) => {
     const errorNamnMsg = document.getElementById("errorTele");
     const input = event.target.value;
 
@@ -504,5 +513,3 @@ function textHoverLeave(x) {
 const hamburgare = document.getElementById("hamburgare");
 const meny = document.getElementById("mobilMeny");
 hamburgare.addEventListener("click", function () {});
-
-// validering
