@@ -113,6 +113,7 @@ const app = Vue.createApp({
 app.mount("#app");
 
 const namnFinns = document.getElementById("forNamn");
+let namnTest = false;
 
 if (namnFinns) {
   namnFinns.addEventListener("change", (event) => {
@@ -121,15 +122,16 @@ if (namnFinns) {
 
     if (input.length < 2) {
       errorNamnMsg.innerHTML = "JÄVLA PAPPSKALLE";
-      return false;
+      namnTest = false;
     } else {
       errorNamnMsg.innerHTML = "";
-      return true;
+      namnTest = true;
     }
   });
 }
 
 const eNamnFinns = document.getElementById("eftNamn");
+let eNamnTest = false;
 
 if (eNamnFinns) {
   eNamnFinns.addEventListener("change", (event) => {
@@ -138,10 +140,10 @@ if (eNamnFinns) {
 
     if (input.length < 2) {
       errorNamnMsg.innerHTML = "JÄVLA PAPPSKALLE Eft";
-      return false;
+      eNamnTest = false;
     } else {
       errorNamnMsg.innerHTML = "";
-      return true;
+      eNamnTest = true;
     }
   });
 }
@@ -197,7 +199,7 @@ if (tele) {
 const sub = document.getElementById("subit-error");
 
 const validateForm = () => {
-  if (!epostTest) {
+  if (!epostTest || !teleTest || !eNamnTest || !namnTest) {
     sub.style.display = "block";
     sub.innerHTML = "Fuck";
     setTimeout(function () {
