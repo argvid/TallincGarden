@@ -115,15 +115,11 @@ app.mount("#app");
 const namnFinns = document.getElementById("forNamn");
 const testSida = document.getElementById("formKassa");
 let namnTest = false;
-console.log(testSida);
 
 if (testSida) {
   namnFinns.addEventListener("focusout", (event) => {
     const errorNamnMsg = document.getElementById("errorNamn");
     let input = event.target.value;
-    console.log(namnFinns);
-    console.log("WWWWWWWW");
-    console.log(input);
 
     if (input.length == 0) {
       errorNamnMsg.innerHTML = "Får inte vara tom";
@@ -216,6 +212,140 @@ const validateForm = () => {
   } else {
     sub.style.display = "block";
     sub.innerHTML = "Tack vi har mottagit din beställning";
+    // setTimeout(function () {
+    //   sub.style.display = "none";
+    // }, 3000);
+  }
+};
+
+// aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+
+const kontaktTestSida = document.getElementById("kontaktForm");
+
+const kontaktNamnFinns = document.getElementById("kontaktFornamn");
+let knamnTest = false;
+
+if (kontaktTestSida) {
+  kontaktNamnFinns.addEventListener("focusout", (event) => {
+    const errorNamnMsg = document.getElementById("KontaktErrorNamn");
+    let input = event.target.value;
+
+    if (input.length == 0) {
+      errorNamnMsg.innerHTML = "Får inte vara tom";
+      knamnTest = false;
+    } else if (input.length < 2) {
+      errorNamnMsg.innerHTML = "För kort";
+      knamnTest = false;
+    } else {
+      errorNamnMsg.innerHTML = "";
+      knamnTest = true;
+    }
+  });
+}
+
+const kontaktEnamnFinns = document.getElementById("kontaktEftNamn");
+let KontaktEamnTest = false;
+
+if (kontaktTestSida) {
+  kontaktEnamnFinns.addEventListener("focusout", (event) => {
+    const errorNamnMsg = document.getElementById("KontaktErrorEnamn");
+    const input = event.target.value;
+
+    if (input.length == 0) {
+      errorNamnMsg.innerHTML = "Får inte vara tom";
+      KontaktEamnTest = false;
+    } else if (input.length < 2) {
+      errorNamnMsg.innerHTML = "För kort";
+      KontaktEamnTest = false;
+    } else {
+      errorNamnMsg.innerHTML = "";
+      KontaktEamnTest = true;
+    }
+  });
+}
+
+const KontaktEpost = document.getElementById("kontaktEpost");
+let KontaktEpostTest = false;
+
+if (kontaktTestSida) {
+  KontaktEpost.addEventListener("focusout", (event) => {
+    const errorNamnMsg = document.getElementById("KontaktErrorEpost");
+    const input = event.target.value;
+
+    if (input.length == 0) {
+      errorNamnMsg.innerHTML = "Får inte vara tom";
+      KontaktEpostTest = false;
+    } else if (!input.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)) {
+      errorNamnMsg.innerHTML = "Felaktig e-post";
+      KontaktEpostTest = false;
+    } else {
+      errorNamnMsg.innerHTML = "";
+      KontaktEpostTest = true;
+    }
+  });
+}
+
+const kontaktTele = document.getElementById("kontaktTele");
+let kontaktTeleTest = false;
+
+if (kontaktTestSida) {
+  kontaktTele.addEventListener("focusout", (event) => {
+    const errorNamnMsg = document.getElementById("kontaktTeleError");
+    const input = event.target.value;
+
+    if (input.length == 0) {
+      errorNamnMsg.innerHTML = "Får inte vara tom";
+      kontaktTeleTest = false;
+    } else if (input.length > 10) {
+      errorNamnMsg.innerHTML = "Inte mer än 10 siffror";
+      kontaktTeleTest = false;
+    } else if (!input.match(/^\d+$/)) {
+      errorNamnMsg.innerHTML = "Måste vara siffror";
+      kontaktTeleTest = false;
+    } else {
+      errorNamnMsg.innerHTML = "";
+      kontaktTeleTest = true;
+    }
+  });
+}
+
+const meddelande = document.getElementById("meddelande");
+let meddelandeTest = false;
+
+if (kontaktTestSida) {
+  meddelande.addEventListener("focusout", (event) => {
+    const errorNamnMsg = document.getElementById("meddelandeError");
+    const input = event.target.value;
+
+    if (input.length == 0) {
+      errorNamnMsg.innerHTML = "Får inte vara tom";
+      meddelandeTest = false;
+    } else {
+      errorNamnMsg.innerHTML = "";
+      meddelandeTest = true;
+    }
+  });
+}
+
+const info = document.getElementById("info");
+
+const validateFormKontakt = () => {
+  if (
+    !knamnTest ||
+    !KontaktEamnTest ||
+    !KontaktEpostTest ||
+    !kontaktTeleTest ||
+    !meddelandeTest
+  ) {
+    info.style.display = "block";
+    info.innerHTML = "Felaktiga fält, vänligen korrigera";
+    setTimeout(function () {
+      info.style.display = "none";
+    }, 3000);
+    return false;
+  } else {
+    info.style.display = "block";
+    info.innerHTML = "Tack vi har mottagit ditt meddelande";
     // setTimeout(function () {
     //   sub.style.display = "none";
     // }, 3000);

@@ -2,54 +2,73 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontaktsida</title>
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="javascript.js" defer></script>
     <link rel="stylesheet" href="myStylesheet.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
-
+    <meta charset="utf-8" />
+    <title>Kassan</title>
+    <script src="//code.jquery.com/jquery-latest.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
 </head>
 
 <body onload="slide();">
-
-    <div id="header" class="personligHeader">
-
-        <h2><span style="background-color:#BBEBB6; padding:3px"> <a class="hrefUtanStil"
-                    href="Index.html">Trädgårds</span><span style="border: solid #BBEBB6">hjälpen </a></span></h2>
-    </div>
-
-    <div class="kontaktBody">
-
-        <div class="form">
-            <div class="kontaktTitel">Kontakta gärna oss om du har frågor!</div>
-
-            <form id="form" name="form" method="post" action=" ">
-
-
-                <label for="fnamn">Förnamn:</label><br>
-                <input type="text" name="fnamn" required maxlength="15"> <br>
-
-                <label for="enamn"><br>
-                    Efternamn:</label><br>
-                <input type="text" name="enamn" required maxlength="15"><br>
+    <div id="app">
 
 
 
-                <label for="e-postadress">e-postadress:</label><br>
-                <input type="email" name="email" required> <br>
-                <label for="phone">Telefonnummer:</label><br>
-                <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}">
-                <br>
-                <small>Format: 0765556667</small><br>
+
+        <div id="header" class="personligHeader">
+
+            <h2><span style="background-color:#BBEBB6; padding:3px"> <a class="hrefUtanStil"
+                        href="Index.html">Trädgårds</span><span style="border: solid #BBEBB6">hjälpen </a></span></h2>
+        </div>
+
+        <div class="kontaktBody">
+
+            <div class="form">
+                <div class="kontaktTitel">Kontakta gärna oss om du har frågor!</div>
+
+                <form id="kontaktForm" onsubmit="return validateFormKontakt()">
 
 
-                Meddelande:<br>
-                <textarea name="meddelande" id="meddelande" cols="45" rows="5"></textarea> <br>
+                    <label for="fnamn">Förnamn:</label><br>
+                    <input input type="text" id="kontaktFornamn"> <br>
+                    <span class="redtext" id="KontaktErrorNamn">
+                    </span> <br>
 
-                <input type="submit" name="skicka" id="skicka" value="Skicka meddelandet" />
+                    <label for="enamn"><br>
+                        Efternamn:</label><br>
+                    <input input type="text" id="kontaktEftNamn"><br>
+                    <span class="redtext" id="KontaktErrorEnamn">
+                    </span> <br>
 
-            </form>
+
+
+                    <label for="e-postadress">e-postadress:</label><br>
+                    <input input type="text" id="kontaktEpost"> <br>
+                    <span class="redtext" id="KontaktErrorEpost">
+                    </span> <br>
+
+
+                    <label for="phone">Telefonnummer:</label><br>
+                    <input input type="text" id="kontaktTele"><br>
+                    <span class="redtext" id="kontaktTeleError">
+                    </span> <br>
+
+
+                    Meddelande:<br>
+                    <textarea id="meddelande" cols="45" rows="5"></textarea> <br>
+                    <span class="redtext" id="meddelandeError">
+                    </span> <br>
+
+                    <input type="submit" name="skicka" id="skicka" value="Skicka meddelandet"
+                        onclick="validateFormKontakt()" />
+                    <br>
+                    <span id="info"></span>
+
+                </form>
+            </div>
         </div>
     </div>
 
