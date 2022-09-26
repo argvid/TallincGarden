@@ -28,11 +28,11 @@
       <div class="formKassa">
         <div class="kontaktTitel">Kassa</div>
 
-        <form id="formKassa" name="form" method="post" action="">
+        <form id="formKassa" onsubmit="return false">
 
-          <label for="fnamn">
-            Förnamn:</label><br>
-          <input id="forNamn" type="text" name="namn"><br>
+          <label for=" fnamn">Förnamn:</label><br>
+          <input id="forNamn" name="namn">
+          <br>
           <span id="errorNamn">
 
           </span> <br>
@@ -48,14 +48,14 @@
 
           <label for="e-postadress">
             e-postadress:</label><br>
-          <input id="epost" type="email" name="email"> <br>
+          <input id="epost"> <br>
           <span id="errorEpost">
 
           </span><br>
 
           <label for="phone">
             Telefonnummer:</label><br>
-          <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}"><br>
+          <input id="phone"><br>
           <span id="errorTele">
 
           </span>
@@ -63,7 +63,8 @@
 
 
 
-          <button id="kassaKnapp2" @click="test2()">betala </button>
+          <button id="kassaKnapp2" onclick="validateForm()" @click="test2()">betala </button>
+          <span id="subit-error"></span>
         </form>
 
         <div class="kassaProdukt">

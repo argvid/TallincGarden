@@ -147,6 +147,7 @@ if (eNamnFinns) {
 }
 
 const epost = document.getElementById("epost");
+let epostTest = false;
 
 if (epost) {
   epost.addEventListener("change", (event) => {
@@ -155,19 +156,20 @@ if (epost) {
 
     if (input.length == 0) {
       errorNamnMsg.innerHTML = "JÄVLA PAPPSKALLE Epost";
-      return false;
+      epostTest = false;
     }
     if (!input.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)) {
       errorNamnMsg.innerHTML = "JÄVLA  Epostre";
-      return false;
+      epostTest = false;
     } else {
       errorNamnMsg.innerHTML = "";
-      return true;
+      epostTest = true;
     }
   });
 }
 
 const tele = document.getElementById("phone");
+let teleTest = false;
 
 if (tele) {
   tele.addEventListener("input", (event) => {
@@ -176,21 +178,39 @@ if (tele) {
 
     if (input.length == 0) {
       errorNamnMsg.innerHTML = "Skriv något";
-      return false;
+      teleTest = false;
     }
     if (input.length > 10) {
       errorNamnMsg.innerHTML = "inte mer än 10 siffror";
-      return false;
+      teleTest = false;
     }
     if (!input.match(/^\d+$/)) {
       errorNamnMsg.innerHTML = "Bara siffror";
-      return false;
+      teleTest = false;
     } else {
       errorNamnMsg.innerHTML = "";
-      return true;
+      teleTest = true;
     }
   });
 }
+
+const sub = document.getElementById("subit-error");
+
+const validateForm = () => {
+  if (!epostTest) {
+    sub.style.display = "block";
+    sub.innerHTML = "Fuck";
+    setTimeout(function () {
+      sub.style.display = "none";
+    }, 3000);
+  } else {
+    sub.style.display = "block";
+    sub.innerHTML = "Tack vi har motagit din beställning";
+    // setTimeout(function () {
+    //   sub.style.display = "none";
+    // }, 3000);
+  }
+};
 
 // let grasklippning = document.querySelector('.grasklippning:checked').value;
 // let planteraBlommor = document.querySelector('.planteraBlommor:checked').value;
