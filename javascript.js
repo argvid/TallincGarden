@@ -112,6 +112,108 @@ const app = Vue.createApp({
 
 app.mount("#app");
 
+const namnFinns = document.getElementById("forNamn");
+let namnTest = false;
+
+if (namnFinns) {
+  namnFinns.addEventListener("change", (event) => {
+    const errorNamnMsg = document.getElementById("errorNamn");
+    let input = event.target.value;
+
+    if (input.length < 2) {
+      errorNamnMsg.innerHTML = "JÄVLA PAPPSKALLE";
+      namnTest = false;
+    } else {
+      errorNamnMsg.innerHTML = "";
+      namnTest = true;
+    }
+  });
+}
+
+const eNamnFinns = document.getElementById("eftNamn");
+let eNamnTest = false;
+
+if (eNamnFinns) {
+  eNamnFinns.addEventListener("change", (event) => {
+    const errorNamnMsg = document.getElementById("errorEnamn");
+    const input = event.target.value;
+
+    if (input.length < 2) {
+      errorNamnMsg.innerHTML = "JÄVLA PAPPSKALLE Eft";
+      eNamnTest = false;
+    } else {
+      errorNamnMsg.innerHTML = "";
+      eNamnTest = true;
+    }
+  });
+}
+
+const epost = document.getElementById("epost");
+let epostTest = false;
+
+if (epost) {
+  epost.addEventListener("change", (event) => {
+    const errorNamnMsg = document.getElementById("errorEpost");
+    const input = event.target.value;
+
+    if (input.length == 0) {
+      errorNamnMsg.innerHTML = "JÄVLA PAPPSKALLE Epost";
+      epostTest = false;
+    }
+    if (!input.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)) {
+      errorNamnMsg.innerHTML = "JÄVLA  Epostre";
+      epostTest = false;
+    } else {
+      errorNamnMsg.innerHTML = "";
+      epostTest = true;
+    }
+  });
+}
+
+const tele = document.getElementById("phone");
+let teleTest = false;
+
+if (tele) {
+  tele.addEventListener("input", (event) => {
+    const errorNamnMsg = document.getElementById("errorTele");
+    const input = event.target.value;
+
+    if (input.length == 0) {
+      errorNamnMsg.innerHTML = "Skriv något";
+      teleTest = false;
+    }
+    if (input.length > 10) {
+      errorNamnMsg.innerHTML = "inte mer än 10 siffror";
+      teleTest = false;
+    }
+    if (!input.match(/^\d+$/)) {
+      errorNamnMsg.innerHTML = "Bara siffror";
+      teleTest = false;
+    } else {
+      errorNamnMsg.innerHTML = "";
+      teleTest = true;
+    }
+  });
+}
+
+const sub = document.getElementById("subit-error");
+
+const validateForm = () => {
+  if (!epostTest || !teleTest || !eNamnTest || !namnTest) {
+    sub.style.display = "block";
+    sub.innerHTML = "Fuck";
+    setTimeout(function () {
+      sub.style.display = "none";
+    }, 3000);
+  } else {
+    sub.style.display = "block";
+    sub.innerHTML = "Tack vi har motagit din beställning";
+    // setTimeout(function () {
+    //   sub.style.display = "none";
+    // }, 3000);
+  }
+};
+
 // let grasklippning = document.querySelector('.grasklippning:checked').value;
 // let planteraBlommor = document.querySelector('.planteraBlommor:checked').value;
 // let vattna = document.querySelector('.vattna:checked').value;
@@ -210,7 +312,7 @@ function smoothScrollTjanster() {
 
 function revealer() {
   var rev = document.querySelectorAll(".revealRight");
-console.log(rev)
+  console.log(rev);
   for (var x = 0; x < rev.length; x++) {
     var winHei = window.innerHeight;
 
@@ -403,12 +505,4 @@ const hamburgare = document.getElementById("hamburgare");
 const meny = document.getElementById("mobilMeny");
 hamburgare.addEventListener("click", function () {});
 
-// document.getElementById("id").addEventListener("change/input",(event) => {
-//   const input = event.target.value;
-//   if(input){
-//     alert('input är' + input)
-//   } else{
-//     alert("det finns ingen input")
-
-//   }
-// });
+// validering

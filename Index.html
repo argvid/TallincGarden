@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
 
 <head>
     <script src="https://unpkg.com/vue@next" defer></script>
@@ -8,10 +8,8 @@
     <title>TrädgårdsHjälpen</title>
     <meta charset="utf-8" />
     <script src="//code.jquery.com/jquery-latest.min.js"></script>
-    <!-- <script src="jquery-3.6.0.min.js"></script> -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
 
@@ -24,6 +22,11 @@
 
         <div id="header">
             <div class="grassContainer">
+                <img class="grass" src="bilder/newgrass.jpg" alt="gräs">
+                <img class="grass" src="bilder/newgrass.jpg" alt="gräs">
+                <img class="grass" src="bilder/newgrass.jpg" alt="gräs">
+                <img class="grass" src="bilder/newgrass.jpg" alt="gräs">
+                <img class="grass" src="bilder/newgrass.jpg" alt="gräs">
                 <img class="grass" src="bilder/newgrass.jpg" alt="gräs">
                 <img class="grass" src="bilder/newgrass.jpg" alt="gräs">
                 <img class="grass" src="bilder/newgrass.jpg" alt="gräs">
@@ -173,8 +176,8 @@
                     <div class="medlem" v-for="anstalld in medarbetare" :key="anstalld.name">
                         <div class="bild">
                             <img onmouseenter="imgMouseEnter(this)" onmouseleave="imgMouseLeave(this)"
-                                 class="profilbild" v-bind:src="anstalld.bild" alt="anstalld">
-                            <div  class="namnText"><a
+                                class="profilbild" v-bind:src="anstalld.bild" alt="anstalld">
+                            <div class="namnText"><a
                                     v-bind:href="anstalld.sida">{{anstalld.namn}}<br>{{anstalld.roll}}</a>
                             </div>
                         </div>
@@ -255,7 +258,7 @@
                     <li>
                         <p class="webContent" onclick="smoothScrollMedarbetare()">Om oss</p>
                     </li>
-                    
+
                     <li>
                         <p class="webContent" onclick="smoothScrollTjanster()">Tjänster</p>
                     </li>
