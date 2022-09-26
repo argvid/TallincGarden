@@ -126,11 +126,10 @@ if (testSida) {
     console.log(input);
 
     if (input.length == 0) {
-      errorNamnMsg.innerHTML = "JÄVLA PAPPSKALLE";
+      errorNamnMsg.innerHTML = "Får inte vara tom";
       namnTest = false;
-    }
-    if (input.length < 2) {
-      errorNamnMsg.innerHTML = "JÄVLA PAPPSKALLE";
+    } else if (input.length < 2) {
+      errorNamnMsg.innerHTML = "För kort";
       namnTest = false;
     } else {
       errorNamnMsg.innerHTML = "";
@@ -147,8 +146,11 @@ if (testSida) {
     const errorNamnMsg = document.getElementById("errorEnamn");
     const input = event.target.value;
 
-    if (input.length < 2) {
-      errorNamnMsg.innerHTML = "JÄVLA PAPPSKALLE Eft";
+    if (input.length == 0) {
+      errorNamnMsg.innerHTML = "Får inte vara tom";
+      namnTest = false;
+    } else if (input.length < 2) {
+      errorNamnMsg.innerHTML = "För kort";
       eNamnTest = false;
     } else {
       errorNamnMsg.innerHTML = "";
@@ -166,11 +168,10 @@ if (testSida) {
     const input = event.target.value;
 
     if (input.length == 0) {
-      errorNamnMsg.innerHTML = "JÄVLA PAPPSKALLE Epost";
+      errorNamnMsg.innerHTML = "Får inte vara tom";
       epostTest = false;
-    }
-    if (!input.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)) {
-      errorNamnMsg.innerHTML = "JÄVLA  Epostre";
+    } else if (!input.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)) {
+      errorNamnMsg.innerHTML = "Felaktig e-post";
       epostTest = false;
     } else {
       errorNamnMsg.innerHTML = "";
@@ -188,15 +189,13 @@ if (testSida) {
     const input = event.target.value;
 
     if (input.length == 0) {
-      errorNamnMsg.innerHTML = "Skriv något";
+      errorNamnMsg.innerHTML = "Får inte vara tom";
       teleTest = false;
-    }
-    if (input.length > 10) {
-      errorNamnMsg.innerHTML = "inte mer än 10 siffror";
+    } else if (input.length > 10) {
+      errorNamnMsg.innerHTML = "Inte mer än 10 siffror";
       teleTest = false;
-    }
-    if (!input.match(/^\d+$/)) {
-      errorNamnMsg.innerHTML = "Bara siffror";
+    } else if (!input.match(/^\d+$/)) {
+      errorNamnMsg.innerHTML = "Måste vara siffror";
       teleTest = false;
     } else {
       errorNamnMsg.innerHTML = "";
@@ -210,7 +209,7 @@ const sub = document.getElementById("subit-error");
 const validateForm = () => {
   if (!epostTest || !teleTest || !eNamnTest || !namnTest) {
     sub.style.display = "block";
-    sub.innerHTML = "Fuck";
+    sub.innerHTML = "Felaktiga fält, vänligen korrigera";
     setTimeout(function () {
       sub.style.display = "none";
     }, 3000);
