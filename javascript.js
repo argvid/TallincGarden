@@ -215,7 +215,7 @@ const validateForm = () => {
     }, 3000);
   } else {
     sub.style.display = "block";
-    sub.innerHTML = "Tack vi har motagit din beställning";
+    sub.innerHTML = "Tack vi har mottagit din beställning";
     // setTimeout(function () {
     //   sub.style.display = "none";
     // }, 3000);

@@ -812,7 +812,7 @@ label {
 .kontaktBody {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(7, 100px);
+    grid-template-rows: repeat(6, 100px);
     grid-column-gap: 10px;
     grid-row-gap: 1px;
 }
@@ -824,15 +824,22 @@ label {
 }
 
 .form {
+    text-align: center;
     border-left: thick solid #BBEBB6;
     border-right: thick solid #BBEBB6;
     background-color: white;
-    grid-column-start: 2;
-    grid-column-end: 5;
-    grid-row-start: 3;
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 2;
     grid-row-end: 7;
     padding: 50px;
     box-shadow: -1px 2px 31px 4px rgba(0, 0, 0, 0.71);
+}
+.form input{
+    width:20%;
+}
+.form textarea{
+    width:20%;
 }
 
 /* Kontaktsidans CSS slut */
@@ -917,6 +924,11 @@ label {
 /* slut på varukorg  */
 
 /* Kassa sidan  */
+
+
+.redtext {
+    color: red;
+}
 
 .hrefUtanStil {
     text-decoration: none;
@@ -1174,7 +1186,7 @@ strong {
     }
 
     .nice-picture {
-        filter:blur(1px);
+        filter: blur(1px);
         -webkit-filter: blur(1px);
     }
 
@@ -1421,12 +1433,13 @@ strong {
     }
 
     /*KASSA*/
-    .kassaProdukt{
+    .kassaProdukt {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-left:-5%;
+        margin-left: -5%;
     }
+
     .formKassa {
         display: flex;
         flex-direction: column-reverse;
@@ -1439,14 +1452,37 @@ strong {
         padding: 50px;
         border-top: thick solid #BBEBB6
     }
-    #form{
+
+    #form {
         text-align: center;
     }
-    #kassaKnapp2{
-        width:50%;
+
+    #kassaKnapp2 {
+        width: 50%;
         margin-right: 0px;
     }
-    #kassaSumma{
+
+    #kassaSumma {
         text-align: center;
+    }
+
+    /*OM OSS*/
+
+    .form {
+        border-top:thick solid #BBEBB6 !important;
+        border-bottom:thick solid #BBEBB6 !important;
+        border:none;
+        background-color: white;
+        grid-column-start: 1;
+        grid-column-end: 7;
+        grid-row-start: 3;
+        grid-row-end: 7;
+        box-shadow: -1px 2px 31px 4px rgba(0, 0, 0, 0.71);
+    }
+    #form input{
+        width:50%;
+    }
+    #form textarea{
+        width:50%;
     }
 }
