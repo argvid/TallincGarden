@@ -1006,7 +1006,6 @@ ul {
     display: grid;
     height: 400px;
     align-content: center;
-
 }
 
 /*Footer till hemsidan**/
@@ -1056,7 +1055,6 @@ strong {
     border-top: thick solid #BBEBB6;
     border-bottom: thick solid #BBEBB6;
     box-shadow: -1px 2px 31px 4px rgba(0, 0, 0, 0.71);
-
     scroll-margin-top: 150px;
     grid-row-start: 25;
     grid-row-end: 31;

@@ -8,14 +8,14 @@ const app = Vue.createApp({
       products: [
         {
           namn: "Plantera",
-          cost: "40",
+          cost: "500",
           image: "bilder/plant.png",
           beskrivning:
             "Vi hjälper dig att välja ut och plantera blommor som passar klimatet och stilen i din trädgård.",
         },
         {
           namn: "Gräsklippning",
-          cost: "50",
+          cost: "500",
           image: "bilder/lawn-mower.png",
           beskrivning:
             "Vi håller din gräsmatta vältrimmad genom gräsklippning av olika typer Både underhåll samt nyklippning.",
@@ -29,7 +29,7 @@ const app = Vue.createApp({
         },
         {
           namn: "Vattna",
-          cost: "490",
+          cost: "150",
           image: "bilder/garden.png",
           beskrivning:
             "Ska du resa bort eller har inte tid att vattna dina blommor? Vi hjälper dig med detta så att din trädgård håller sig grön.",
