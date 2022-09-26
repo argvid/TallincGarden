@@ -45,7 +45,7 @@ const app = Vue.createApp({
         {
           namn: "William Åberg",
           roll: "Krattmästare",
-          bild: "bilder/willeboi.png",
+          bild: "bilder/williamBild.jpg",
           sida: "william.html",
         },
         {
