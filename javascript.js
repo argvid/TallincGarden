@@ -346,9 +346,9 @@ const validateFormKontakt = () => {
   } else {
     info.style.display = "block";
     info.innerHTML = "Tack vi har mottagit ditt meddelande";
-    // setTimeout(function () {
-    //   sub.style.display = "none";
-    // }, 3000);
+    setTimeout(function () {
+      sub.style.display = "none";
+    }, 3000);
   }
 };
 
