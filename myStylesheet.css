@@ -96,7 +96,27 @@ body {
     grid-row-start: 4;
     grid-row-end: 5;
     z-index: 99;
+}
+
+#bytBild1 img {
+    margin-left: 5%;
+    border: thick solid white;
+    padding: 10px;
+    height: 60%;
+    border-radius: 10%;
     cursor: pointer;
+
+}
+
+#bytBild2 img {
+    margin-right: 5%;
+
+    border: thick solid white;
+    padding: 10px;
+    height: 60%;
+    border-radius: 10%;
+    cursor: pointer;
+
 }
 
 #bytBild2 {
@@ -106,7 +126,6 @@ body {
     grid-row-start: 4;
     grid-row-end: 5;
     z-index: 99;
-    cursor: pointer;
 }
 
 #bytBild2 img {
@@ -281,6 +300,8 @@ body {
 }
 
 .presentation-bild img {
+    box-shadow: -1px 2px 10px 4px rgba(0, 0, 0, 0.71);
+
     height: 200px;
 }
 
@@ -667,12 +688,21 @@ label {
     background-color: white;
     color: white;
 }
+.coloredBackground{
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 7;
+    grid-row-end: 13;
+    background-color: green;
+    z-index: 0;
+
+}
 
 .revealLeft {
     position: relative;
     transform: translateX(-150px);
     opacity: 0;
-    transition: 0.25s all ease;
+    transition: 1s all ease;
     border-radius: 0.5;
     margin: auto;
     max-height: 100%;
@@ -687,7 +717,7 @@ label {
     position: relative;
     transform: translateX(150px);
     opacity: 0;
-    transition: 0.25s all ease;
+    transition: 1s all ease;
     background-color: white;
     margin: auto;
     max-height: 100%;
@@ -835,11 +865,24 @@ label {
     padding: 50px;
     box-shadow: -1px 2px 31px 4px rgba(0, 0, 0, 0.71);
 }
-.form input{
+#skicka{
     width:20%;
+    background-color: white;
+    border:thin solid #BBEBB6;
+    cursor: pointer;
+    border-radius: 5px;
 }
-.form textarea{
-    width:20%;
+#skicka:hover{
+    background-color: #BBEBB6;
+    transition: 1s;
+}
+
+.form input {
+    width: 20%;
+}
+
+.form textarea {
+    width: 20%;
 }
 
 /* Kontaktsidans CSS slut */
@@ -848,6 +891,7 @@ label {
 .cart {
     position: relative;
     background-color: #fff;
+    border:thin solid green;
     color: #213458;
     font-size: 25px;
     padding: 5px;
@@ -1165,6 +1209,8 @@ strong {
 
     .presentation-bild img {
         display: none;
+
+
     }
 
     .presentation-bild p {
@@ -1172,13 +1218,14 @@ strong {
     }
 
     #bytBild1 img {
-        width: 70%;
-        height: 50%;
+        width: 40%;
+        height: 30%;
     }
+    
 
     #bytBild2 img {
-        width: 70%;
-        height: 50%;
+        width: 40%;
+        height: 30%;
     }
 
     .presentation-bild {
@@ -1323,6 +1370,9 @@ strong {
         font-size: xx-large;
     }
 
+    .tjanst-beskrivning {
+        width:40%;
+    }
     #kopButton {
         height: 20%;
         width: 50%;
@@ -1452,6 +1502,9 @@ strong {
         padding: 50px;
         border-top: thick solid #BBEBB6
     }
+    #formKassa{
+        text-align: center;
+    }
 
     #form {
         text-align: center;
@@ -1469,20 +1522,40 @@ strong {
     /*OM OSS*/
 
     .form {
-        border-top:thick solid #BBEBB6 !important;
-        border-bottom:thick solid #BBEBB6 !important;
-        border:none;
+        border-top: thick solid #BBEBB6 !important;
+        border-bottom: thick solid #BBEBB6 !important;
+        border: none;
         background-color: white;
         grid-column-start: 1;
         grid-column-end: 7;
         grid-row-start: 3;
         grid-row-end: 7;
         box-shadow: -1px 2px 31px 4px rgba(0, 0, 0, 0.71);
+        overflow: auto;
+        width:100%;
+        margin: auto;
+        padding-left: 0px;
     }
-    #form input{
-        width:50%;
+    #skicka{
+        height: 30px;
+        width:40%;
+        background-color: white;
+        border:thin solid #BBEBB6;
+        cursor: pointer;
+        border-radius: 5px;
     }
-    #form textarea{
-        width:50%;
+    #skicka:hover{
+        background-color: #BBEBB6;
+        transition: 1s;
     }
+
+
+    #form input {
+        width: 50%;
+    }
+
+    #form textarea {
+        width: 50%;
+    }
+
 }

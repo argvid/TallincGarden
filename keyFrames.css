@@ -5,6 +5,15 @@
     border-radius: 25px;
 
 }
+.n{
+    background-color: white;
+}
+.o{
+    background-color: yellow;
+}
+.w{
+    background-color: red;
+}
 
 .barBorder {
     width: 80%;
@@ -218,7 +227,7 @@
 
 @keyframes slideinwBars5 {
     from {
-        width: 95px;
+        width: 0px;
     }
 
     to {

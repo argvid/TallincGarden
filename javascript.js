@@ -550,42 +550,7 @@ bytBild2.addEventListener("click", function () {
 textHover(x);
 textHoverLeave(x);
 // ----- medlemshover ---------
-imgMouseEnter(x);
-imgMouseLeave(x);
-function imgMouseEnter(x) {
-  let arvidBild = document.getElementById("arvidProfilbild");
-  let arvidText = document.getElementById("textRuta");
-  arvidBild.addEventListener(
-    "mouseenter",
-    function () {
-      arvidBild.classList.add("profilbildBlur");
-      arvidText.classList.add("namnTextOpacity");
-    },
-    false
-  );
-  arvidText.addEventListener(
-    "mouseenter",
-    function () {
-      arvidBild.classList.add("profilbildBlur");
-      arvidText.classList.add("namnTextOpacity");
-    },
-    false
-  );
-}
-function imgMouseLeave(x) {
-  let arvidBild = document.getElementById("arvidProfilbild");
-  let arvidText = document.getElementById("textRuta");
 
-  arvidBild.addEventListener(
-    "mouseleave",
-    function () {
-      arvidText.classList.remove("namnTextOpacity");
-
-      arvidBild.classList.remove("profilbildBlur");
-    },
-    false
-  );
-}
 
 // ------Arvids presentation-----
 
