@@ -390,7 +390,6 @@ body {
     text-transform: uppercase;
     cursor: pointer;
     font-size: 70%;
-    letter-spacing: auto;
     position: relative;
     background-color: #BBEBB6;
     border: thick solid #BBEBB6;
@@ -702,8 +701,12 @@ label {
     position: relative;
     transform: translateX(-150px);
     opacity: 0;
+<<<<<<< HEAD
     transition: 1s all ease;
     border-radius: 0.5;
+=======
+    transition: 0.25s all ease;
+>>>>>>> 931184e1516d97ebc80673c5f69cde4956ac10ee
     margin: auto;
     max-height: 100%;
 }
@@ -865,6 +868,7 @@ label {
     padding: 50px;
     box-shadow: -1px 2px 31px 4px rgba(0, 0, 0, 0.71);
 }
+<<<<<<< HEAD
 #skicka{
     width:20%;
     background-color: white;
@@ -880,6 +884,12 @@ label {
 .form input {
     width: 20%;
 }
+=======
+
+.form input {
+    width: 20%;
+}
+>>>>>>> 931184e1516d97ebc80673c5f69cde4956ac10ee
 
 .form textarea {
     width: 20%;
@@ -949,7 +959,6 @@ label {
     text-transform: uppercase;
     cursor: pointer;
     font-size: 70%;
-    letter-spacing: auto;
     position: relative;
     background-color: #BBEBB6;
     border: thick solid #BBEBB6;
@@ -1001,7 +1010,6 @@ label {
     text-transform: uppercase;
     cursor: pointer;
     font-size: 70%;
-    letter-spacing: auto;
     position: relative;
     background-color: #BBEBB6;
     border: thick solid #BBEBB6;
@@ -1536,6 +1544,7 @@ strong {
         margin: auto;
         padding-left: 0px;
     }
+<<<<<<< HEAD
     #skicka{
         height: 30px;
         width:40%;
@@ -1547,6 +1556,15 @@ strong {
     #skicka:hover{
         background-color: #BBEBB6;
         transition: 1s;
+=======
+
+    #form input {
+        width: 50%;
+    }
+
+    #form textarea {
+        width: 50%;
+>>>>>>> 931184e1516d97ebc80673c5f69cde4956ac10ee
     }
 
 
