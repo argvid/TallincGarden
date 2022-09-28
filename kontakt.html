@@ -6,7 +6,7 @@
     <script src="javascript.js" defer></script>
     <link rel="stylesheet" href="myStylesheet.css" />
     <meta charset="utf-8" />
-    <title>Kassan</title>
+    <title>Kontakt</title>
     <script src="//code.jquery.com/jquery-latest.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
@@ -14,9 +14,6 @@
 
 <body onload="slide();">
     <div id="app">
-
-
-
 
         <div id="header" class="personligHeader">
 
@@ -31,31 +28,26 @@
 
                 <form id="kontaktForm" onsubmit="return validateFormKontakt()">
 
-
-                    <label for="fnamn">Förnamn:</label><br>
-                    <input input type="text" id="kontaktFornamn"> <br>
+                    <label>Förnamn:</label><br>
+                    <input id="kontaktFornamn"> <br>
                     <span class="redtext" id="KontaktErrorNamn">
                     </span> 
 
-                    <label for="enamn"><br>
+                    <label><br>
                         Efternamn:</label><br>
-                    <input input type="text" id="kontaktEftNamn"><br>
+                    <input id="kontaktEftNamn"><br>
                     <span class="redtext" id="KontaktErrorEnamn">
                     </span> <br>
 
-
-
-                    <label for="e-postadress">e-postadress:</label><br>
-                    <input input type="text" id="kontaktEpost"> <br>
+                    <label>e-postadress:</label><br>
+                    <input id="kontaktEpost"> <br>
                     <span class="redtext" id="KontaktErrorEpost">
                     </span> <br>
 
-
-                    <label for="phone">Telefonnummer:</label><br>
-                    <input input type="text" id="kontaktTele"><br>
+                    <label>Telefonnummer:</label><br>
+                    <input id="kontaktTele"><br>
                     <span class="redtext" id="kontaktTeleError">
                     </span> <br>
-
 
                     Meddelande:<br>
                     <textarea id="meddelande" cols="45" rows="5"></textarea> <br>

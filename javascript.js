@@ -127,6 +127,9 @@ if (testSida) {
     } else if (input.length < 2) {
       errorNamnMsg.innerHTML = "För kort";
       namnTest = false;
+    } else if (input.match(/^\d+$/)) {
+      errorNamnMsg.innerHTML = "Måste vara bokstäver";
+      namnTest = false;
     } else {
       errorNamnMsg.innerHTML = "";
       namnTest = true;
@@ -147,6 +150,9 @@ if (testSida) {
       namnTest = false;
     } else if (input.length < 2) {
       errorNamnMsg.innerHTML = "För kort";
+      eNamnTest = false;
+    } else if (input.match(/^\d+$/)) {
+      errorNamnMsg.innerHTML = "Måste vara bokstäver";
       eNamnTest = false;
     } else {
       errorNamnMsg.innerHTML = "";
@@ -186,6 +192,9 @@ if (testSida) {
 
     if (input.length == 0) {
       errorNamnMsg.innerHTML = "Får inte vara tom";
+      teleTest = false;
+    } else if (input.length < 5) {
+      errorNamnMsg.innerHTML = "Måste vara mer än 5 siffror";
       teleTest = false;
     } else if (input.length > 10) {
       errorNamnMsg.innerHTML = "Inte mer än 10 siffror";
@@ -233,6 +242,9 @@ if (kontaktTestSida) {
     if (input.length == 0) {
       errorNamnMsg.innerHTML = "Får inte vara tom";
       knamnTest = false;
+    } else if (input.match(/^\d+$/)) {
+      errorNamnMsg.innerHTML = "Måste vara bokstäver";
+      knamnTest = false;
     } else if (input.length < 2) {
       errorNamnMsg.innerHTML = "För kort";
       knamnTest = false;
@@ -253,6 +265,9 @@ if (kontaktTestSida) {
 
     if (input.length == 0) {
       errorNamnMsg.innerHTML = "Får inte vara tom";
+      KontaktEamnTest = false;
+    } else if (input.match(/^\d+$/)) {
+      errorNamnMsg.innerHTML = "Måste vara bokstäver";
       KontaktEamnTest = false;
     } else if (input.length < 2) {
       errorNamnMsg.innerHTML = "För kort";
@@ -295,6 +310,9 @@ if (kontaktTestSida) {
 
     if (input.length == 0) {
       errorNamnMsg.innerHTML = "Får inte vara tom";
+      kontaktTeleTest = false;
+    } else if (input.length < 5) {
+      errorNamnMsg.innerHTML = "måste var mer än 5 siffror";
       kontaktTeleTest = false;
     } else if (input.length > 10) {
       errorNamnMsg.innerHTML = "Inte mer än 10 siffror";
@@ -346,9 +364,9 @@ const validateFormKontakt = () => {
   } else {
     info.style.display = "block";
     info.innerHTML = "Tack vi har mottagit ditt meddelande";
-    // setTimeout(function () {
-    //   sub.style.display = "none";
-    // }, 3000);
+    setTimeout(function () {
+      sub.style.display = "none";
+    }, 3000);
   }
 };
 
