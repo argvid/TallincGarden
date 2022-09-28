@@ -835,11 +835,13 @@ label {
     padding: 50px;
     box-shadow: -1px 2px 31px 4px rgba(0, 0, 0, 0.71);
 }
-.form input{
-    width:20%;
+
+.form input {
+    width: 20%;
 }
-.form textarea{
-    width:20%;
+
+.form textarea {
+    width: 20%;
 }
 
 /* Kontaktsidans CSS slut */
@@ -1469,9 +1471,9 @@ strong {
     /*OM OSS*/
 
     .form {
-        border-top:thick solid #BBEBB6 !important;
-        border-bottom:thick solid #BBEBB6 !important;
-        border:none;
+        border-top: thick solid #BBEBB6 !important;
+        border-bottom: thick solid #BBEBB6 !important;
+        border: none;
         background-color: white;
         grid-column-start: 1;
         grid-column-end: 7;
@@ -1479,10 +1481,12 @@ strong {
         grid-row-end: 7;
         box-shadow: -1px 2px 31px 4px rgba(0, 0, 0, 0.71);
     }
-    #form input{
-        width:50%;
+
+    #form input {
+        width: 50%;
     }
-    #form textarea{
-        width:50%;
+
+    #form textarea {
+        width: 50%;
     }
 }
